@@ -39,335 +39,6 @@
   border-radius: 0;
 }
 /*
- * Cards */
-.card {
-  display: inline-block;
-  font-size: 32px;
-  margin-right: 15px;
-  vertical-align: top;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  /*
-     * General link and span styles */
-  /*
-     * Handle color conditions for links and spans */
-  /*
-     * Big cards */
-  /*
-     * Icon cards */
-}
-.card > .value {
-  background: #484848;
-  color: #ffffff;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-.card > a.value:hover {
-  background: #333333;
-}
-.card.blue > .value {
-  background-color: #007db6;
-}
-.card.blue > a.value:hover {
-  background-color: #006391;
-}
-.card.green > .value {
-  background-color: #2ba02b;
-}
-.card.green > a.value:hover {
-  background-color: #227f22;
-}
-.card.red > .value {
-  background-color: #b94f3c;
-}
-.card.red > a.value:hover {
-  background-color: #933e2f;
-}
-.card.purple > .value {
-  background-color: #ab51c4;
-}
-.card.purple > a.value:hover {
-  background-color: #88409c;
-}
-.card.teal > .value {
-  background-color: #359fa3;
-}
-.card.teal > a.value:hover {
-  background-color: #2a7e81;
-}
-.card.yellow > .value {
-  background-color: #d6a70e;
-}
-.card.yellow > a.value:hover {
-  background-color: #aa850b;
-}
-.card.big {
-  position: relative;
-  width: 18%;
-  /*
-         * Big cards show the caption overlayed up top */
-  /*
-         * Link or span holding the value */
-  /*
-         * Add the "View -->" on link to the bottom right via :after */
-}
-.card.big > .caption {
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 13px;
-  height: 30px;
-  margin-bottom: -30px;
-  padding: 6px 15px;
-  position: absolute;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.card.big > .value {
-  font-size: 48px;
-  display: block;
-  padding: 48px 0 22px;
-  line-height: 48px;
-  text-align: center;
-}
-.card.big > a.value:after {
-  bottom: 0;
-  color: rgba(255, 255, 255, 0.7);
-  content: 'View \2192';
-  display: block;
-  font-size: 13px;
-  margin-bottom: -13px;
-  position: absolute;
-  right: 5px;
-}
-.card.icon {
-  /*
-         * Profile cards display the caption below, as a link or text */
-  /*
-         * Link or span holding the value */
-}
-.card.icon > .caption {
-  color: #555555;
-  font-size: 13px;
-  margin: 5px 0 0 2px;
-}
-.card.icon > .caption > a {
-  border-bottom: 1px solid #cccccc;
-  color: #555555;
-  padding-bottom: 1px;
-}
-.card.icon > .caption > a:after {
-  color: #484848;
-  content: ' \2192';
-  position: absolute;
-  margin-left: 3px;
-}
-.card.icon > .caption > a:hover {
-  border-bottom-color: #aaaaaa;
-  color: #333333;
-}
-.card.icon > .value {
-  display: inline-block;
-  padding: 10px 15px;
-}
-/*
- * Colors */
-/*
- * Typography */
-/*
- * Position */
-/*
- * Global */
-body {
-  width: auto;
-}
-figure,
-footer,
-header,
-menu,
-nav,
-section {
-  margin: 0;
-  padding: 0;
-}
-/*
- * Header */
-header {
-  background: #333333;
-  color: #ffffff;
-  height: 56px;
-  position: fixed;
-  width: 100%;
-  z-index: 1010;
-}
-header .logo {
-  background: url('../img/brand/logo-app.png') 0 0 no-repeat;
-  height: 43px;
-  margin: 8px 0 0 15px;
-  text-indent: -10000px;
-  width: 170px;
-}
-header .logo .logo-link {
-  display: block;
-  width: 175px;
-  height: 54px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.titan header {
-  border-bottom: 4px solid #359fa3;
-}
-/*
- * Elements */
-.container-fluid {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.with-header .container-fluid {
-  padding-top: 55px;
-}
-.with-left .container-fluid {
-  margin-left: 200px;
-}
-section.help {
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  text-align: center;
-  width: 200px;
-  z-index: 1040;
-}
-section.help > .btn {
-  font-size: 15px;
-  padding: 5px 12px 4px;
-}
-section.help > .btn > .fa {
-  font-size: 13px;
-  padding-right: 7px;
-  top: 0;
-}
-section.help.off .btn,
-section.help.off .btn.no-hover:hover {
-  border-bottom-color: #cccccc;
-  color: #aaaaaa !important;
-}
-section.help.off .fa {
-  color: #aaaaaa;
-}
-/*
- * Footer */
-footer {
-  border-top: 3px solid #dddddd;
-  font-size: 13px;
-  line-height: 1.8em;
-}
-.with-left footer {
-  border-top: 1px solid #dddddd;
-  color: #aaaaaa;
-  margin: 50px 20px 0 220px;
-  padding: 15px 0;
-}
-/*
- * Backgrounds */
-.blue-background {
-  background-color: #007db6;
-}
-a.blue-background:hover {
-  background-color: #006391;
-}
-.red-background {
-  background-color: #b94f3c;
-}
-a.red-background:hover {
-  background-color: #933e2f;
-}
-.green-background {
-  background-color: #2ba02b;
-}
-a.green-background:hover {
-  background-color: #227f22;
-}
-.purple-background {
-  background-color: #ab51c4;
-}
-a.purple-background:hover {
-  background-color: #88409c;
-}
-.yellow-background {
-  background-color: #d6a70e;
-}
-a.yellow-background:hover {
-  background-color: #aa850b;
-}
-.orange-background {
-  background-color: #d1712d;
-}
-a.orange-background:hover {
-  background-color: #a65a23;
-}
-.teal-background {
-  background-color: #359fa3;
-}
-a.teal-background:hover {
-  background-color: #2a7e81;
-}
-.garnet-background {
-  background-color: #af362b;
-}
-.beryl-background {
-  background-color: #8c2b22;
-}
-.white-background {
-  background-color: #ffffff;
-}
-.gray-background {
-  background-color: #eeeeee;
-}
-.dark-background {
-  background-color: #333333;
-}
-.castlerock-background {
-  background-color: #383838;
-}
-.ash-background {
-  background-color: #484848;
-}
-.wormwood-background {
-  background-color: #787878;
-}
-.heart-background {
-  background-color: #a8a8a8;
-}
-.graygray-background {
-  background-color: #aaaaaa;
-}
-.dark-overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-/*
- * Font colors */
-.gray-text {
-  color: #777777;
-}
-.midgray-text {
-  color: #555555;
-}
-.darkgray-text {
-  color: #333333;
-}
-.teal-text {
-  color: #359fa3;
-}
-/*
  * Color buttons 
  * function .make-button (
  *      background color: gray, 
@@ -1070,6 +741,237 @@ a.teal-background:hover {
   text-indent: -1000px;
 }
 /*
+ * Cards */
+.card {
+  display: inline-block;
+  font-size: 32px;
+  margin-right: 15px;
+  vertical-align: top;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  /*
+     * General link and span styles */
+  /*
+     * Handle color conditions for links and spans */
+  /*
+     * Big cards */
+  /*
+     * Icon cards */
+}
+.card > .value {
+  background: #484848;
+  color: #ffffff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.card > a.value:hover {
+  background: #333333;
+}
+.card.blue > .value {
+  background-color: #007db6;
+}
+.card.blue > a.value:hover {
+  background-color: #006391;
+}
+.card.green > .value {
+  background-color: #2ba02b;
+}
+.card.green > a.value:hover {
+  background-color: #227f22;
+}
+.card.red > .value {
+  background-color: #b94f3c;
+}
+.card.red > a.value:hover {
+  background-color: #933e2f;
+}
+.card.purple > .value {
+  background-color: #ab51c4;
+}
+.card.purple > a.value:hover {
+  background-color: #88409c;
+}
+.card.teal > .value {
+  background-color: #359fa3;
+}
+.card.teal > a.value:hover {
+  background-color: #2a7e81;
+}
+.card.yellow > .value {
+  background-color: #d6a70e;
+}
+.card.yellow > a.value:hover {
+  background-color: #aa850b;
+}
+.card.big {
+  position: relative;
+  width: 18%;
+  /*
+         * Big cards show the caption overlayed up top */
+  /*
+         * Link or span holding the value */
+  /*
+         * Add the "View -->" on link to the bottom right via :after */
+}
+.card.big > .caption {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 13px;
+  height: 30px;
+  margin-bottom: -30px;
+  padding: 6px 15px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card.big > .value {
+  font-size: 48px;
+  display: block;
+  padding: 48px 0 22px;
+  line-height: 48px;
+  text-align: center;
+}
+.card.big > a.value:after {
+  bottom: 0;
+  color: rgba(255, 255, 255, 0.7);
+  content: 'View \2192';
+  display: block;
+  font-size: 13px;
+  margin-bottom: -13px;
+  position: absolute;
+  right: 5px;
+}
+.card.icon {
+  /*
+         * Profile cards display the caption below, as a link or text */
+  /*
+         * Link or span holding the value */
+}
+.card.icon > .caption {
+  color: #555555;
+  font-size: 13px;
+  margin: 5px 0 0 2px;
+}
+.card.icon > .caption > a {
+  border-bottom: 1px solid #cccccc;
+  color: #555555;
+  padding-bottom: 1px;
+}
+.card.icon > .caption > a:after {
+  color: #484848;
+  content: ' \2192';
+  position: absolute;
+  margin-left: 3px;
+}
+.card.icon > .caption > a:hover {
+  border-bottom-color: #aaaaaa;
+  color: #333333;
+}
+.card.icon > .value {
+  display: inline-block;
+  padding: 10px 15px;
+}
+/*
+ * Backgrounds */
+.blue-background {
+  background-color: #007db6;
+}
+a.blue-background:hover {
+  background-color: #006391;
+}
+.red-background {
+  background-color: #b94f3c;
+}
+a.red-background:hover {
+  background-color: #933e2f;
+}
+.green-background {
+  background-color: #2ba02b;
+}
+a.green-background:hover {
+  background-color: #227f22;
+}
+.purple-background {
+  background-color: #ab51c4;
+}
+a.purple-background:hover {
+  background-color: #88409c;
+}
+.yellow-background {
+  background-color: #d6a70e;
+}
+a.yellow-background:hover {
+  background-color: #aa850b;
+}
+.orange-background {
+  background-color: #d1712d;
+}
+a.orange-background:hover {
+  background-color: #a65a23;
+}
+.teal-background {
+  background-color: #359fa3;
+}
+a.teal-background:hover {
+  background-color: #2a7e81;
+}
+.garnet-background {
+  background-color: #af362b;
+}
+.beryl-background {
+  background-color: #8c2b22;
+}
+.white-background {
+  background-color: #ffffff;
+}
+.gray-background {
+  background-color: #eeeeee;
+}
+.dark-background {
+  background-color: #333333;
+}
+.castlerock-background {
+  background-color: #383838;
+}
+.ash-background {
+  background-color: #484848;
+}
+.wormwood-background {
+  background-color: #787878;
+}
+.heart-background {
+  background-color: #a8a8a8;
+}
+.graygray-background {
+  background-color: #aaaaaa;
+}
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/*
+ * Font colors */
+.gray-text {
+  color: #777777;
+}
+.midgray-text {
+  color: #555555;
+}
+.darkgray-text {
+  color: #333333;
+}
+.teal-text {
+  color: #359fa3;
+}
+/*
  * Dropdown menus */
 .dropdown-menu {
   border: none;
@@ -1164,6 +1066,204 @@ header .dropdown-menu {
   -webkit-border-radius: 4px 0 4px 4px;
   border-radius: 4px 0 4px 4px;
 }
+/*
+ * Form components */
+.control-label {
+  color: #484848;
+  margin-bottom: 8px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-control {
+  border-color: #aaaaaa;
+  color: #333333;
+  font-size: 15px;
+  height: 34px;
+  padding: 6px 10px;
+  position: relative;
+  top: 1px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  /*
+     * Size overrides */
+  /* 
+     * Disabled inputs (adding a specific class) */
+  /*
+     * Focus overrides (no box shadows) */
+  /*
+     * Validation states (see below for label text handling) */
+}
+.form-control.input-lg {
+  font-size: 18px;
+  height: 48px;
+  padding: 10px;
+}
+.form-control.input-sm {
+  font-size: 13px;
+  height: 26px;
+  padding: 3px 6px;
+}
+.form-control[disabled],
+.form-control.disabled {
+  background-color: #eeeeee;
+  color: #aaaaaa;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.form-control:focus {
+  background-color: #f7f7f7;
+  border-color: #007db6;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.has-success .form-control,
+.has-warning .form-control,
+.has-error .form-control {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.has-success .form-control {
+  border-color: #227f22;
+}
+.has-success .form-control:focus {
+  border-color: #175717;
+}
+.has-warning .form-control {
+  border-color: #aa850b;
+}
+.has-warning .form-control:focus {
+  border-color: #7a6008;
+}
+.has-error .form-control {
+  border-color: #933e2f;
+}
+.has-error .form-control:focus {
+  border-color: #6c2e23;
+}
+.checkbox,
+.radio {
+  margin-bottom: 15px;
+}
+.checkbox label,
+.radio label {
+  top: 1px;
+}
+input[type="file"] {
+  font-size: 12px;
+}
+/*
+ * Form accoutrements */
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline {
+  color: #227f22;
+}
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline {
+  color: #aa850b;
+}
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+  color: #b94f3c;
+}
+.help-block {
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.5em;
+  margin: 8px 0 10px 10px;
+}
+.form-control-icon {
+  color: #333333;
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  position: absolute;
+  left: 10px;
+  text-align: center;
+  top: 4px;
+  width: 34px;
+}
+/*
+ * Colors */
+/*
+ * Typography */
+/*
+ * Position */
+/*
+ * Size */
+/*
+ * iCheck input plug (blue square) */
+.icheck,
+.iradio {
+  background: url('../img/icheck/blue.png') no-repeat;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  height: 22px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  top: -1px;
+  vertical-align: middle;
+  width: 22px;
+}
+.icheck {
+  background-position: 0 0;
+}
+.icheck.hover {
+  background-position: -24px 0;
+}
+.icheck.checked {
+  background-position: -48px 0;
+}
+.icheck.disabled {
+  background-position: -72px 0;
+  cursor: not-allowed;
+}
+.icheck.disabled.checked {
+  background-position: -96px 0;
+}
+.iradio {
+  background-position: -120px 0;
+}
+.iradio.hover {
+  background-position: -144px 0;
+}
+.iradio.checked {
+  background-position: -168px 0;
+}
+.iradio.disabled {
+  background-position: -192px 0;
+  cursor: not-allowed;
+}
+.iradio.disabled.checked {
+  background-position: -216px 0;
+}
+/* 
+ * HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  .icheck,
+  .iradio {
+    background-image: url('../img/icheck/blue@2x.png');
+    -webkit-background-size: 240px 24px;
+    background-size: 240px 24px;
+  }
+}
 /* 
   * Unordered lists */
 ul {
@@ -1204,6 +1304,8 @@ ul.three-column {
   top: 0;
   width: 200px;
   text-shadow: 0 1px 0 #ffffff;
+  /*
+     * Shrink the nav bar when the page width is small */
 }
 .left-nav > .nav {
   margin: 0;
@@ -1213,6 +1315,8 @@ ul.three-column {
          * Hover and active states controlled at <li> level */
   /*
          * Pad the top button more for aesthetics */
+  /*
+         * Style the search box */
 }
 .left-nav > .nav .item {
   border-bottom: 1px solid #dddddd;
@@ -1233,12 +1337,47 @@ ul.three-column {
 .left-nav > .nav > li:first-child .item {
   padding-top: 10px;
 }
+.left-nav > .nav .user-search {
+  border-bottom: 1px solid #dddddd;
+}
+.left-nav > .nav .user-search .form-control {
+  background-color: #eeeeee;
+  border: none;
+  height: 40px;
+  padding: 10px 10px 10px 50px;
+  top: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.left-nav > .nav .user-search .form-control:focus {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
 .with-left .left-nav {
   top: 52px;
   z-index: 1030;
 }
-.titan.with-left .left-nav {
+.eagle.with-left .left-nav {
   border-top: 4px solid #2a7e81;
+}
+.titan.with-left .left-nav {
+  border-top: 4px solid #006391;
+}
+.falcon.with-left .left-nav {
+  border-top: 4px solid #933e2f;
+}
+@media (max-width: 768px) {
+  .left-nav {
+    width: 56px;
+  }
+  .left-nav li {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .left-nav li span {
+    display: none;
+  }
 }
 .top-nav {
   float: right;
@@ -1646,6 +1785,12 @@ ul.three-column {
 .no-margin {
   margin: 0 !important;
 }
+.padding-5 {
+  padding: 5px !important;
+}
+.padding-10 {
+  padding: 10px !important;
+}
 /*
  * Global positioning */
 .float-left {
@@ -1670,10 +1815,128 @@ ul.three-column {
   position: relative !important;
 }
 .absolute-position {
+  display: block;
   position: absolute !important;
 }
 .fixed-position {
+  display: block;
   position: fixed !important;
+}
+/*
+ * Global */
+body {
+  width: auto;
+}
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Header */
+header {
+  background: #333333;
+  color: #ffffff;
+  height: 56px;
+  position: fixed;
+  width: 100%;
+  z-index: 1010;
+  /*
+     * Branding */
+  /*
+     * Each application is color branded ;) */
+}
+header .logo {
+  background: url('../img/brand/logo-app.png') 0 0 no-repeat;
+  height: 43px;
+  margin: 8px 0 0 15px;
+  text-indent: -10000px;
+  width: 170px;
+}
+header .logo .logo-link {
+  width: 175px;
+  height: 54px;
+}
+.titan header {
+  border-bottom: 4px solid #007db6;
+}
+.eagle header {
+  border-bottom: 4px solid #359fa3;
+}
+.falcon header {
+  border-bottom: 4px solid #b94f3c;
+}
+/*
+ * Main window */
+main {
+  /*
+     * Default container is the fluid width container */
+}
+main.container-fluid {
+  padding-right: 20px;
+  padding-left: 20px;
+  /*
+         * If we have a header and/or left nav, push this */
+}
+.with-header main.container-fluid {
+  padding-top: 55px;
+}
+.with-left main.container-fluid {
+  margin-left: 200px;
+}
+@media (max-width: 768px) {
+  .with-left main.container-fluid {
+    margin-left: 56px;
+  }
+}
+/*
+ * Sections */
+section {
+  /*
+     * Special (verbose) styles for the help button */
+}
+section.help {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  text-align: center;
+  width: 200px;
+  z-index: 1040;
+}
+section.help > .btn {
+  font-size: 15px;
+  padding: 5px 12px 4px;
+}
+section.help > .btn > .fa {
+  font-size: 13px;
+  padding-right: 7px;
+  top: 0;
+}
+section.help.off .btn,
+section.help.off .btn.no-hover:hover {
+  border-bottom-color: #cccccc;
+  color: #aaaaaa !important;
+}
+section.help.off .fa {
+  color: #aaaaaa;
+}
+/*
+ * Footer */
+footer {
+  border-top: 3px solid #dddddd;
+  font-size: 13px;
+  line-height: 1.8em;
+}
+.with-left footer {
+  border-top: 1px solid #dddddd;
+  color: #aaaaaa;
+  margin: 50px 20px 0 220px;
+  padding: 15px 0;
 }
 /*
  * Tables */
@@ -1804,7 +2067,6 @@ h5,
 h6 {
   font-family: Signika, "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
   font-weight: normal;
-  margin: 15px 0;
   padding: 0;
 }
 h1 {
@@ -1824,13 +2086,18 @@ h3 {
   margin: 25px 0 15px;
 }
 h4 {
+  color: #777777;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
+  margin: 25px 0 15px;
 }
 h5 {
   font-size: 17px;
+  margin: 20px 0 15px;
 }
 h6 {
   font-size: 15px;
+  margin: 20px 0 15px;
 }
 p {
   line-height: 1.53846154;
@@ -1894,7 +2161,7 @@ pre .com {
 }
 /* comment - gray */
 pre .typ {
-  color: #98fb98;
+  color: #99cc99;
 }
 /* type - lightgreen */
 pre .lit {
@@ -1946,4 +2213,76 @@ pre .dec {
 }
 .lineheight-1-8 {
   line-height: 1.8em;
+}
+/*
+ * Font colors */
+.color-blue {
+  color: #007db6;
+}
+.color-red {
+  color: #b94f3c;
+}
+.color-green {
+  color: #2ba02b;
+}
+.color-purple {
+  color: #ab51c4;
+}
+.color-yellow {
+  color: #d6a70e;
+}
+.color-orange {
+  color: #d1712d;
+}
+.color-teal {
+  color: #359fa3;
+}
+.color-gray {
+  color: #aaaaaa;
+}
+.color-darkgray {
+  color: #333333;
+}
+.color-seven {
+  color: #777777;
+}
+.color-five {
+  color: #555555;
+}
+.color-white {
+  color: #ffffff;
+}
+/*
+ * Font sizes */
+.xs-text {
+  font-size: 11px;
+}
+.sm-text {
+  font-size: 13px;
+}
+.md-text {
+  font-size: 15px;
+}
+.lg-text {
+  font-size: 17px;
+}
+.body-text {
+  font-size: 15px;
+}
+/*
+ * Other type styles */
+.bold-weight {
+  font-weight: bold;
+}
+.normal-weight {
+  font-weight: normal;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.italicize {
+  font-style: italic;
+}
+.nowrap {
+  white-space: nowrap;
 }
