@@ -63,6 +63,8 @@
   /*
      * Color buttons */
   /*
+     * States */
+  /*
      * Button sizes */
   /*
      * Disabled state: always light gray */
@@ -532,7 +534,7 @@
   border-radius: 4px 4px 5px 5px;
   /*
      * Background */
-  background-color: #282828;
+  background-color: #383838;
   border-bottom: 3px solid #111111;
   /* 
      * Hover and active states */
@@ -548,7 +550,7 @@
 .btn.black:active,
 .btn.black.active {
   color: #ffffff !important;
-  background-color: #1b1b1b;
+  background-color: #2b2b2b;
   border: none;
   border-bottom: 3px solid #000000;
 }
@@ -580,7 +582,7 @@
   border-color: #202020;
 }
 .btn.black.no-hover:hover {
-  background-color: #282828;
+  background-color: #383838;
   border-bottom: 3px solid #111111;
 }
 .btn.gray {
@@ -647,6 +649,76 @@
   background-color: #dddddd;
   border-bottom: 3px solid #a8a8a8;
 }
+.btn.medium-gray {
+  /* 
+     * Base styles */
+  color: #777777;
+  font-size: 17px;
+  /* 
+     * Mixins */
+  text-shadow: 0 1px 0 #999999;
+  -moz-border-radius: 4px 4px 5px 5px;
+  -webkit-border-radius: 4px 4px 5px 5px;
+  border-radius: 4px 4px 5px 5px;
+  /*
+     * Background */
+  background-color: #bbbbbb;
+  border-bottom: 3px solid #a8a8a8;
+  /* 
+     * Hover and active states */
+  /*
+     * Glow button for marketing site/login */
+  /*
+     * Dark background: overload hover/active so it shows well */
+  /*
+    * Prevent the hover */
+}
+.btn.medium-gray:hover,
+.btn.medium-gray:focus,
+.btn.medium-gray:active,
+.btn.medium-gray.active {
+  color: #777777 !important;
+  background-color: #aeaeae;
+  border: none;
+  border-bottom: 3px solid #949494;
+}
+.btn.medium-gray.glowing {
+  border: none;
+  padding: 6px 15px 7px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.btn.medium-gray.glowing:hover {
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
+}
+.btn.medium-gray.on-black {
+  border-bottom-color: #8f8f8f;
+}
+.black.btn.medium-gray.on-black {
+  border-bottom-color: #282828;
+}
+.btn.medium-gray.on-black:hover {
+  border-color: #828282;
+}
+.black.btn.medium-gray.on-black:hover {
+  border-color: #202020;
+}
+.btn.medium-gray.no-hover:hover {
+  background-color: #bbbbbb;
+  border-bottom: 3px solid #a8a8a8;
+}
+.btn:active {
+  border-bottom-width: 1px !important;
+  top: 2px;
+  margin-bottom: 2px;
+  position: relative;
+}
 .btn.small {
   border-width: 2px !important;
   font-size: 13px !important;
@@ -655,10 +727,22 @@
   -webkit-border-radius: 3px 3px 4px 4px;
   border-radius: 3px 3px 4px 4px;
 }
+.btn.small:active {
+  border-bottom-width: 1px !important;
+  top: 1px;
+  margin-bottom: 1px;
+  position: relative;
+}
 .btn.big {
   border-width: 4px !important;
   font-size: 20px !important;
   padding: 10px 18px 9px !important;
+}
+.btn.big:active {
+  border-bottom-width: 2px !important;
+  top: 2px;
+  margin-bottom: 2px;
+  position: relative;
 }
 .btn.huge {
   border-width: 5px !important;
@@ -667,6 +751,12 @@
   -moz-border-radius: 5px 5px 7px 7px;
   -webkit-border-radius: 5px 5px 7px 7px;
   border-radius: 5px 5px 7px 7px;
+}
+.btn.huge:active {
+  border-bottom-width: 2px !important;
+  top: 3px;
+  margin-bottom: 3px;
+  position: relative;
 }
 .btn.disabled,
 .btn[disabled],
@@ -1278,8 +1368,7 @@ a.teal-background:hover {
   background-color: #484848;
   font-size: 15px;
   text-shadow: 0 1px 0 #333333;
-  /*
-     * Dropdowns in the site <header> */
+  z-index: 1050;
 }
 .dropdown-menu .dropdown-header {
   padding: 5px 15px;
@@ -1312,9 +1401,6 @@ a.teal-background:hover {
   border-bottom: none;
   height: 2px;
   margin: 5px 0;
-}
-header .dropdown-menu {
-  background-color: #282828;
 }
 .dropdown-submenu {
   position: relative;
@@ -1550,7 +1636,11 @@ ul.three-column {
      * Shrink the nav bar when the page width is small */
 }
 .left-nav > .nav {
+  bottom: 104px;
   margin: 0;
+  position: absolute;
+  top: 0;
+  overflow-y: hidden;
   /*
          * The button links span the full width/height */
   /*
@@ -1597,17 +1687,18 @@ ul.three-column {
   border-color: #cccccc;
 }
 .with-left .left-nav {
+  border-top: 4px solid #777777;
   top: 52px;
   z-index: 1030;
 }
-.eagle.with-left .left-nav {
-  border-top: 4px solid #2a7e81;
-}
 .titan.with-left .left-nav {
-  border-top: 4px solid #006391;
+  border-top-color: #006391;
+}
+.eagle.with-left .left-nav {
+  border-top-color: #2a7e81;
 }
 .falcon.with-left .left-nav {
-  border-top: 4px solid #933e2f;
+  border-top-color: #933e2f;
 }
 @media (max-width: 768px) {
   .left-nav {
@@ -2124,10 +2215,10 @@ header .logo .logo-link {
   height: 54px;
 }
 .titan header {
-  border-bottom-color: #359fa3;
+  border-bottom-color: #007db6;
 }
 .eagle header {
-  border-bottom-color: #007db6;
+  border-bottom-color: #359fa3;
 }
 .falcon header {
   border-bottom-color: #b94f3c;
@@ -2142,7 +2233,7 @@ main.container-fluid {
   padding-right: 20px;
   padding-left: 20px;
   /*
-         * If we have a header and/or left nav, push this */
+         * If we have a header and/or left/right nav, push this */
 }
 .with-header main.container-fluid {
   padding-top: 55px;
@@ -2155,17 +2246,30 @@ main.container-fluid {
     margin-left: 56px;
   }
 }
+.with-drawer main.container-fluid {
+  margin-right: 30%;
+}
+@media (max-width: 768px) {
+  .with-drawer main.container-fluid {
+    margin-right: 44px;
+  }
+}
+.with-collapsed-drawer main.container-fluid {
+  margin-right: 44px;
+}
 /*
  * Sections */
 section {
   /*
      * Special (verbose) styles for the help button */
+  /*
+     * Drawer styles */
 }
 section.help {
-  position: fixed;
-  bottom: 20px;
+  bottom: 15px;
   left: 0;
   text-align: center;
+  position: fixed;
   width: 200px;
   z-index: 1040;
 }
@@ -2186,6 +2290,85 @@ section.help.off .btn.no-hover:hover {
 section.help.off .fa {
   color: #aaaaaa;
 }
+section.drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  background: #eee;
+  z-index: 1030;
+  display: none;
+  /*
+         * Components within drawer */
+}
+section.drawer h3 {
+  margin: 0px;
+  padding: 0px 15px;
+  height: 50px;
+  line-height: 50px;
+  background: #ddd;
+}
+section.drawer h3 .buttons {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  line-height: 46px;
+}
+section.drawer h3 .buttons a {
+  padding: 6px 9px;
+}
+section.drawer h3 .buttons .open-btn {
+  display: none;
+}
+section.drawer h3 .buttons .close-btn {
+  display: inline-block;
+}
+section.drawer .drawer-container {
+  position: absolute;
+  left: 15px;
+  right: 5px;
+  bottom: 10px;
+  top: 60px;
+}
+section.drawer .drawer-container .drawer-scroller {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.with-header section.drawer {
+  top: 52px;
+}
+.eagle.with-left section.drawer {
+  border-top: 4px solid #2a7e81;
+}
+.titan.with-left section.drawer {
+  border-top: 4px solid #006391;
+}
+.falcon.with-left section.drawer {
+  border-top: 4px solid #933e2f;
+}
+.with-drawer section.drawer {
+  display: block;
+}
+.with-collapsed-drawer section.drawer {
+  width: 44px;
+}
+.with-collapsed-drawer section.drawer .drawer-container {
+  display: none;
+}
+.with-collapsed-drawer section.drawer h3 span {
+  display: none;
+}
+.with-collapsed-drawer section.drawer h3 a {
+  display: none !important;
+}
+.with-collapsed-drawer section.drawer h3 .open-btn {
+  display: inline-block !important;
+}
 /*
  * Footer */
 footer {
@@ -2198,6 +2381,15 @@ footer {
   color: #aaaaaa;
   margin: 50px 20px 0 220px;
   padding: 15px 0;
+}
+.with-drawer footer {
+  right: 30%;
+  left: 200px;
+  margin: 50px 20px 0 20px;
+  position: absolute;
+}
+.with-collapsed-drawer footer {
+  right: 44px !important;
 }
 /*
  * Tables */
@@ -2548,6 +2740,12 @@ pre .dec {
   white-space: nowrap;
 }
 /*
+ * Transitions */
+.nav-transition {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+/*
  * iCheck input plug (blue square) */
 .icheck,
 .iradio {
@@ -2606,7 +2804,7 @@ pre .dec {
   }
 }
 .notifyjs-corner {
-  padding-top: 54px;
+  top: 54px !important;
 }
 .notifyjs-wrapper {
   margin: 0 0 5px !important;
@@ -2662,4 +2860,124 @@ a.notifyjs-flat-info:hover {
 }
 a.notifyjs-flat-warning:hover {
   background-color: #a65a23;
+}
+.ps-container {
+  /*
+     * X Rail */
+  /*
+     * X Scrollbar */
+  /*
+     * Y Rail */
+  /*
+     * Y Scrollbar */
+}
+.ps-container .ps-scrollbar-x-rail {
+  position: absolute;
+  /* please don't change 'position' */
+  bottom: 3px;
+  /* there must be 'bottom' for ps-scrollbar-x-rail */
+  height: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  /*filter: alpha(opacity = 0);*/
+  -o-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
+}
+.ps-container .ps-scrollbar-x-rail:hover,
+.ps-container .ps-scrollbar-x-rail.hover {
+  background-color: #eee;
+  opacity: 0.9;
+  /*filter: alpha(opacity = 90);*/
+}
+.ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x,
+.ps-container .ps-scrollbar-x-rail.hover .ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container .ps-scrollbar-x-rail.in-scrolling {
+  opacity: 0.9;
+  /*filter: alpha(opacity = 90);*/
+}
+.ps-container:hover .ps-scrollbar-x-rail,
+.ps-container.hover .ps-scrollbar-x-rail {
+  opacity: 0.6;
+  /*filter: alpha(opacity = 60);*/
+}
+.ps-container .ps-scrollbar-x {
+  position: absolute;
+  /* please don't change 'position' */
+  bottom: 0;
+  /* there must be 'bottom' for ps-scrollbar-x */
+  height: 10px;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -o-transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+.ps-container .ps-scrollbar-y-rail {
+  position: absolute;
+  /* please don't change 'position' */
+  right: 3px;
+  /* there must be 'right' for ps-scrollbar-y-rail */
+  width: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  /*filter: alpha(opacity = 0);*/
+  -o-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
+}
+.ps-container .ps-scrollbar-y-rail:hover,
+.ps-container .ps-scrollbar-y-rail.hover {
+  background-color: #eee;
+  opacity: 0.9;
+  /*filter: alpha(opacity = 90);*/
+}
+.ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y,
+.ps-container .ps-scrollbar-y-rail.hover .ps-scrollbar-y {
+  background-color: #999;
+}
+.ps-container .ps-scrollbar-y-rail.in-scrolling {
+  opacity: 0.9;
+  /*filter: alpha(opacity = 90);*/
+}
+.ps-container:hover .ps-scrollbar-y-rail,
+.ps-container.hover .ps-scrollbar-y-rail {
+  opacity: 0.6;
+  /*filter: alpha(opacity = 60);*/
+}
+.ps-container .ps-scrollbar-y {
+  position: absolute;
+  /* please don't change 'position' */
+  right: 0;
+  /* there must be 'right' for ps-scrollbar-y */
+  width: 10px;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -o-transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+.ps-container .ie .ps-scrollbar-x,
+.ps-container .ie .ps-scrollbar-y {
+  visibility: hidden;
+}
+.ps-container .ie:hover .ps-scrollbar-x,
+.ps-container .ie:hover .ps-scrollbar-y,
+.ps-container .ie.hover .ps-scrollbar-x,
+.ps-container .ie.hover .ps-scrollbar-y {
+  visibility: visible;
 }
