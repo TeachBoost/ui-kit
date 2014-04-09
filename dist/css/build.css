@@ -2297,6 +2297,7 @@ section.drawer {
   top: 0;
   bottom: 0;
   right: 0;
+  left: 70%;
   width: 30%;
   background: #eee;
   z-index: 1030;
@@ -2316,6 +2317,11 @@ section.drawer h3 .buttons {
   top: 0px;
   right: 8px;
   line-height: 46px;
+}
+.with-header section.drawer h3 .buttons {
+  position: fixed;
+  top: 56px;
+  right: 7px;
 }
 section.drawer h3 .buttons a {
   padding: 6px 9px;
@@ -2357,7 +2363,8 @@ section.drawer .drawer-container .drawer-scroller {
   display: block;
 }
 .with-collapsed-drawer section.drawer {
-  width: 44px;
+  margin-left: -44px;
+  left: 100%;
 }
 .with-collapsed-drawer section.drawer .drawer-container {
   display: none;
