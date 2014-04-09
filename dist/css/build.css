@@ -2347,6 +2347,9 @@ section.drawer .drawer-container .drawer-scroller {
   bottom: 0;
   top: 0;
 }
+section.drawer .drawer-container .drawer-scroller .drawer-content {
+  padding-right: 10px;
+}
 .with-header section.drawer {
   top: 52px;
 }
