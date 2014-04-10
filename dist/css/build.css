@@ -652,7 +652,7 @@
 .btn.medium-gray {
   /* 
      * Base styles */
-  color: #555555;
+  color: #333333;
   font-size: 17px;
   /* 
      * Mixins */
@@ -677,7 +677,7 @@
 .btn.medium-gray:focus,
 .btn.medium-gray:active,
 .btn.medium-gray.active {
-  color: #555555 !important;
+  color: #333333 !important;
   background-color: #aeaeae;
   border: none;
   border-bottom: 3px solid #949494;
