@@ -656,14 +656,14 @@
   font-size: 17px;
   /* 
      * Mixins */
-  text-shadow: 0 1px 0 #999999;
+  text-shadow: 0 1px 0 #bbbbbb;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
   /*
      * Background */
   background-color: #bbbbbb;
-  border-bottom: 3px solid #a8a8a8;
+  border-bottom: 3px solid #999999;
   /* 
      * Hover and active states */
   /*
@@ -680,7 +680,7 @@
   color: #333333 !important;
   background-color: #aeaeae;
   border: none;
-  border-bottom: 3px solid #949494;
+  border-bottom: 3px solid #858585;
 }
 .btn.medium-gray.glowing {
   border: none;
@@ -698,20 +698,20 @@
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
 }
 .btn.medium-gray.on-black {
-  border-bottom-color: #8f8f8f;
+  border-bottom-color: #808080;
 }
 .black.btn.medium-gray.on-black {
   border-bottom-color: #282828;
 }
 .btn.medium-gray.on-black:hover {
-  border-color: #828282;
+  border-color: #737373;
 }
 .black.btn.medium-gray.on-black:hover {
   border-color: #202020;
 }
 .btn.medium-gray.no-hover:hover {
   background-color: #bbbbbb;
-  border-bottom: 3px solid #a8a8a8;
+  border-bottom: 3px solid #999999;
 }
 .btn:active {
   border-bottom-width: 1px !important;
@@ -1644,6 +1644,8 @@ ul.three-column {
   right: 0;
   top: 0;
   /*
+         * Overwrite the base style */
+  /*
          * The button links span the full width/height */
   /*
          * Hover and active states controlled at <li> level */
@@ -1651,6 +1653,9 @@ ul.three-column {
          * Pad the top button more for aesthetics */
   /*
          * Style the search box */
+}
+.left-nav > .nav > li > a {
+  padding: 7px 15px 5px;
 }
 .left-nav > .nav .item {
   border-bottom: 1px solid #dddddd;
