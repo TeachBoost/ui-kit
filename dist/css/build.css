@@ -1390,7 +1390,7 @@ a.teal-background:hover {
 .dropdown-menu {
   border: none;
   background-color: #484848;
-  font-size: 15px;
+  font-size: 0.9333em;
   text-shadow: 0 1px 0 #333333;
   z-index: 1050;
 }
@@ -1784,6 +1784,76 @@ ul.three-column {
 }
 .top-nav .btn.black:hover {
   background: #3c3c3c;
+}
+/*
+ * Next Steps */
+.next-step {
+  border-left: 4px solid #007db6;
+  box-shadow: 0 1px 0 #d8d8d8;
+  line-height: 1.4em;
+  padding: 8px 0 7px 10px;
+  background-color: #f9f9f9;
+  list-style: none;
+  margin-bottom: 1px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  font-size: 0.9em;
+  position: relative;
+}
+.next-step a {
+  color: #333333;
+}
+.next-step i.checkbox {
+  font-size: 1.5384em;
+  float: left;
+  margin-right: 10px;
+  color: #666666;
+  position: relative;
+  top: 1px;
+}
+.next-step.complete {
+  border-left-color: #999999;
+}
+.next-step.complete i {
+  color: #dddddd;
+}
+.next-step.complete a {
+  color: #aaaaaa;
+}
+.next-step span.round {
+  background: #e8e8e8;
+  color: #777777;
+  display: inline-block;
+  font-size: 0.8667em;
+  line-height: 1.5em;
+  padding: 2px 6px;
+  white-space: nowrap;
+  -moz-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+}
+.next-step span.success {
+  display: inline-block;
+  background-color: #c0e5c0;
+  color: #2ba02b;
+}
+.next-step .controls {
+  position: absolute;
+  top: 9px;
+  right: 7px;
+}
+.next-step .controls i {
+  font-size: 1.3em;
+  color: #999999;
+  cursor: pointer;
+}
+.next-step .controls i.edit-next-step {
+  margin-right: 5px;
+}
+.next-step.w-controls .wrap {
+  display: inline-block;
+  padding-right: 65px;
 }
 /*
  * Directional padding, margins and positions */
@@ -2263,7 +2333,7 @@ header {
      * Each application is color branded ;) */
 }
 header .logo {
-  background: url('../img/brand/logo-app.png') 0 0 no-repeat;
+  background: url('../images/brand/logo-app.png') 0 0 no-repeat;
   height: 43px;
   margin: 8px 0 0 15px;
   text-indent: -10000px;
@@ -2280,7 +2350,7 @@ header .logo .logo-link {
   border-bottom-color: #359fa3;
 }
 .falcon header {
-  border-bottom-color: #b94f3c;
+  border-bottom-color: #007db6;
 }
 /*
  * Main window */
@@ -2852,7 +2922,7 @@ kbd {
  * iCheck input plug (blue square) */
 .icheck,
 .iradio {
-  background: url('../img/icheck/blue.png') no-repeat;
+  background: url('../images/icheck/blue.png') no-repeat;
   border: none;
   cursor: pointer;
   display: inline-block;
@@ -2901,7 +2971,7 @@ kbd {
 @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   .icheck,
   .iradio {
-    background-image: url('../img/icheck/blue@2x.png');
+    background-image: url('../images/icheck/blue@2x.png');
     -webkit-background-size: 240px 24px;
     background-size: 240px 24px;
   }
