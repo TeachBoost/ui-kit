@@ -1,6 +1,5 @@
 {
-    "name" : "tb-ui-kit",
-    "version" : "0.0.17",
-    "private" : true
+  "name": "tb-ui-kit",
+  "version": "0.0.16",
+  "private": true
 }
-
