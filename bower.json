@@ -1,6 +1,5 @@
 {
-    "name" : "TeachBoost UI Kit",
-    "version" : "0.0.15",
-    "private" : true
+  "name": "tb-ui-kit",
+  "version": "0.0.19",
+  "private": true
 }
-
