@@ -6,12 +6,12 @@
     "Andrew Gioia <andrew@teachboost.com>"
   ],
   "devDependencies": {
-    "gulp": "*",
-    "path": "*",
-    "gulp-less": "*",
     "less": "*",
+    "gulp": "*",
+    "gulp-less": "*",
     "gulp-exec": "*",
-    "gulp-concat": "*"
+    "gulp-concat": "*",
+    "gulp-rename": "*"
   },
   "repository": {
     "type": "git",

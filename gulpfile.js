@@ -2,8 +2,10 @@ var gulp = require( 'gulp' );
 var less = require( 'gulp-less' );
 var path = require( 'path' );
 var exec = require( 'gulp-exec' );
+var rename = require( 'gulp-rename' );
 var concat = require( 'gulp-concat' );
- 
+
+// Compile less files to a css file
 gulp.task( 'less', function () {
     return gulp
         .src( './src/less/build.less' )
@@ -15,6 +17,7 @@ gulp.task( 'less', function () {
             gulp.dest( './src/css/' ));
 });
 
+// Compile html partials to an index file
 gulp.task( 'html', function () {
     return gulp
         .src([
@@ -34,9 +37,23 @@ gulp.task( 'html', function () {
             gulp.dest( './' ));
 });
 
+// Watch html or less changes and recompile
 gulp.task( 'watch', [ 'html', 'less' ], function () {
     gulp.watch( './src/html/*.html', [ 'html' ] );
     gulp.watch( './src/less/*.less', [ 'less' ] );
 });
 
+// Copy built assets to dist folder
+gulp.task( 'dist', function () {
+    gulp.src( './src/images/**/*' )
+        .pipe(
+            gulp.dest( './dist/images/' ));
+    gulp.src( './src/css/build.css' )
+        .pipe(
+            rename( 'uikit.css' ))
+        .pipe(
+            gulp.dest( './dist/css/' ));
+});
+
+// Watch for changes by default
 gulp.task( 'default', [ 'watch' ] );
