@@ -5,7 +5,7 @@ var exec = require( 'gulp-exec' );
 var concat = require( 'gulp-concat' );
  
 gulp.task( 'less', function () {
-    gulp
+    return gulp
         .src( './src/less/build.less' )
         .pipe(
             less({
@@ -15,16 +15,8 @@ gulp.task( 'less', function () {
             gulp.dest( './src/css/' ));
 });
 
-gulp.task( 'default', function () {
-    gulp.run( 'less' );
-
-    gulp.watch( './src/less/*.less', function ( event ) {
-        gulp.run( 'less' );
-    });
-});
-
 gulp.task( 'html', function () {
-    gulp
+    return gulp
         .src([
             './src/html/header.html',
             './src/html/colors.html',
@@ -42,10 +34,9 @@ gulp.task( 'html', function () {
             gulp.dest( './' ));
 });
 
-gulp.task( 'watch-html', function () {
-    gulp.run( 'html' );
-
-    gulp.watch( './src/html/*.html', function ( event ) {
-        gulp.run( 'html' );
-    });
+gulp.task( 'watch', [ 'html', 'less' ], function () {
+    gulp.watch( './src/html/*.html', [ 'html' ] );
+    gulp.watch( './src/less/*.less', [ 'less' ] );
 });
+
+gulp.task( 'default', [ 'watch' ] );
