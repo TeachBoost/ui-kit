@@ -1,12 +1,12 @@
 {
-  "name" : "tb-ui-kit",
-  "private" : true,
-  "version": "0.0.20",
-  "dependencies" : {
-    "bootstrap" : "*",
-    "fontawesome" : "*",
-    "underscore" : "*",
-    "iCheck" : "*",
-    "notifyjs" : "*"
+  "name": "tb-ui-kit",
+  "private": true,
+  "version": "0.0.21",
+  "dependencies": {
+    "bootstrap": "*",
+    "fontawesome": "*",
+    "underscore": "*",
+    "iCheck": "*",
+    "notifyjs": "*"
   }
 }
