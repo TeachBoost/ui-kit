@@ -5,7 +5,6 @@
     "Mike Gioia <mike@teachboost.com>",
     "Andrew Gioia <andrew@teachboost.com>"
   ],
-  "dependencies": {},
   "devDependencies": {
     "gulp": "*",
     "path": "*",
@@ -14,7 +13,8 @@
     "gulp-exec": "*",
     "gulp-concat": "*"
   },
-  "scripts": {
-    "watch": "gulp"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeachBoost/ui-kit.git"
   }
 }
