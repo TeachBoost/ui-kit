@@ -1,0 +1,117 @@
+/*
+ * Fixed navigation */
+
+.left-nav {
+    bottom: 0;
+    background: @light-gray;
+    float: left; 
+    height: auto; 
+    position: fixed; 
+    top: 0;
+    width: 200px;
+    .text-shadow(0; 1px; 0; @white);
+
+    > .nav {
+        border-right: 1px solid @line-gray-lt;
+        bottom: 50px;
+        left: 0;
+        margin: 0;
+        overflow-y: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        /*
+         * Overwrite the base style */
+        > li {
+            > a {
+                padding: 7px 15px 5px;
+            }
+        }
+
+        /*
+         * The button links span the full width/height */
+        .item {
+            border-bottom: 1px solid @line-gray;
+            display: block;
+            font-size: 18px;
+            line-height: 48px;
+            padding: 0px 15px;
+
+            > .fa {
+                color: @castlerock;
+                font-size: 24px;
+                width: 29px;
+                padding-right:3px;
+            }
+        }
+
+        /*
+         * Hover and active states controlled at <li> level */
+        > .active .item,
+        > li:hover .item {
+            background: @line-gray-lt;
+            color: @dark-gray;
+        }
+
+        /*
+         * Pad the top button more for aesthetics */
+        > li:first-child .item {
+            // padding-top: 10px;
+        }
+
+        /*
+         * Style the search box */
+        .user-search {
+            border-bottom: 1px solid @line-gray-lt;
+            .form-control {
+                background-color: @light-gray;
+                border: none;
+                height: 40px;
+                padding: 10px 10px 10px 50px;
+                top: 0;
+                .border-radius(0);
+                &:focus {
+                    background-color: @white;
+                    border-color: @line-gray;
+                }
+            }
+        }
+    }
+
+    .with-left & {
+        border-top: 4px solid @seven-gray;
+        top: 52px; 
+        z-index: @zindex-navbar;
+
+        .titan& { border-top-color: @dark-blue; }
+        .eagle& { border-top-color: @dark-teal; }
+        .falcon& { border-top-color: @dark-red; }
+    }
+
+    /*
+     * Shrink the nav bar when the page width is small */
+    @media (max-width: @screen-sm) {
+        width: 56px;
+        li {
+            overflow: hidden;
+            white-space: nowrap;
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+.top-nav {
+    float: right;
+    margin: 10px 1em 0 0;
+
+    .btn {
+        font-size: 15px;
+        &.black {
+            background: #444;
+            &:hover { background: #3c3c3c; }
+        }
+    }
+}

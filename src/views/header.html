@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TeachBoost UI Kit</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--
+        CSS
+    -->
+    <!-- Global dependencies -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css" />
+    <!-- Documentation styles -->
+    <link rel="stylesheet" href="css/documentation.css" />
+    <!-- Build file -->
+    <link rel="stylesheet" href="css/build.css" />
+
+    <!--
+        Javascripts
+    -->
+    <!-- Global dependencies (not included in dist) -->
+    <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/underscore/underscore.js"></script>
+    <!-- Plugins -->
+    <script type="text/javascript" src="vendor/iCheck/icheck.min.js"></script>
+    <script type="text/javascript" src="vendor/notifyjs/dist/notify.min.js"></script>
+    <script type="text/javascript" src="vendor/perfect-scrollbar/min/perfect-scrollbar-0.4.9.with-mousewheel.min.js"></script>
+    <!-- Documentation scripts -->
+    <script type="text/javascript" src="js/documentation.js"></script>
+    <!-- Prettifier -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+
+<body class="with-left with-header with-drawer titan"
+      data-spy="scroll"
+      data-target=".left-nav"
+      data-offset="55">
+
+    <!-- Header -->
+    <header>
+        <div class="logo float-left">
+            <a href="index.html" class="logo-link position-absolute">TeachBoost</a>
+        </div>
+        <nav class="top-nav">
+            <a class="black btn on-black" href="javascript:;">Settings</a>
+            <a class="black btn on-black" href="javascript:;">Admin</a>
+            <a class="green btn on-black" href="javascript:;">Green</a>
+            <a class="red btn on-black" href="javascript:;">Red</a>
+            <menu class="btn-group">
+                <a class="first black btn on-black" href="javascript:;">Dashboard</a>
+                <a class="last black btn on-black dropdown-toggle" href="javascript:;" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li><a href="javascript:;">Classroom Walkthrough</a></li>
+                    <li><a href="javascript:;">Informal Observation</a></li>
+                    <li><a href="javascript:;">Checklist</a></li>
+                    <li class="divider"></li>
+                    <li><a href="javascript:;">Formal Observation</a></li>
+                </ul>
+            </menu>
+        </nav>
+    </header>
+
+    <!-- Left Navigation -->
+    <nav class="left-nav">
+        <ul class="nav">
+            <li class="active">
+                <a href="#colors" class="item colors">
+                    <i class="fa fa-fw fa-tint"></i> <span>Color &amp; Type</span>
+                </a>
+            </li>
+            <li>
+                <a href="#buttons" class="item buttons">
+                    <i class="fa fa-fw fa-power-off"></i> <span>Buttons</span>
+                </a>
+            </li>
+            <li>
+                <a href="#icons" class="item icons off">
+                    <i class="fa fa-fw fa-flag"></i> <span>Icons</span>
+                </a>
+            </li>
+            <li>
+                <a href="#position" class="item position off">
+                    <i class="fa fa-fw fa-map-marker"></i> <span>Positioning</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tables" class="item tables off">
+                    <i class="fa fa-fw fa-table"></i> <span>Tables</span>
+                </a>
+            </li>
+            <li>
+                <a href="#cards" class="item cards off">
+                    <i class="fa fa-fw fa-square"></i> <span>Info Cards</span>
+                </a>
+            </li>
+            <li>
+                <a href="#forms" class="item forms off">
+                    <i class="fa fa-fw fa-check-square-o"></i> <span>Form &amp; Inputs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#notifications" class="item cards off">
+                    <i class="fa fa-fw fa-bullhorn"></i> <span>Notifications</span>
+                </a>
+            </li>
+            <li>
+                <div class="user-search">
+                    <input type="text" class="form-control" placeholder="Find people..." />
+                    <i class="fa fa-search form-control-icon"></i>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Help Button -->
+    <section class="help off">
+        <a href="javascript:;" class="gray help btn no-hover">
+            <i class="fa fa-circle"></i>Help for this page
+        </a>
+    </section>
+
+    <!-- Style Documentation -->
+    <main class="container-fluid titan">
+
+        <h1 class="top-padding-5">
+            TeachBoost Application Style Guide
+        </h1>

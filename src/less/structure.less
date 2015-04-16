@@ -1,0 +1,288 @@
+/*
+ * Global */
+
+body {
+    width: auto;
+}
+
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ * Header */
+
+header {
+    background: @dark-gray;
+    border-bottom: 4px solid @gray;
+    color: @white;
+    height: 56px;
+    position: fixed;
+    width: 100%;
+    z-index: @zindex-header;
+
+    /*
+     * Branding */
+    .logo {
+        background: url( '../images/brand/logo-app.png' ) 0 0 no-repeat;
+        height: 43px;
+        margin: 8px 0 0 15px;
+        text-indent: -10000px;
+        width: 170px;
+
+        .logo-link {
+            width: 175px;
+            height: 54px;
+        }
+    }
+
+    /*
+     * Each application is color branded ;) */
+    .titan & { border-bottom-color: @blue; }
+    .eagle & { border-bottom-color: @teal; }
+    .falcon & { border-bottom-color: @blue; }
+}
+
+
+/*
+ * Main window */
+
+main {
+    /*
+     * Default container is the fluid width container */
+    &.container-fluid {
+        padding-right: 20px;
+        padding-left: 20px;
+
+        /*
+         * If we have a header and/or left/right nav, push this */
+        .with-header & { padding-top: 55px; }
+        .with-left & { 
+            margin-left: 200px;
+            @media (max-width: @screen-sm) {
+                margin-left: 56px;
+            }
+        }
+        .with-drawer & {
+            margin-right: 30%;
+            @media (max-width: @screen-sm) {
+                margin-right: 44px;
+            }
+        }
+        .with-collapsed-drawer & {
+            margin-right: 44px;
+        }
+    }
+}
+
+
+/*
+ * Sections */
+
+section {
+    /*
+     * Special (verbose) styles for the help button */
+    &.help {
+        border-right: 1px solid @medium-gray;
+        bottom: 0;
+        height: 50px;
+        left: 0;
+        text-align: center;
+        position: fixed;
+        width: 200px;
+        z-index: @zindex-fixed-nav;
+
+        > .btn {
+            font-size: 1em;
+            padding: 0.1em 12px 0;
+
+            > .fa {
+                font-size: 13px;
+                padding-right: 7px;
+                top: 0;
+            }
+        }
+
+        &.off {
+            .btn,
+            .btn.no-hover:hover {
+                border-bottom-color: @line-gray;
+                color: @gray !important;
+            }
+            .fa {
+                color: @gray;
+            }
+        }
+
+        &.on {
+            .fa {
+                color: @soft-green;
+            }
+        }
+    }
+
+    /*
+     * Drawer styles */
+    &.drawer {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 70%;
+        width: 30%;
+        background: #eee;
+        z-index: @zindex-navbar;
+        display: none;
+
+        /*
+         * Components within drawer */
+        h3 {
+            margin: 0px;
+            padding: 0px 15px;
+            height: 50px;
+            line-height: 50px;
+            background: #ddd;
+
+            .buttons {
+                position: absolute;
+                top: 0px;
+                right: 8px;
+                line-height: 46px;
+
+                .with-header & {
+                    position: fixed;
+                    top: 56px;
+                    right: 7px;
+                }
+
+                a {
+                    padding: 0 9px;
+                    line-height: 32px;
+
+                    .fa {
+                        top: 1px;
+                    }
+                }
+                .open-btn {
+                    display: none;
+                }
+                .close-btn {
+                    display: inline-block;
+                }
+            }
+        }
+        .drawer-container {
+            position: absolute;
+            left: 15px;
+            right: 5px;
+            bottom: 10px;
+            top: 60px;
+
+            .drawer-scroller {
+                overflow: hidden;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+
+                .drawer-content {
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        .with-header & { top: 52px; }
+        .with-left & {
+            .eagle& {
+                border-top: 4px solid @dark-teal;
+            }
+            .titan& {
+                border-top: 4px solid @dark-blue;
+            }
+            .falcon& {
+                border-top: 4px solid @dark-red;
+            }
+        }
+        .with-drawer & {
+            display: block;
+        }
+        .with-collapsed-drawer & {
+            margin-left: -44px;
+            left: 100%;
+
+            .drawer-container {
+                display: none;
+            }
+            h3 {
+                span {
+                    display: none;
+                }
+                a {
+                    display: none !important;
+                }
+                .open-btn {
+                    display: inline-block !important;
+                }
+            }
+        }
+    }
+
+    /*
+     * Actions menu */
+    &.actions {
+        position: fixed;
+        top: 56px;
+        left: 200px;
+        right: 0;
+        padding: 0.625em 1em;
+        background: @five-lt-gray;
+        border-bottom: 1px solid @line-gray;
+
+        .btn {
+            font-size: 1em;
+            padding: 0 1em;
+            height: 2.25em;
+            line-height: 2.25em;
+
+            &:active {
+                margin-bottom: 2px;
+                height: 34px;
+            }
+        }
+    }
+}
+
+
+/*
+ * Footer */
+
+footer {
+    border-top: 3px solid @line-gray-lt;
+    font-size: 13px;
+    line-height: 1.8em;
+
+    .with-left & {
+        border-top: 1px solid @line-gray-lt;
+        color: @gray;
+        margin: 50px 20px 0 220px;
+        padding: 15px 0;
+    }
+    .with-drawer & {
+        right: 30%;
+        left: 200px;
+        margin: 50px 20px 0 20px;
+        position: absolute;
+    }
+    .with-collapsed-drawer & {
+        right: 44px !important;
+    }
+}

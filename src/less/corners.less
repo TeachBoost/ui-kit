@@ -1,0 +1,104 @@
+/*
+ * Rounded corners */
+
+.round {
+
+    /*
+     * Default .round will be a 2px all radius */
+    .border-radius();
+
+    /*
+     * All corners */
+    &-3 { .border-radius(3px); }
+    &-4 { .border-radius(4px); }
+    &-5 { .border-radius(5px); }
+
+    /*
+     * Top corners */
+    &-top {
+        .border-radius-top();
+        &-3 { .border-radius-top(3px 3px); }
+        &-4 { .border-radius-top(4px 4px); }
+        &-5 { .border-radius-top(5px 5px); }
+
+        /* Top left */
+        &-left {
+            .border-radius-topleft();
+            &-3 { .border-radius-topleft(3px); }
+            &-4 { .border-radius-topleft(4px); }
+            &-5 { .border-radius-topleft(5px); }
+        }
+
+        /* Top Right */
+        &-right {
+            .border-radius-topright();
+            &-3 { .border-radius-topright(3px); }
+            &-4 { .border-radius-topright(4px); }
+            &-5 { .border-radius-topright(5px); }
+        }
+    }
+
+    /*
+     * Top corners */
+    &-right {
+        .border-radius-topright();
+        .border-radius-bottomright();
+        &-3 { 
+            .border-radius-topright(3px);
+            .border-radius-bottomright(3px);
+        }
+        &-4 { 
+            .border-radius-topright(4px);
+            .border-radius-bottomright(4px);
+        }
+        &-5 { 
+            .border-radius-topright(5px);
+            .border-radius-bottomright(5px);
+        }
+    }
+
+    /*
+     * Bottom corners */
+    &-bottom {
+
+        .border-radius-bottom();
+        &-3 { .border-radius-bottom(3px 3px); }
+        &-4 { .border-radius-bottom(4px 4px); }
+        &-5 { .border-radius-bottom(5px 5px); }
+
+        /* Bottom left */
+        &-left {
+            .border-radius-bottomleft();
+            &-3 { .border-radius-bottomleft(3px); }
+            &-4 { .border-radius-bottomleft(4px); }
+            &-5 { .border-radius-bottomleft(5px); }
+        }
+
+        /* Top Right */
+        &-right {
+            .border-radius-bottomright();
+            &-3 { .border-radius-bottomright(3px); }
+            &-4 { .border-radius-bottomright(4px); }
+            &-5 { .border-radius-bottomright(5px); }
+        }
+    }
+
+    /*
+     * Top corners */
+    &-left {
+        .border-radius-topleft();
+        .border-radius-bottomleft();
+        &-3 { 
+            .border-radius-topleft(3px);
+            .border-radius-bottomleft(3px);
+        }
+        &-4 { 
+            .border-radius-topleft(4px);
+            .border-radius-bottomleft(4px);
+        }
+        &-5 { 
+            .border-radius-topleft(5px);
+            .border-radius-bottomleft(5px);
+        }
+    }
+}

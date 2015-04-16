@@ -1,0 +1,106 @@
+/*
+ * Tables */
+
+.table {
+
+    /* 
+     * Change the cells' borders */
+    > thead > tr > td, 
+    > tbody > tr > td, 
+    > tfoot > tr > td {
+        border-top: 1px solid @line-gray;
+    }
+
+    /*
+     * Headers */
+    > thead > tr > th {
+        background: @ash;
+        border-bottom: 3px solid @castlerock;
+        color: @white;
+        font-weight: normal;
+        padding: 8px 8px 6px;
+        .text-shadow(0; 1px; 0; @black);
+
+        /*
+         * Round the top left and top right corners */
+        &:first-child {
+            .border-radius-topleft(3px);
+        }
+        &:last-child {
+            .border-radius-topright(3px);
+        }
+    }
+
+    /*
+     * Filter row in the <thead> */
+    > thead > tr.filters td {
+        background: @light-gray;
+        border-bottom: 3px solid @line-gray;
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    /*
+     * Round the bottom left and bottom right cell corners */
+    > tbody > tr:last-child {
+        > td:first-child {
+            .border-radius-bottomleft(3px);
+        }
+        > td:last-child {
+            .border-radius-bottomright(3px);
+        }
+    }
+
+    /* 
+     * Striped tables */
+    &.table-striped {
+        /*
+         * Add a 1px bottom bump */
+        > thead > tr > td, 
+        > tbody > tr > td, 
+        > tfoot > tr > td {
+            border-bottom: 1px solid @white;
+        }
+
+        /*
+         * Darken the on cells' background */
+        > tbody > tr:nth-child(odd) > td, 
+        > tbody > tr:nth-child(odd) > th {
+            background-color: @light-gray;
+        }
+    }
+
+    /*
+     * Hover rows */
+    &.table-hover {
+        /*
+         * Make the hover color light blue and apply it to every row */
+        > tbody > tr:hover td {
+            background-color: @light-blue;
+        }
+    }
+
+    /*
+     * Contextual classes */
+    > tbody > tr > td.active, 
+    > tbody > tr.active > td {
+        background-color: @light-gray;
+    }
+    > tbody > tr > td.info, 
+    > tbody > tr.info > td {
+        background-color: @light-blue;
+    }
+    > tbody > tr > td.success, 
+    > tbody > tr.success > td {
+        background-color: @light-teal;
+    }
+    > tbody > tr > td.warning, 
+    > tbody > tr.warning > td {
+        background-color: @light-yellow;
+    }
+    > tbody > tr > td.danger, 
+    > tbody > tr.danger > td {
+        background-color: @light-red;
+    }
+
+}

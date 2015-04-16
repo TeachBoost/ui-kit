@@ -1,0 +1,20 @@
+{
+  "name": "ui-kit",
+  "description": "TeachBoost UI Kit",
+  "contributors": [
+    "Mike Gioia <mike@teachboost.com>",
+    "Andrew Gioia <andrew@teachboost.com>"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+    "path": "*",
+    "gulp-less": "*",
+    "less": "*",
+    "gulp-exec": "*",
+    "gulp-concat": "*"
+  },
+  "scripts": {
+    "watch": "gulp"
+  }
+}

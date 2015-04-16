@@ -1,0 +1,168 @@
+/*
+ * Typography */
+
+.text-shadow (@h: 0; @v: 1px; @blur: 0; @color: @white) {
+    text-shadow: @arguments;
+}
+
+
+/*
+ * Corners */
+
+.border-radius (@radius: 2px) {
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.border-radius-top (@l: 2px; @r: 2px) {
+    -webkit-border-top-left-radius: @l;
+    -webkit-border-top-right-radius: @r;
+    -moz-border-radius-topleft: @l;
+    -moz-border-radius-topright: @r;
+    border-top-left-radius: @l;
+    border-top-right-radius: @r;
+}
+
+.border-radius-topleft (@x: 2px) {
+    -webkit-border-top-left-radius: @x !important;
+    -moz-border-radius-topleft: @x !important;
+    border-top-left-radius: @x !important;
+}
+
+.border-radius-topright (@x: 2px) {
+    -webkit-border-top-right-radius: @x !important;
+    -moz-border-radius-topright: @x !important;
+    border-top-right-radius: @x !important;
+}
+
+.border-radius-bottom(@l: 2px; @r: 2px) {
+    -webkit-border-bottom-right-radius: @r;
+    -webkit-border-bottom-left-radius: @l;
+    -moz-border-radius-bottomright: @r;
+    -moz-border-radius-bottomleft: @l;
+    border-bottom-right-radius: @r;
+    border-bottom-left-radius: @l;
+}
+
+.border-radius-bottomright(@x: 2px) {
+    -webkit-border-bottom-right-radius: @x !important;
+    -moz-border-radius-bottomright: @x !important;
+    border-bottom-right-radius: @x !important;
+}
+
+.border-radius-bottomleft(@x: 2px) {
+    -webkit-border-bottom-left-radius: @x !important;
+    -moz-border-radius-bottomleft: @x !important;
+    border-bottom-left-radius: @x !important;
+}
+
+
+/* 
+ * Box shadows */
+.box-shadow (@x: 0; @y: 1px; @blur: 0; @spread: 0; @color: @light-gray) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.box-shadow-inset (@inset: inset; @x: 0; @y: 1px; @blur: 0; @spread: 0; @color: @light-gray) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+/* To pass in more than 1 box shadow, call .box-shadow-list() and comma-
+ * delineate a list like this: .box-shadow-list(str, str, str;); */
+.box-shadow-list (@arguments) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+
+/*
+ * Buttons */
+
+.make-button(@background-color: @gray; 
+             @text-color: @white;
+             @border-color: @dark-gray; 
+             @shadow-color: @light-gray; 
+             @textshadow-color: @dark-gray; 
+             @textshadow-vertical: 1px; 
+             @font-size: 17px) {
+    /* 
+     * Base styles */
+    color: @text-color;
+    font-size: @font-size;
+
+    /* 
+     * Mixins */
+    .text-shadow(0, @textshadow-vertical, 0, @textshadow-color);  
+    .border-radius(4px 4px 5px 5px);
+
+    /*
+     * Background */
+    background-color: @background-color;
+    border-bottom: 3px solid @border-color;
+
+    /* 
+     * Hover and active states */
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: @text-color !important;
+        background-color: darken(@background-color, 5%);
+        border: none;
+        border-bottom: 3px solid darken(@border-color, 8%);
+        outline: none;
+    }
+
+    /*
+     * Glow button for marketing site/login */
+    &.glowing {
+        border: none;
+        padding: 6px 15px 7px;
+        .border-radius(3px);
+        .box-shadow-list(0 0 0 4px rgba( 0, 0, 0, 0.2 ););
+        &:hover {
+            .box-shadow-list(0 0 0 4px rgba( 0, 0, 0, 0.3 ););
+        }
+    }
+
+    /*
+     * Dark background: overload hover/active so it shows well */
+    &.on-black {
+        border-bottom-color: darken(@border-color, 10%);
+        .black& { border-bottom-color: #282828; }
+        &:hover {
+            border-color: darken(@border-color, 15%);
+            .black& { border-color: #202020; }
+        }
+    }
+
+    /*
+    * Prevent the hover */
+    &.no-hover:hover {
+        background-color: @background-color;
+        border-bottom: 3px solid @border-color;
+    }
+}
+
+
+/*
+ * Layout */
+
+/* Include .clearfix for regular clearfixes; call this mixin on elements 
+   so you don't have to include .clearfix a million times */
+.clearfix () {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

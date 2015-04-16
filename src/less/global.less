@@ -1,0 +1,112 @@
+/*
+ * Colors */
+
+@blue:          #007db6;
+@dark-blue:     #006391;
+@hover-blue:    #00577f;
+@light-blue:    lighten(@blue, 58%);
+
+@red:           #b94f3c;
+@dark-red:      #933e2f;
+@hover-red:     #813729;
+@light-red:     lighten(@red, 45%);
+
+@green:         #2ba02b;
+@muted-green:   #c0e5c0;
+@soft-green:    #4da74d;
+@dark-green:    #227f22;
+@darker-green:  #0f520f;
+@hover-green:   #1e6f1e;
+@light-green:   lighten(@green, 50%);
+
+@purple:        #ab51c4;
+@dark-purple:   #88409c;
+@hover-purple:  #773889;
+@light-purple:  lighten(@purple, 52%);
+
+@yellow:        #d6a70e;
+@dark-yellow:   #aa850b;
+@light-yellow:  lighten(@yellow, 48%);
+
+@orange:        #d1712d;
+@dark-orange:   #a65a23;
+@hover-orange:  #924f1f;
+@light-orange:  lighten(@orange, 48%);
+
+@teal:          #359fa3;
+@dark-teal:     #2a7e81;
+@hover-teal:    #256f71;
+@light-teal:    lighten(@teal, 50%);
+
+@garnet:        #af362b;
+@beryl:         #8c2b22;
+@gray:          #aaa;
+
+@dark-castle:   #282828;
+@castlerock:    #383838;
+@ash:           #484848;
+@wormwood:      #787878;
+@heart:         #a8a8a8;
+@shale:         #d8d8d8;
+@aspen-dark:    #e8e8e8;
+@aspen:         #f8f8f8;
+@light-gray:    #eee;
+@line-gray-lt:  #ddd;
+@line-gray:     #ccc;
+@medium-gray:   #bbb;
+@neutral-gray:  #aaa;
+@nine-lt-gray:  #f9f9f9;
+@white-gray:    #f7f7f7;
+@five-lt-gray:  #f5f5f5;
+@nine-gray:     #999;
+@seven-gray:    #777;
+@six-gray:      #666;
+@five-gray:     #555;
+@dark-gray:     #333;
+@darker-gray:   #111;
+@white:         #fff;
+@black:         #000;
+
+
+/*
+ * Typography */
+
+@font-family-sans: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", 
+    Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif: Signika, "Trebuchet MS", Tahoma, Verdana, Arial, 
+    Helvetica, sans-serif;
+@font-family-base: @font-family-sans;
+
+@font-base-color: @dark-gray;
+
+@font-size-base: 16px;
+@font-size-xsmall: 0.75em;
+@font-size-small: 0.875em;
+@font-size-medium: 1em;
+@font-size-large: 1.125em;
+
+@line-height-base: 1.53846153846; // 20/14
+@line-height-computed: floor(@font-size-base * @line-height-base); // ~20px
+
+@text-color-base: @dark-gray;
+@text-color-off: @gray;
+
+@link-color: @blue;
+@link-hover-color: @dark-gray;
+
+
+/*
+ * Position */
+
+@zindex-header: 1010;
+@zindex-navbar: 1030;
+@zindex-fixed-nav: 1040;
+@zindex-dropdown: 1050;
+
+
+/*
+ * Size */
+@screen-xs: 480px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;

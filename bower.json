@@ -1,5 +1,13 @@
 {
-  "name": "tb-ui-kit",
-  "version": "0.0.20",
-  "private": true
+    "name" : "Centaur",
+    "private" : true,
+    "dependencies" : {
+        "bootstrap" : "*",
+        "fontawesome" : "*",
+        "underscore" : "*",
+        "iCheck" : "*",
+        "notifyjs" : "*",
+        "perfect-scrollbar" : "*",
+        "jquery-mousewheel" : "*"
+    }
 }

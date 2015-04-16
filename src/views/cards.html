@@ -1,0 +1,155 @@
+        <!-- Info Cards -->
+        <section class="topic page-section" id="cards">
+            <a name="cards" class="section"></a>
+            <h2>Information Cards</h2>
+            <p class="body">
+                Color cards present quick, high-level data to users on their Dashboard and 
+                profile pages. These come in a number of colors and should typically contain 
+                a number/statistic; the Dashboard version doesn't contain an icon 
+                and is larger, the profile version is tighter and always contains an icon.
+                They may be clickable and provide a link below them to click through to more 
+                details or a fuller page with tabular data, charts, and the like.
+            </p>
+            <p class="body">
+                Cards can and should float left in a horizontal line from each other (they 
+                carry a default <code>display: inline-block;</code> so make sure to override 
+                this with a different display if necessary. Their markup uses the 
+                <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements.
+            </p>
+            <h3>Big Cards</h3>
+            <p class="body">
+                Big cards show either one number or figure, or a large icon. Their caption 
+                id displayed in a dark overlay at the top of the card and generally always 
+                links to a table or breakdown of the data they represent. These cards are only 
+                displayed on the Dashboard currently.
+            </p>
+            <div class="top-padding-15 bottom-padding-15">
+                <figure class="big teal card">
+                    <figcaption class="caption">
+                        Total
+                    </figcaption>
+                    <span class="value">
+                        37k
+                    </span>
+                </figure>
+                <figure class="big blue card">
+                    <figcaption class="caption">
+                        Complete
+                    </figcaption>
+                    <a href="javascript:;" class="value">
+                        2453
+                    </a>
+                </figure>
+                <figure class="big card">
+                    <figcaption class="caption">
+                        In-Progress
+                    </figcaption>
+                    <a href="javascript:;" class="value">
+                        28
+                    </a>
+                </figure>
+            </div>
+            <p class="body">
+                To create a big card use a <code>&lt;figure&gt;</code> with classes 
+                <code>.big .card</code>. Place the card's caption inside of 
+                <code>&lt;figcaption&gt;</code> with class <code>.caption</code> and place 
+                the card's value inside either a link or span (if it's not clickable) with 
+                class <code>.value</code>. These cards carry an 18% width so that five fit 
+                nicely on one line. Add a color class to color it, otherwise they will 
+                display in Ash.
+            </p>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Big Dashboard cards --&gt;
+&lt;figure class=&quot;big teal card&quot;&gt;
+    &lt;figcaption class=&quot;caption&quot;&gt;
+        Total
+    &lt;/figcaption&gt;
+    &lt;span class=&quot;value&quot;&gt;
+        37k
+    &lt;/span&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;big blue card&quot;&gt;
+    &lt;figcaption class=&quot;caption&quot;&gt;
+        Complete
+    &lt;/figcaption&gt;
+    &lt;a href=&quot;javascript:;&quot; class=&quot;value&quot;&gt;
+        2453
+    &lt;/a&gt;
+&lt;/figure&gt;
+...</code></pre>
+            <h3 class="top-margin-20">Little Cards</h3>
+            <p class="body">
+                Little cards are used on Profile pages and carry a value/figure and a 
+                representational icon to the left. These cards may also be either static 
+                (use a <code>&lt;span&gt;</code>) or clickable with a link. A caption 
+                is optional and if included will appear below the card. Note that for links, 
+                the caption text automatically adds in the &rarr; to the right&mdash;no 
+                need to manually add that little guy!
+            </p>
+            <div class="top-padding-15 bottom-padding-15">
+                <figure class="blue icon card">
+                    <span class="value">
+                        <i class="fa fa-users"></i>
+                        123
+                    </span>
+                </figure>
+                <figure class="green icon card">
+                    <span class="value">
+                        <i class="fa fa-trophy"></i>
+                        45
+                    </span>
+                    <figcaption class="caption">
+                        Span with text
+                    </figcaption>
+                </figure>
+                <figure class="purple icon card">
+                    <a href="javascript:;" class="value">
+                        <i class="fa fa-eye"></i>
+                        1.7
+                    </a>
+                </figure>
+                <figure class="red icon card">
+                    <a href="javascript:;" class="value">
+                        <i class="fa fa-book"></i>
+                        110
+                    </a>
+                    <figcaption class="caption">
+                        <a href="javascript:;">Link with text</a>
+                    </figcaption>
+                </figure>
+            </div>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Static card with no caption --&gt;
+&lt;figure class=&quot;blue icon card&quot;&gt;
+    &lt;span class=&quot;value&quot;&gt;
+        &lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; 123
+    &lt;/span&gt;
+&lt;/figure&gt;
+
+&lt;!-- Static card with a caption --&gt;
+&lt;figure class=&quot;green icon card&quot;&gt;
+    &lt;span class=&quot;value&quot;&gt;
+        &lt;i class=&quot;fa fa-trophy&quot;&gt;&lt;/i&gt; 45
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;caption&quot;&gt;
+        Span with text
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Clickable card with no caption (discouraged) --&gt;
+&lt;figure class=&quot;purple icon card&quot;&gt;
+    &lt;a href=&quot;javascript:;&quot; class=&quot;value&quot;&gt;
+        &lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt; 1.7
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;!-- Clickable card with a caption --&gt;
+&lt;figure class=&quot;red icon card&quot;&gt;
+    &lt;a href=&quot;javascript:;&quot; class=&quot;value&quot;&gt;
+        &lt;i class=&quot;fa fa-book&quot;&gt;&lt;/i&gt; 110
+    &lt;/a&gt;
+    &lt;figcaption class=&quot;caption&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot;&gt;Link with text&lt;/a&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        </section>

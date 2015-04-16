@@ -1,0 +1,256 @@
+/*
+ * Color buttons 
+ * function .make-button (
+ *      background color: gray, 
+ *      text color: white, 
+ *      border color: dark-gray, 
+ *      box-shadow color: light-gray, 
+ *      text-shadow color: dark-gray, 
+ *      vertical text-shadow offset: 1, 
+ *      font-size: 15) */
+.btn {
+    /*
+     * Global styles, so just calling .btn works ok */
+    background: @gray;
+    border: none;
+    border-bottom: 3px solid @seven-gray;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+
+    font-family: @font-family-sans;
+    font-size: 1.1333em;
+    line-height: 2em;
+    padding: 0.1em 1em 0;
+
+    /*
+     * Color buttons */
+    &.blue {
+        .make-button(@blue, @white, @dark-blue, @light-gray, @dark-gray);
+    }
+    &.red {
+        .make-button(@red, @white, @dark-red, @light-gray, @dark-gray);
+    }
+    &.green {
+        .make-button(@green, @white, @dark-green, @light-gray, @dark-gray);
+    }
+    &.purple {
+        .make-button(@purple, @white, @dark-purple, @light-gray, @dark-gray);
+    }
+    &.yellow {
+        .make-button(@yellow, @white, @dark-yellow, @light-gray, @dark-yellow);
+    }
+    &.orange {
+        .make-button(@orange, @white, @dark-orange, @light-gray, @dark-gray);
+    }
+    &.teal {
+        .make-button(@teal, @white, @dark-teal, @light-gray, @dark-gray);
+    }
+    &.black {
+        .make-button(@castlerock, @white, @darker-gray, @light-gray, @black);
+    }
+    &.gray {
+        .make-button(#ddd, @dark-gray, @heart, @light-gray, @white-gray);
+    }
+    &.medium-gray {
+        .make-button(@medium-gray, @dark-gray, @nine-gray, @light-gray, @medium-gray);
+    }
+
+    /*
+     * States */
+    &:active {
+        border-bottom-width: 1px !important;
+        top: 2px;
+        margin-bottom: 2px;
+        position: relative;
+    }
+
+    /*
+     * Button sizes */
+    &.small {
+        border-width: 2px !important;
+        font-size: 0.8667em !important;
+        line-height: 1.8em;
+        padding: 0 0.6em !important;
+        .border-radius(3px 3px 4px 4px);
+
+        &:active {
+            border-bottom-width: 1px !important;
+            top: 1px;
+            margin-bottom: 1px;
+            position: relative;
+        }
+
+        .fa {
+            font-size: 0.9em;
+            top: 0;
+        }
+    }
+    &.big {
+        border-width: 4px !important;
+        font-size: 20px !important;
+        padding: 0 18px !important;
+
+        &:active {
+            border-bottom-width: 2px !important;
+            top: 2px;
+            margin-bottom: 2px;
+            position: relative;
+        }
+    }
+    &.huge {
+        border-width: 5px !important;
+        font-size: 24px !important;
+        padding: 0 18px !important;
+        .border-radius(5px 5px 7px 7px);
+
+        &:active {
+            border-bottom-width: 2px !important;
+            top: 3px;
+            margin-bottom: 3px;
+            position: relative;
+        }
+    }
+
+    /*
+     * Disabled state: always light gray */
+    &.disabled,
+    &[disabled] {
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: #eee !important;
+            border-color: #dadada !important;
+            color: #bbb !important;
+            cursor: not-allowed !important;
+            opacity: 1;
+            pointer-events: auto; /* this conflicts with the cursor */
+            filter: none;
+            .text-shadow(0, 1px, 0, #fff);
+        }
+    }
+
+    /*
+     * Icon buttons */
+    .fa {
+        position: relative;
+        top: 0;
+    }
+
+    /* 
+     * Buttons with icons and text need padding */
+    &:not(.icon) .fa {
+        padding-right: 10px;
+    }
+
+}
+
+
+/*
+ * Button groups */
+
+.btn-group {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+    /*
+     * style the.button buttons */
+    > .btn {
+        position: relative;
+        float: left;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            z-index: 2;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+    /*
+     * middle buttons: remove border radii and add left border */
+    > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
+    > .btn:not(.first):not(.last):not(.dropdown-toggle) {
+        border-left: 1px solid rgba(0,0,0,.2);
+        .border-radius(0);
+    }
+
+    /* 
+     * prevent double borders when.btns are next to each other */
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        margin-left: 0;
+    }
+
+    /*
+     * first button: set corners and handle when there's only one button */
+    > .btn:first-child,
+    > .btn.first {
+        margin-left: 0;
+        &:not(:last-child):not(.dropdown-toggle),
+        &:not(.last):not(.dropdown-toggle) {
+            .border-radius-topright(0);
+            .border-radius-bottomright(0);
+        }
+    }
+
+    /*
+     * last button: set corners and add left border */
+    > .btn:last-child:not(:first-child),
+    > .btn.last:not(.first),
+    > .dropdown-toggle:not(:first-child),
+    > .dropdown-toggle:not(.first) {
+        border-left: 1px solid rgba(0,0,0,.2);
+        .border-radius-topleft(0);
+        .border-radius-bottomleft(0);
+    }
+
+    /*
+     * pad the dropdown toggle a bit more than default (8px) */
+    .dropdown-toggle {
+        padding-right: 10px !important;
+        padding-left: 9px !important;
+    }
+
+    /*
+     * Switch toggle */
+    &.switch-toggle {
+        > .btn {
+            color: @white;
+            width: 50px;
+            .text-shadow(0; 1px; 0; @dark-gray);
+            &:hover {
+                color: @white;
+            }
+            > .fa {
+                font-size: 17px;
+            }
+        }
+        > .btn.active {
+            background: @green;
+            border-bottom-color: @dark-green;
+        }
+        > .btn.off {
+            background: @gray;
+            border-left: none;
+            border-right: none;
+            border-bottom-color: @seven-gray;
+            text-indent: -9999px;
+        }
+        > .btn.inactive {
+            text-indent: -10000px;
+        }
+        > .btn.turn-off.active {
+            background: @red;
+            border-bottom-color: @dark-red;
+        }
+    }
+}

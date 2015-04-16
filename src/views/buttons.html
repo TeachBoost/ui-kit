@@ -1,0 +1,340 @@
+<!-- Buttons -->
+        <section class="topic page-section" id="buttons">
+            <a name="buttons" class="section"></a>
+            <h2>Buttons</h2>
+            <p class="body">
+                We use buttons for all application functions that do more than merely open 
+                a new page or window (for those we use regular links). Buttons shall be used 
+                sparingly and shall always maintain their color:function identity.
+            </p>
+            <p class="top-margin-25">
+                <a class="gray btn" href="javascript:;">Default</a>
+                <a class="blue btn" href="javascript:;">Primary</a>
+                <a class="green btn" href="javascript:;">Success</a>
+                <a class="teal btn" href="javascript:;">Information</a>
+                <a class="yellow btn" href="javascript:;">Print</a>
+                <a class="orange btn" href="javascript:;">Warning</a>
+                <a class="red btn right-margin-5" href="javascript:;">Danger!</a>
+                <a href="javascript:;">Regular link</a>
+            </p>
+            <pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Standard button, used for background or minor actions --&gt;
+&lt;a class="gray btn"&gt;Default&lt;/a&gt;
+
+&lt;!-- Default for submitting forms, initiating actions, and opening modals --&gt;
+&lt;a class="blue btn"&gt;Primary&lt;/a&gt;
+
+&lt;!-- Adding or editing information via a form --&gt;
+&lt;a class="green btn"&gt;Success&lt;/a&gt;
+
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;a class="teal btn"&gt;Information&lt;/a&gt;
+
+&lt;!-- Used only for printing --&gt;
+&lt;a class="yellow btn"&gt;Print&lt;/a&gt;
+
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;a class="orange btn"&gt;Warning&lt;/a&gt;
+
+&lt;!-- Indicates a dangerous action (e.g., deleting information) --&gt;
+&lt;a class="red btn"&gt;Danger!&lt;/a&gt;</code></pre>
+            <h3 class="top-margin-15">Button Sizes</h3>
+            <p class="body">
+                In addition to the default buttons above we have 3 other sizes for various 
+                functions and levels of awareness. Small should only be used for filtering 
+                and low-use functions; Big and Huge should rarely, if ever, be used in the 
+                application.
+            </p>
+            <p>
+                <a class="small gray btn" href="javascript:;">Small Gray Filter</a>
+            </p>
+            <p>
+                <a class="blue btn" href="javascript:;">Normal Button</a>
+            </p>
+            <p>
+                <a class="big green btn" href="javascript:;">Big Green Submit</a>
+            </p>
+            <p>
+                <a class="huge red btn" href="javascript:;">Huge Alert Button</a>
+            </p>
+            <pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Small buttons are usually gray and to filter forms --&gt;
+&lt;a class="small gray btn"&gt;Small Gray Filter&lt;/a&gt;
+
+&lt;!-- Big buttons submit important forms usually on their own page --&gt;
+&lt;a class="big green btn"&gt;Big Green Submit&lt;/a&gt;
+
+&lt;!-- Huge buttons are reserved for critical functions and are always red --&gt;
+&lt;a class="huge red btn"&gt;Huge Alert Button&lt;/a&gt;</code></pre>
+            <h3 class="top-margin-15">Using Icons with Buttons</h3>
+            <p class="body">
+                When placing an icon inside of a button there are no additional classes or 
+                changes to make other than adding the icon itself. They always appear to the 
+                left of the button text and are always the same color as the text. By default
+                there is a 10px right pad on the icon's <code>&lt;i&gt;</code> element; 
+                because of this there should be no space between the icon and the text.
+            </p>
+            <p>
+                <a class="blue btn" href="javascript:;">
+                    <i class="fa fa-download"></i>Start a New Observation
+                </a>
+            </p>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;a class="blue btn" href="javascript:;"&gt;
+    &lt;i class="fa fa-download"&gt;&lt;/i&gt;Start a New Observation
+&lt;/a&gt;</code></pre>
+            <p class="body no-top-margin">
+                For the full set of icons review <a href="http://fontawesome.io/icons/">Font 
+                Awesome's icon page</a>. Our current version is 4.0.3. Use your best 
+                judgement when selecting a new icon and stick to our <a href="#icons">icons 
+                list</a> for existing functions and consistency.
+            </p>
+            <h3>Limited Edition Black Buttons</h3>
+            <p class="body">
+                Black buttons are only used on a dark background in our header navigation. 
+                They were formerly used for the "Delete Form" button but this has been 
+                deprecated. They are created with <code>class="black button"</code>.
+            </p>
+            <p>
+                <a class="black btn" href="javascript:;">Header Navigation</a>
+            </p>
+            <h3 class="top-margin-35">Buttons on Dark Backgrounds</h3>
+            <p>
+                Each colored button comes with a version for use on dark backgrounds. The 
+                borders and hover states are adjusted for readability on any background that is 
+                darker than <code>#666</code>. They are created by adding the <code>.on-black</code> 
+                class.
+            </p>
+            <blockquote class="codeblock">
+                <a class="teal btn on-black" href="javascript:;">Button on a Dark Background</a>
+            </blockquote>
+            <div class="clear"></div>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;a class="teal btn on-black"&gt;Button on a Dark Background&lt;/a&gt;</code></pre>
+            <h3 class="top-margin-15">Glowing Buttons</h3>
+            <p class="body">
+                The "glowing" button state adds a semi-translucent border to the button and is 
+                used primarily in the marketing site and to log in. They are created by adding the 
+                <code>.glowing</code> class to the button class stack and work for all colors. These 
+                look better on colored backgrounds.
+            </p>
+            <blockquote class="blue-background">
+                <a class="glowing green btn" href="javascript:;"><i class="fa fa-lock"></i>Log in to TeachBoost</a>
+            </blockquote>
+            <div class="clear"></div>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;a class="glowing green btn"&gt;&lt;i class="fa fa-lock"&gt;&lt;/i&gt;Log in to TeachBoost&lt;/a&gt;</code></pre>
+            <h3 class="top-margin-15">Disabled Buttons</h3>
+            <p class="body">
+                To visually signify that a button cannot be clicked or activated simply add the 
+                <code>.disabled</code> class to to the class stack. 
+            </p>
+            <p>
+                <a class="disabled gray btn" href="javascript:;">Upload a Document</a>
+            </p>
+            <h3 class="top-margin-35">Segment Buttons</h3>
+            <p class="body">
+                Use segmented buttons to toggle between various states or to contextually attach 
+                related functions together. It is preferable that one button in a segment always 
+                have the "on" state.
+            </p>
+            <p>
+                <menu class="btn-group">
+                    <a class="first blue btn active" href="javascript:;">First</a>
+                    <a class="blue btn" href="javascript:;">Second</a>
+                    <a class="last blue btn" href="javascript:;">Last</a>
+                </menu>
+            </p>
+            <p>
+                <menu class="btn-group">
+                    <a class="first green icon btn" href="javascript:;">
+                        <i class="fa fa-align-left"></i>
+                    </a>
+                    <a class="green icon btn active" href="javascript:;">
+                        <i class="fa fa-align-center"></i>
+                    </a>
+                    <a class="green icon btn" href="javascript:;">
+                        <i class="fa fa-align-right"></i>
+                    </a>
+                    <a class="last green icon btn" href="javascript:;">
+                        <i class="fa fa-align-justify"></i>
+                    </a>
+                </menu>
+            </p>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Blue segmented buttons with text only --&gt;
+&lt;menu class="btn-group"&gt;
+    &lt;a class="first blue btn active" href="javascript:;"&gt;First&lt;/a&gt;
+    &lt;a class="blue btn" href="javascript:;"&gt;Second&lt;/a&gt;
+    &lt;a class="last blue btn" href="javascript:;"&gt;Last&lt;/a&gt;
+&lt;/menu&gt;
+
+&lt;!-- Green segmented buttons with icons--&gt;
+&lt;menu class="btn-group"&gt;
+    &lt;a class="first green icon btn" href="javascript:;"&gt;
+        &lt;i class="fa fa-align-left">&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a class="green icon btn active" href="javascript:;"&gt;
+        &lt;i class="fa fa-align-center">&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a class="green icon btn" href="javascript:;"&gt;
+        &lt;i class="fa fa-align-right">&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a class="last green icon btn" href="javascript:;"&gt;
+        &lt;i class="fa fa-align-justify">&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/menu&gt;</code></pre>
+            <p class="body no-top-margin">
+                As you can see segment buttons are created with the <code>&lt;menu&gt;</code> 
+                element and class <code>.btn-group</code>. Each button in the group 
+                is created like a regular button. When only an icon is present you 
+                must add the class <code>.icon</code>. Use the class <code>.active</code> 
+                when manually setting an active button.
+            </p>
+            <p class="body">
+                <strong>Note:</strong> the <code>.first</code> and <code>.last</code> 
+                classes are fallbacks for the preferred <code>:first-child</code> and 
+                <code>:last-child</code> pseudo-selectors. They are only required if 
+                IE8 support is mandatory and these pseudo-selectors are supported by 
+                every modern browser and IE9+.
+            </p>
+            <h3>Button Dropdowns</h3>
+            <p class="body">
+                A dropdown menu is a toggleable context menu to display a vertical list of links. 
+                These will typically pop-up from a segmented button with a dropdown caret and provide 
+                a great way to reduce a menu system's size and clutter. If you have a series of related 
+                items or links that fall under one category or heading these are a good option.
+            </p>
+            <div class="dropdown clearfix bottom-margin-25">
+                <ul class="dropdown-menu" role="menu" style="display:block; position:relative;">
+                    <li><a href="javascript:;">Classroom Walkthrough</a></li>
+                    <li><a href="javascript:;">Informal Observation</a></li>
+                    <li class="divider"></li>
+                    <li><a href="javascript:;">Formal Observation</a></li>
+                </ul>
+            </div>
+            <p class="body">
+                You can attach a dropdown menu and caret to a button with the segment 
+                button classes above. The button that opens the dropdown menu needs class 
+                <code>.dropdown-toggle</code>, a <code>data-toggle</code> attribute with 
+                value "dropdown", and a <code>&lt;span&gt;</code> inside with class 
+                <code>.caret</code>.
+            </p>
+            <p class="body bottom-margin-25">
+                The menus are hidden by default and are built from a <code>&lt;ul&gt;</code> 
+                with class <code>.dropdown-menu</code>. The menu must be nested inside of a 
+                block-level element with <code>position: relative;</code>; this can be done 
+                by wrapping the trigger and menu in <code>&lt;div class="dropdown"&gt;</code> 
+                but the <code>menu.button-group</code> also works by default if you're using 
+                that to open it.
+            </p>
+            <p>
+                <menu class="btn-group">
+                    <a class="first teal btn" href="javascript:;">
+                        Start a New Observation
+                    </a>
+                    <a class="last teal btn dropdown-toggle" href="javascript:;" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Classroom Walkthrough</a></li>
+                        <li><a href="#">Informal Observation</a></li>
+                        <li><a href="#">Checklist</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Formal Observation</a></li>
+                    </ul>
+                </menu>
+            </p>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Create a segmented button with a dropdown caret --&gt;
+&lt;menu class="btn-group"&gt;
+    &lt;a class="first teal btn" href="javascript:;"&gt;Start a New Observation&lt;/a&gt;
+    &lt;a class="last teal btn dropdown-toggle" href="javascript:;" data-toggle="dropdown"&gt;
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu" role="menu">
+        &lt;li&gt;&lt;a href="javascript:;">Classroom Walkthrough&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;">Informal Observation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;">Checklist&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;">Formal Observation&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/menu&gt;</code></pre>
+            <p class="body top-margin-10">
+                You can add headers to sections inside the menu by using <code>li.dropdown-header</code> 
+                before the menu items. <code>li.divider</code> provides a 2px white divider line and 
+                <code>.disabled</code> on the link will visually signify it "off."
+            </p>
+            <p class="body bottom-margin-25">
+                The dropdown menu by default positions itself to align with the left of its 
+                parent; add the class <code>.dropdown-menu-right</code> to the 
+                <code>&lt;ul&gt;</code> to align the dropdown to the right side of its parent. 
+                The following shows every option with code:
+            </p>
+            <div class="dropdown clearfix bottom-margin-15">
+                <ul class="dropdown-menu" role="menu" style="display:block; position:relative;">
+                    <li class="dropdown-header">Informals</li>
+                    <li><a href="javascript:;">Classroom Walkthrough</a></li>
+                    <li><a href="javascript:;">Informal Observation</a></li>
+                    <li class="disabled"><a href="javascript:;">Bulletin Board Checklist</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Formals</li>
+                    <li><a href="javascript:;">Formal Observation</a></li>
+                </ul>
+            </div>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Create a dropdown menu and trigger button --&gt;
+&lt;div class="dropdown"&gt;
+    &lt;menu class="button-group"&gt;
+        &lt;a class="first teal button" href="javascript:;"&gt;Start a New Observation&lt;/a&gt;
+        &lt;a class="last teal button dropdown-toggle" href="javascript:;" data-toggle="dropdown"&gt;
+            &lt;span class="caret"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class="dropdown-menu dropdown-menu-left" role="menu">
+            &lt;li class="dropdown-header"&gt;Informals&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascript:;">Classroom Walkthrough&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascript:;">Informal Observation&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="disabled"&gt;&lt;a href="#">Bulletin Board Checklist&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li class="dropdown-header"&gt;Formals&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascript:;">Formal Observation&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/menu&gt;
+&lt;/div&gt;</code></pre>
+            <p class="body no-top-margin">
+                Bootstrap supports submenus but we will never implement a dual-layer menu 
+                system in dropdown form in the app. Keep all dropdown menus to one level!
+            </p>
+            <h3>Switch Toggles</h3>
+            <p class="body">
+                Toggles visually represent an "on" state among two available states. Use 
+                switch toggles when you want to allow a user to switch only between two 
+                application states, such as different "modes" on a tool or different datasets 
+                for a chart. They can accept values of On/Off or icons.
+            </p>
+            <p>
+                <menu class="btn-group switch-toggle">
+                    <a class="first btn active" href="javascript:;">On</a>
+                    <a class="last btn off" href="javascript:;">Off</a>
+                </menu>
+            </p>
+            <p>
+                <menu class="btn-group switch-toggle">
+                    <a class="first btn off" href="javascript:;"><i class="fa fa-font"></i></a>
+                    <a class="last btn active" href="javascript:;"><i class="fa fa-table"></i></a>
+                </menu>
+            </p>
+            <p class="body">
+                To create a switch toggle, set it up like a button group but add the class 
+                <code>.switch-toggle</code> to the <code>&lt;menu&gt;</code> element. Do not 
+                use any color classes on the buttons, just <code>.active</code> for the active 
+                state and <code>.off</code> for every inactive button in the switch.
+            </p>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Toggle switch with icons --&gt;
+&lt;menu class="btn-group switch-toggle"&gt;
+    &lt;a class="first btn off" href="javascript:;"&gt;&lt;i class="fa fa-font"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="last btn active" href="javascript:;"&gt;&lt;i class="fa fa-table"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/menu&gt;
+</code></pre>
+        </section>

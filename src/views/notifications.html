@@ -1,0 +1,93 @@
+        <!-- Notifications -->
+        <section class="topic page-section" id="notifications">
+            <a name="buttons" class="section"></a>
+            <h2>Notifications</h2>
+            <p class="body">
+                Click the buttons to see how to show a notification. A global variable has been
+                hooked into this documentation, but any API could wrap the notifyjs library we use.
+            </p>
+            <p class="body">
+                Below is the preferred implementation for extending the notifyjs library:
+            </p>
+<pre class="codeblock">
+<code class="html prettyprint">// set up notifyjs
+$.notify.addStyle( 'flat', {
+    html:
+        '&lt;div&gt;' +
+            '&lt;div class="icon" data-notify-html="icon"/&gt;' +
+            '&lt;div class="text-wrapper sans-font"&gt;' +
+                '&lt;div class="md-text text" data-notify-text="text"/&gt;' +
+            '&lt;/div&gt;' +
+        '&lt;/div&gt;',
+    classes: {}
+});
+
+// extend with our options
+$.notify.defaults({
+    // whether to hide the notification on click
+    clickToHide: true,
+    // whether to auto-hide the notification
+    autoHide: true,
+    // if autoHide, hide after milliseconds
+    autoHideDelay: 10000,
+    // show the arrow pointing at the element
+    arrowShow: false,
+    // arrow size in pixels
+    arrowSize: 5,
+    // default positions
+    elementPosition: 'bottom left',
+    globalPosition: 'top right',
+    // default style
+    style: 'flat',
+    // default class (string or [string])
+    className: 'error',
+    // show animation
+    showAnimation: 'fadeIn',
+    // show animation duration
+    showDuration: 400,
+    // hide animation
+    hideAnimation: 'fadeOut',
+    // hide animation duration
+    hideDuration: 200,
+    // padding between element and notification
+    gap: 2
+});
+
+// sample implementation
+var $ = require( 'jquery' );
+require( 'notifyjs' );
+
+var Notify = {
+    success: function ( message ) {
+        $.notify({
+            text: message,
+            icon: '&lt;i class="fa fa-check" style="top:-2px;"&gt;&lt;/i&gt;'
+        }, 'success' );
+    },
+    error: function ( message ) {
+        $.notify({
+            text: message,
+            icon: '&lt;i class="fa fa-times-circle"&gt;&lt;/i&gt;'
+        }, 'error' );
+    },
+    info: function ( message ) {
+        $.notify({
+            text: message,
+            icon: '&lt;i class="fa fa-info-circle"&gt;&lt;/i&gt;'
+        }, 'info' );
+    },
+    warning: function ( message ) {
+        $.notify({
+            text: message,
+            icon: '&lt;i class="fa fa-warning"&gt;&lt;/i&gt;'
+        }, 'warning' );
+    }
+};
+</code></pre>
+            <p class="top-margin-25">
+                <a class="blue btn" href="javascript:;" onclick="notify.info( 'This is an info notification' );">Info Notification</a>
+                <a class="green btn" href="javascript:;" onclick="notify.success( 'This is a success notification with a lot more text so that it wraps to the next line.' );">Success</a>
+                <a class="orange btn" href="javascript:;" onclick="notify.warning( 'This is a warning notification' );">Warning</a>
+                <a class="red btn" href="javascript:;" onclick="notify.error( 'This is an error notification' );">Error Notification</a>
+            </p>
+        </section>

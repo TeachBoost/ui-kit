@@ -1,0 +1,73 @@
+/*
+ * Next Steps */
+
+.next-step {
+    border-left: 4px solid @blue;
+    box-shadow: 0 1px 0 @shale;
+    line-height: 1.4em;
+    padding: 8px 0 7px 10px;
+    background-color: @nine-lt-gray;
+    list-style: none;
+    margin-bottom: 1px;
+    .border-radius(3px 3px 3px 3px);
+    font-size: 0.9em;
+    position: relative;
+
+    a {
+        color: @dark-gray;
+    }
+    i.checkbox {
+        font-size: 1.5384em;
+        float: left;
+        margin-right: 10px;
+        color: @six-gray;
+        position: relative;
+        top: 1px;
+    }
+    &.complete {
+        border-left-color: @nine-gray;
+        
+        i {
+            color: @line-gray-lt;
+        }
+        a {
+            color: @neutral-gray;
+        }
+    }
+    span.round {
+        background: @aspen-dark;
+        color: @seven-gray;
+        display: inline-block;
+        font-size: 0.8667em;
+        line-height: 1.5em;
+        padding: 2px 6px;
+        white-space: nowrap;
+        .border-radius(2px 2px 2px 2px);
+    }
+    span.success {
+        display: inline-block;
+        background-color: @muted-green;
+        color: @green;
+    }
+    .controls {
+        position: absolute;
+        top: 9px;
+        right: 7px;
+
+        i {
+            font-size: 1.3em;
+            color: @nine-gray;
+            cursor: pointer;
+
+            &.edit-next-step {
+                margin-right: 5px;
+            }
+        }
+    }
+    &.w-controls {
+        .wrap {
+            display: inline-block;
+            padding-right: 65px;
+        }
+    }
+}

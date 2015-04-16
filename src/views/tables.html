@@ -1,0 +1,362 @@
+        <!-- Tables -->
+        <section class="example page-section" id="tables">
+            <a name="tables" class="section"></a>
+            <h2>Tables</h2>
+            <p class="body">
+                The table component is used to display large amounts of data or 
+                statistics, lists of users and forms, and anything else that's best 
+                displayed by columns and rows. Despite what your 1998 gut is telling you, 
+                do not use tables to frame out a page or to position elements&mdash;although 
+                much easier to position things this way it's not semantically correct and 
+                we hold ourselves to the highest of semantic standards. We're not animals.
+            </p>
+            <h3>Basic Tables</h3>
+            <p class="body">
+                To create the basic TeachBoost table simply add the class <code>.table</code> 
+                to a <code>&lt;table&gt;</code> element&mdash;so simple! Always include  
+                <code>&lt;thead&gt;</code> around table headers and 
+                <code>&lt;tbody&gt;</code> around the table's data cells. Here's a basic 
+                table with it's markup, note that rows have a 1px lightgray border between 
+                them:
+            </p>
+            <table class="table top-margin-25">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>School</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jerry Campbell</td>
+                        <td>jcampbell@schools.tb.com</td>
+                        <td>Starfleet Academy</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Reese Black</td>
+                        <td>jrblack@schools.tb.com</td>
+                        <td>Rydell High School</td>
+                        <td>Teacher</td>
+                    </tr>
+                </tbody>
+            </table>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Basic table with only one row --&gt;
+&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Email&lt;/th&gt;
+            &lt;th&gt;School&lt;/th&gt;
+            &lt;th&gt;Role&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Jerry Campbell&lt;/td&gt;
+            &lt;td&gt;jcampbell@schools.tb.com&lt;/td&gt;
+            &lt;td&gt;Starfleet Academy&lt;/td&gt;
+            &lt;td&gt;Admin&lt;/td&gt;
+        &lt;/tr&gt;
+        ...
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            <h3 class="top-margin-20">Column Filters and Sorting</h3>
+            <p class="body">
+                Often in complex or long forms it makes sense to provide column filters and 
+                sorts. Filters sit below the column header and can be either a text input or 
+                dropdown menu. When a column is sortable there will be a clickable caret icon 
+                to the right of the header indicating which direction that column is sorted.
+            </p>
+            <table class="table filterable sortable top-margin-25 bottom-margin-25">
+                <thead>
+                    <tr>
+                        <th>Teacher <span class="caret column-sort"></span></th>
+                        <th>Observation Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr class="filters">
+                        <td></td>
+                        <td>
+                            <select class="column-filter form-control input-sm" 
+                                    placeholder="Observation Type">
+                                <option value="-1"></option>
+                                <option value="1">Classroom Walkthrough</option>
+                                <option value="2">Informal Observation</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" 
+                                   class="column-filter date form-control input-sm" 
+                                   placeholder="Date" />
+                        </td>
+                        <td>
+                            <input type="text" 
+                                   class="column-filter form-control input-sm" 
+                                   placeholder="Status" />
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Reese Black</td>
+                        <td>Classroom Walkthrough</td>
+                        <td>March 12</td>
+                        <td>In-Progress</td>
+                    </tr>
+                    <tr>
+                        <td>Jackie Pillow</td>
+                        <td>Informal Observation</td>
+                        <td>March 10</td>
+                        <td>Complete</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="body">
+                <strong>Column sorts</strong> can be added simply by dropping in a 
+                <code>&lt;span&gt;</code> with a class <code>.column-sort</code>. This 
+                will automatically wire up the javascript sorting on that column. 
+            </p>
+            <p class="body">
+                <strong>Column filters</strong> are added as a second optional 
+                <code>&lt;tr&gt;</code> within the <code>&lt;thead&gt;</code> and require 
+                the class <code>.filters</code>. You can add either text inputs or select 
+                menus in the cells of this row. For inputs use the class 
+                <code>.column-filter</code> and a secondary contextual class depending on 
+                the type of data it filters: <code>.date</code>, <code>.status</code>, 
+                or <code>.name</code>.
+            </p>
+            <p class="body">
+                For select menus you also must apply the class <code>.column-filter</code>. 
+                There are no secondary classes for these menus. The first 
+                <code>&lt;option&gt;</code> in the menu must have a value of "-1" and 
+                should have no text.
+            </p>
+            <div class="alert alert-info top-margin-25">
+                <strong>Note:</strong> placeholders should be used for all column filter 
+                inputs and should generally be the same as the column's header. For instance, 
+                for a "Name" column use <code>placeholder="Name"</code> in the 
+                <code>&lt;input&gt;</code> and for a form's status use 
+                <code>placeholder="Status"</code>. Use these for both text inputs and 
+                select menus.
+            </div>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Table with a filter row and column sorts --&gt;
+&lt;table class=&quot;table filterable sortable&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Teacher &lt;span class=&quot;caret column-sort&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Observation&lt;/th&gt;
+            &lt;th&gt;Date&lt;/th&gt;
+            &lt;th&gt;Status&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;filters&quot;&gt;
+            &lt;td&gt;&lt;!-- no filter --&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;select class=&quot;column-filter&quot;&gt;
+                    &lt;option value=&quot;-1&quot;&gt;&lt;/option&gt;
+                    &lt;option value=&quot;1&quot;&gt;Classroom Walkthrough&lt;/option&gt;
+                    &lt;option value=&quot;2&quot;&gt;Informal Observation&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;input type=&quot;text&quot; class=&quot;column-filter date&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;input type=&quot;text&quot; class=&quot;column-filter status&quot; /&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        ...
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            <h3>Zebra Tables</h3>
+            <p class="body">
+                Our true default tables should have zebra-striped rows (alternating white 
+                and gray table rows). To create this append the class <code>.table-striped</code>
+                in the <code>&lt;table&gt;</code> element. Rarely should you ever exclude 
+                this class as the stripes make a much more readable table&mdash;when in doubt 
+                stripe the table.
+            </p>
+            <table class="table table-striped top-margin-25">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>School</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jerry Campbell</td>
+                        <td>jcampbell@schools.tb.com</td>
+                        <td>Starfleet Academy</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Reese Black</td>
+                        <td>jrblack@schools.tb.com</td>
+                        <td>Rydell High School</td>
+                        <td>Teacher</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fuller Bean</td>
+                        <td>fbeank@schools.tb.com</td>
+                        <td>Bayside High School</td>
+                        <td>Teacher</td>
+                    </tr>
+                </tbody>
+            </table>
+<pre class="codeblock">
+<code class="html prettyprint">&lt;!-- Stripe this table --&gt;
+&lt;table class="table table-striped"&gt;
+    ...
+&lt;/table&gt;</code></pre>
+            <h3 class="top-margin-20">Condensed Rows</h3>
+            <p class="body">
+                When you need to tighten the table up a bit you can condense the row 
+                padding by appending the class <code>.table-condensed</code> to the 
+                <code>&lt;table&gt;</code> element. This cuts the table cell padding 
+                in half to 4px.
+            </p>
+            <h3>Hover Rows</h3>
+            <p class="body">
+                For a more visual way to indicate at which row the user is looking you can 
+                highlight the active row by appending the class <code>.table-hover</code> to 
+                the <code>&lt;table&gt;</code> element. This turns on a hover state to 
+                every row inside of a <code>&lt;tbody&gt;</code> and is great when you are 
+                presenting a lot of data, complex data, long rows, or many (condensed) rows 
+                that might be hard to read otherwise.
+            </p>
+            <table class="table table-striped table-hover top-margin-25 bottom-margin-25">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>School</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jerry Campbell</td>
+                        <td>jcampbell@schools.tb.com</td>
+                        <td>Starfleet Academy</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Reese Black</td>
+                        <td>jrblack@schools.tb.com</td>
+                        <td>Rydell High School</td>
+                        <td>Teacher</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fuller Bean</td>
+                        <td>fbean@schools.tb.com</td>
+                        <td>Bayside High School</td>
+                        <td>Teacher</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="body">
+                This works on regular tables and striped tables and will always apply a 
+                lightblue hover color. Because of this, beware of the effect if you apply 
+                an indicator color to a table row (displayed below). Blue rows will not 
+                highlight, for instance.
+            </p>
+            <h3>Contextual Indicators</h3>
+            <p class="body">
+                When building a table you can apply contextual classes to either the entire 
+                row in the <code>&lt;tr&gt;</code> or to specific cells in their 
+                <code>&lt;td&gt;</code> tag. These classes can be used to indicate a successful 
+                or positive action (<code>.success</code>), neutral info (<code>.info</code>), 
+                a mild warning (<code>.warning</code>), or an alert (<code>.danger</code>). 
+                These work in a striped table and with hover rows.
+            </p>
+            <table class="table top-margin-25 bottom-margin-25">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>School</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jerry Campbell</td>
+                        <td>jcampbell@schools.tb.com</td>
+                        <td>Starfleet Academy</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr class="success">
+                        <td>2</td>
+                        <td>Reese Black</td>
+                        <td>jrblack@schools.tb.com</td>
+                        <td>Rydell High School</td>
+                        <td>Teacher</td>
+                    </tr>
+                    <tr class="info">
+                        <td>3</td>
+                        <td>Fuller Bean</td>
+                        <td>fbean@schools.tb.com</td>
+                        <td>Bayside High School</td>
+                        <td>Teacher</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Jenny Flowers</td>
+                        <td>jflowers@schools.tb.com</td>
+                        <td>Valley High School</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr class="warning">
+                        <td>5</td>
+                        <td>Mason Stone</td>
+                        <td>mstone@schools.tb.com</td>
+                        <td>Mahnsignor Bahner</td>
+                        <td>Teacher</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mark Johnstone</td>
+                        <td>mjohnstone@schools.tb.com</td>
+                        <td>Starfleet Academy</td>
+                        <td>Teacher</td>
+                    </tr>
+                    <tr class="danger">
+                        <td>7</td>
+                        <td>Melinda Willens</td>
+                        <td>mwilliams@schools.tb.com</td>
+                        <td>Rydell High School</td>
+                        <td>Teacher</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="body">
+                Add the class <code>.active</code> to a row or to a specific cell to apply a 
+                light gray background color. Use this to create the most neutral indicator or 
+                to merely call a row or cell out without applying any other context or meaning.
+            </p>
+        </section>

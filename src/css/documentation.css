@@ -1,0 +1,63 @@
+/*
+ * Example sections */
+
+.section {
+    display: block;
+    padding-top: 1px;
+}
+.topic {
+    margin-bottom: 20px;
+}
+
+
+/* 
+ * Lists */
+
+.half-list {
+    position: relative;
+    width: 45%;
+}
+
+.half-list strong {
+    line-height: 1.8em;
+}
+
+
+/*
+ * Color Swatches */
+
+.color-swatches .swatches {
+    background-color: #fff;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.color-swatches .light {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    height: 60px;
+    width: 75%;
+}
+.color-swatches .dark {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    height: 60px;
+    width: 25%;
+}
+.color-swatches .infos {
+    padding: 7px 8px 5px;
+}
+.color-swatches .infos h4,
+.color-swatches .infos p {
+    margin: 0;
+}
+.color-swatches .infos h4 {
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.color-swatches .infos p {
+    font-size: 12px;
+}

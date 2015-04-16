@@ -1,0 +1,149 @@
+/*
+ * Form components */
+
+.control-label {
+    color: @ash;
+    margin-bottom: 8px;         // padding this a bit more
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-color: @gray;
+    color: @dark-gray;
+    font-size: 1em;
+    height: 34px;
+    padding: 6px 10px;
+    position: relative;         // this is for inputs that are inline 
+    top: 1px;                   // with a button, so they line up well
+    .box-shadow-list(none);
+
+    /*
+     * Size overrides */
+
+    &.input-lg {
+        font-size: 18px;
+        height: 48px;
+        padding: 10px;
+    }
+    &.input-sm {
+        font-size: 13px;
+        height: 26px;
+        padding: 3px 6px;
+    }
+
+    /* 
+     * Disabled inputs (adding a specific class) */
+
+    &[disabled],
+    &.disabled {
+        background-color: @light-gray;
+        color: @gray;
+        cursor: not-allowed;
+        opacity: 1;
+    }
+
+    /*
+     * Focus overrides (no box shadows) */
+    &:focus {
+        background-color: @white-gray;
+        border-color: @blue;
+        .box-shadow-list(none) !important;
+    }
+
+    /*
+     * Validation states (see below for label text handling) */
+    .has-success &,
+    .has-warning &,
+    .has-error & {
+        .box-shadow-list(none);
+    }
+    .has-success & {
+        border-color: @dark-green;
+        &:focus { border-color: darken(@dark-green, 10%); }
+    }
+    .has-warning & {
+        border-color: @dark-yellow;
+        &:focus { border-color: darken(@dark-yellow, 10%); }
+    }
+    .has-error & {
+        border-color: @dark-red;
+        &:focus { border-color: darken(@dark-red, 10%); }
+    }
+}
+
+.form-horizontal {
+    overflow: hidden;
+
+    .control-label {
+        text-align: left;
+        line-height: 1;
+    }
+}
+
+.checkbox,
+.radio {
+    margin-bottom: 15px;
+    label {
+        top: 1px;
+    }
+}
+
+input[type="file"] {
+    font-size: 12px;
+}
+
+label.with-checkbox {
+    display: inline-block;
+    font-weight: normal;
+    padding-left: 20px;
+    text-indent: -13px;
+
+    input {
+        width: 13px;
+        height: 13px;
+        padding: 0;
+        margin: 0;
+        top: -1px;
+        left: -7px;
+        vertical-align: middle;
+        position: relative;
+        *overflow: hidden;
+    }
+}
+
+
+/*
+ * Form accoutrements */
+
+.help-block,
+.control-label,
+.radio,
+.checkbox,
+.radio-inline,
+.checkbox-inline  {
+    .has-success & { color: @dark-green; }
+    .has-warning & { color: @dark-yellow; }
+    .has-error & { color: @red; }
+}
+
+.help-block {
+    color: @seven-gray;
+    font-size: 13px;
+    line-height: 1.5em;
+    margin: 8px 0 10px 10px;
+}
+
+.form-control-icon {
+    color: @dark-gray;
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    position: absolute;
+    left: 10px;
+    text-align: center;
+    top: 4px;
+    width: 34px;
+}

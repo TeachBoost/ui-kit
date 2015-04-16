@@ -1,0 +1,187 @@
+/*
+ * Base typography */
+
+body {
+    color: @font-base-color;
+    font-family: @font-family-sans;
+    font-size: @font-size-base;
+    background: @white;
+}
+
+a {
+    color: @link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: @font-family-serif;
+    font-weight: normal;
+    padding: 0;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.0em;
+    margin: 25px 0 20px;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.0em;
+    margin: 25px 0 20px;
+}
+h3 { 
+    color: @five-gray;
+    font-family: @font-family-sans;
+    font-size: 1.25em;
+    margin: 25px 0 15px;
+}
+h4 { 
+    color: @seven-gray;
+    font-family: @font-family-sans;
+    font-size: 1.2em;
+    margin: 25px 0 15px;
+}
+h5 { 
+    font-size: 1.0625em; 
+    margin: 20px 0 15px;
+}
+h6 { 
+    font-size: 1em;
+    margin: 20px 0 15px; 
+}
+
+p {
+    line-height: @line-height-base;
+    margin: 15px 0;
+
+    &.body {
+        line-height: 1.7em;
+    }
+}
+
+
+/*
+ * Blockquotes */
+
+blockquote,
+pre {
+    background: @light-gray;
+    border: none;
+    border-left: 5px solid @line-gray-lt;
+    font-size: 15px;
+    line-height: 1.6em;
+    margin: 15px 0;
+    padding: 18px 24px 20px 20px;
+    text-indent: 0;
+    display: inline-block;
+    .border-radius(3px);
+
+    /*
+     * Codeblocks */
+    &.codeblock {
+        background: @ash;
+        border-left: 5px solid @castlerock;
+        color: @white;
+        font-size: 13px;
+
+        ::selection {
+            background: #585858;
+        }
+    }
+
+    &.blue-background {
+        border-left-color: @dark-blue;
+    }
+
+    /*
+     * Position and float fix */
+    &:before,
+    &:after {
+        content: none;
+    }
+
+}
+
+pre .str { color: #6699cc; } /* string - blue */
+pre .kwd { color: #f0e68c; } /* keyword - */
+pre .com { color: #999999; } /* comment - gray */
+pre .typ { color: #99cc99; } /* type - lightgreen */
+pre .lit { color: #cd5c5c; } /* literal - darkred */
+pre .pun { color: #fff; }    /* punctuation - white */
+pre .pln { color: #eee; }    /* plaintext */
+pre .tag { color: #cc99cc; } /* html/xml tag - purple */
+pre .atn { color: #66cccc; } /* attribute name - teal */
+pre .atv { color: #99cc99; } /* attribute value - green */
+pre .dec { color: #98fb98; } /* decimal - lightgreen */
+
+kbd { background-color: #111; font-weight: bold; }
+
+
+/* 
+ * Font families */
+
+.serif-font { font-family: @font-family-serif; }
+.sans-font { font-family: @font-family-sans; }
+
+
+/*
+ * Line height */
+
+.lineheight {
+    &-1-5 { line-height: 1.5em; }
+    &-1-6 { line-height: 1.6em; }
+    &-1-7 { line-height: 1.7em; }
+    &-1-8 { line-height: 1.8em; }
+}
+
+
+/*
+ * Font colors */
+
+.color {
+    &-blue { color: @blue; }
+    &-red { color: @red; }
+    &-green { color: @green; }
+    &-purple { color: @purple; }
+    &-yellow { color: @yellow; }
+    &-orange { color: @orange; }
+    &-teal { color: @teal; }
+    &-gray { color: @gray; }
+    &-darkgray { color: @dark-gray; }
+    &-seven { color: @seven-gray; }
+    &-five { color: @five-gray; }
+    &-white { color: @white; }
+}
+
+
+/*
+ * Font sizes */
+
+.xs-text { font-size: @font-size-xsmall; }
+.sm-text { font-size: @font-size-small; }
+.md-text { font-size: @font-size-medium; }
+.lg-text { font-size: @font-size-large; }
+.body-text { font-size: @font-size-medium; }
+
+
+/*
+ * Other type styles */
+
+.bold-weight { font-weight: bold; }
+.normal-weight { font-weight: normal; }
+.uppercase { text-transform: uppercase; }
+.italicize { font-style: italic; }
+.nowrap { white-space: nowrap; }

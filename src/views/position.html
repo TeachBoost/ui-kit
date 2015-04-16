@@ -1,0 +1,166 @@
+        <!-- Position -->
+        <section class="topic page-section" id="position">
+            <a name="position" class="section"></a>
+            <h2>Position</h2>
+            <p class="body">
+                We now have a collection of classes that handle most padding, margin, and position 
+                styles for block level elements. The Codex speaks of a bygone era in which 
+                every element had an individual, unique class with custom definitions for its 
+                attributes. This bore a cruel and unweildy beast that only the bravest&mdash;or most 
+                foolish&mdash;of our forefathers could tame.
+            </p>
+            <p class="body">
+                Today simply chain our new position classnames together for elements instead 
+                of creating a custom component-specific class in our stylesheets. The goal here is 
+                <em>reusability</em> and not trivial HTML markup reduction.
+            </p>
+            <h3>Padding and Margin</h3>
+            <p class="body">
+                You can add directional padding to an element in increments of 5 from 5 to 40 and 
+                then in increments of 10 from 50 to 100. The classname syntax is 
+                <code>.{direction}-padding-{#}</code>. For instance, to add a 10px right pad 
+                use the class <code>.right-padding-10</code> and to add bottom padding of 20px use 
+                the class <code>.bottom-padding-20</code>.
+            </p>
+            <p class="body">
+                This syntax is the same for margins as well: for instance, the add a top margin of 
+                25px use the class <code>.top-margin-25</code> and to add a left margin of 40px 
+                use the class <code>.left-margin-40</code>.
+            </p>
+            <p class="body">
+                There are a few special "group" classes to add or remove all or one side of an 
+                element's padding or margins:
+            </p>
+            <table class="table table-striped top-margin-25 bottom-margin-25">
+                <thead>
+                    <tr>
+                        <th>Direction</th>
+                        <th>Classname</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Top</td>
+                        <td><code>.no-top-padding</code>, <code>.no-top-margin</code></td>
+                        <td>Sets the top padding or margin to 0</td>
+                    </tr>
+                    <tr>
+                        <td>Right</td>
+                        <td><code>.no-right-padding</code>, <code>.no-right-margin</code></td>
+                        <td>Sets the right padding or margin to 0</td>
+                    </tr>
+                    <tr>
+                        <td>Bottom</td>
+                        <td><code>.no-bottom-padding</code>, <code>.no-bottom-margin</code></td>
+                        <td>Sets the bottom padding or margin to 0</td>
+                    </tr>
+                    <tr>
+                        <td>Left</td>
+                        <td><code>.no-left-padding</code>, <code>.no-left-margin</code></td>
+                        <td>Sets the left padding or margin to 0</td>
+                    </tr> 
+                    <tr>
+                        <td>All</td>
+                        <td><code>.no-padding</code>, <code>.no-margin</code></td>
+                        <td>Sets the element's padding or margin to 0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="body">
+                <strong>A Note on Headers:</strong> we have default margins and no padding set 
+                on our block-level headers (<code>&lt;h1&gt;</code>, etc.) that have been 
+                calculated for <em>most</em> display cases. We do not create separate classes 
+                or subclasses for these elements for various margins/paddings anymore and 
+                instead always use a discretionary position class (e.g., <code>&lt;h2 
+                class="top-margin-10"&gt;</code>). This significantly reduces class-bloat 
+                and you will often use them to push headers (and other components) up and down 
+                depending on the margins and/or padding of any elements before or after them 
+                on the page. This is fine and expected.
+            </p>
+            <h3>Floats and Clears</h3>
+            <p class="body">
+                Float elements left or right by adding the class <code>.float-left</code> or 
+                <code>.float-right</code> respectively. Remove any inherited float by adding 
+                the class <code>.float-none</code>.
+            </p>
+            <p class="body">
+                Clear floated elements by adding the class <code>.clearfix</code> to the 
+                element you are floating; this adds a hidden pseudo-selector with a 
+                block-level display to clear it in an elegant manner. If you're creating a 
+                custom class you can add the LESS class function <code>.clearfix()</code> to 
+                build the clear into your new class:
+            </p>
+<pre class="codeblock">
+<code class="html prettyprint lang-css">// new component that clears itself
+.newcomponent {
+    ...
+    float: left;
+    .clearfix();
+}</code></pre>
+            <div class="alert alert-info top-margin-10 bottom-margin-30">
+                <strong>Note:</strong> you can also manually clear elements by adding 
+                <code>&lt;div class="clear"&gt;&lt;/div&gt;</code>; this is discouraged as it
+                creates an unnecessary element in the dom (and potentially many).
+            </div>
+            <h3>Positioning</h3>
+            <p class="body">
+                Add position values with these respective classes: <code>.relative-position</code>, 
+                <code>.absolute-position</code>, and <code>.fixed-position</code>. The absolute and 
+                fixed classes carry a default <code>top</code> and <code>left</code> value of 0px. 
+                Unless this is what you want, positioning an element absolute or fixed with these 
+                classes is generally discouraged as you will often need to assign top, right, 
+                bottom, or left numerical offsets anyway. 
+            </p>
+            <p class="body">
+                To help combat this, we do have specific positional classes for the most 
+                common values 1px, 2px, 3px, 4px, and 5px in the format 
+                <code>.{direction}-{#}</code>. For instance, to set an element 1px from the 
+                top and 5px from the left append <code>.top-1 .left-5</code>.
+            </p>
+            <h3>Z-Index</h3>
+            <p class="body">
+                Bootstrap provides default z-index values for different components, and we have 
+                set z-indexes for own components in relation to these. These values 
+                have been assigned to work together and should be the reference point for new 
+                components:
+            </p>
+            <table class="table table-striped top-margin-25 bottom-margin-30">
+                <thead>
+                    <tr>
+                        <th>Components</th>
+                        <th>Z-Index Value</th>
+                        <th>Affected Classes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Navbars, Dropdowns</td>
+                        <td>1000</td>
+                        <td><code>.navbar</code>, <code>.dropdown-menu</code></td>
+                    </tr>
+                    <tr>
+                        <td>Header, Popovers</td>
+                        <td>1010</td>
+                        <td><code>&lt;header&gt;</code>, <code>.popover</code></td>
+                    </tr>
+                    <tr>
+                        <td>Tooltips, Fixed navbar</td>
+                        <td>1030</td>
+                        <td><code>.tooltip</code>, <code>.left-nav</code>, 
+                            <code>.navbar-fixed-*</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Modal background, Fixed buttons</td>
+                        <td>1040</td>
+                        <td><code>.modal-backdrop</code>, <code>.help.btn</code></td>
+                    </tr>
+                    <tr>
+                        <td>Modals</td>
+                        <td>1050</td>
+                        <td><code>.modal</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
