@@ -1,6 +1,7 @@
 {
-  "name" : "TeachBoost UI Kit",
+  "name" : "tb-ui-kit",
   "private" : true,
+  "version": "0.0.20",
   "dependencies" : {
     "bootstrap" : "*",
     "fontawesome" : "*",
