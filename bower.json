@@ -1,13 +1,11 @@
 {
-    "name" : "Centaur",
-    "private" : true,
-    "dependencies" : {
-        "bootstrap" : "*",
-        "fontawesome" : "*",
-        "underscore" : "*",
-        "iCheck" : "*",
-        "notifyjs" : "*",
-        "perfect-scrollbar" : "*",
-        "jquery-mousewheel" : "*"
-    }
+  "name" : "TeachBoost UI Kit",
+  "private" : true,
+  "dependencies" : {
+    "bootstrap" : "*",
+    "fontawesome" : "*",
+    "underscore" : "*",
+    "iCheck" : "*",
+    "notifyjs" : "*"
+  }
 }
