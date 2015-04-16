@@ -12,7 +12,7 @@ gulp.task( 'less', function () {
                 paths: [ 'less' ]
             }))
         .pipe(
-            gulp.dest( './src/css' ));
+            gulp.dest( './src/css/' ));
 });
 
 gulp.task( 'default', function () {
