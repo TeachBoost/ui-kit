@@ -26,16 +26,16 @@ gulp.task( 'default', function () {
 gulp.task( 'html', function () {
     gulp
         .src([
-            './src/views/header.phtml',
-            './src/views/colors.phtml',
-            './src/views/buttons.phtml',
-            './src/views/icons.phtml',
-            './src/views/position.phtml',
-            './src/views/tables.phtml',
-            './src/views/cards.phtml',
-            './src/views/forms.phtml',
-            './src/views/notifications.phtml',
-            './src/views/footer.phtml' ])
+            './src/html/header.html',
+            './src/html/colors.html',
+            './src/html/buttons.html',
+            './src/html/icons.html',
+            './src/html/position.html',
+            './src/html/tables.html',
+            './src/html/cards.html',
+            './src/html/forms.html',
+            './src/html/notifications.html',
+            './src/html/footer.html' ])
         .pipe(
             concat( 'index.html' ))
         .pipe(
@@ -45,7 +45,7 @@ gulp.task( 'html', function () {
 gulp.task( 'watch-html', function () {
     gulp.run( 'html' );
 
-    gulp.watch( './src/views/*.html', function ( event ) {
+    gulp.watch( './src/html/*.html', function ( event ) {
         gulp.run( 'html' );
     });
 });
