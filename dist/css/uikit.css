@@ -2396,6 +2396,7 @@ section {
 }
 .with-actions section.page {
   top: 56px;
+  position: relative;
 }
 section.help {
   border-right: 1px solid #bbbbbb;
