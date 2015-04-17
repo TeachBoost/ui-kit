@@ -1685,7 +1685,7 @@ ul.three-column {
      * Shrink the nav bar when the page width is small */
 }
 .left-nav > .nav {
-  border-right: 1px solid #dddddd;
+  border-right: 1px solid #bbbbbb;
   bottom: 50px;
   left: 0;
   margin: 0;
