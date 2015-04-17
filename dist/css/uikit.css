@@ -2535,7 +2535,7 @@ section.actions .btn {
   font-size: 1em;
   padding: 0 1em;
   height: 2.25em;
-  line-height: 2.25em;
+  line-height: 2.15em;
 }
 section.actions .btn:active {
   margin-bottom: 2px;
