@@ -89,6 +89,14 @@ main {
 
 section {
     /*
+     * Content panel */
+    &.content {
+        .with-actions & {
+            top: 56px;
+        }
+    }
+
+    /*
      * Special (verbose) styles for the help button */
     &.help {
         border-right: 1px solid @medium-gray;
@@ -242,6 +250,7 @@ section {
         position: fixed;
         top: 56px;
         left: 200px;
+        height: 56px;
         right: 0;
         padding: 0.625em 1em;
         background: @five-lt-gray;
