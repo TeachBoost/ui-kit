@@ -185,3 +185,31 @@ kbd { background-color: #111; font-weight: bold; }
 .uppercase { text-transform: uppercase; }
 .italicize { font-style: italic; }
 .nowrap { white-space: nowrap; }
+
+
+/*
+ * Wrapper for 'none' messages */
+
+span.none {
+    color: @heart;
+    background: @aspen-darker;
+    line-height: 1.8em;
+    display: inline-block;
+    padding: 0 0.4em;
+    font-size: 0.8667em;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design. */
+
+::-moz-selection {
+    background: @light-blue;
+    text-shadow: none;
+}
+::selection {
+    background: @light-blue;
+    text-shadow: none;
+}

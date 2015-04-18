@@ -1,0 +1,35 @@
+.toggle {
+    border: 1px solid @seven-gray;
+    text-decoration: none;
+    position: relative;
+    outline: 0;
+
+    span {
+        &.left {
+            float: left;
+            .border-radius(2px 0 0 2px);
+        }
+        &.right {
+            float: right;
+            .border-radius(0 2px 2px 0);
+        }
+        &.option {
+            background-color: #4da74d;
+            color: $white;
+            padding: 4px 12px;
+            height: 22px;
+            line-height: 22px;
+        }
+        &.slider {
+            position: absolute;
+            top: -1px;
+            bottom: -1px;
+            right: -1px;
+            left: 46%;
+        }
+    }
+
+    &.left span.slider {
+        border-left: 1px solid @dark-gray;
+    }
+}

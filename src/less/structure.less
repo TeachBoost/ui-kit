@@ -1,6 +1,14 @@
 /*
  * Global */
 
+html {
+    box-sizing: border-box
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
 body {
     width: auto;
 }
@@ -14,6 +22,26 @@ nav,
 section {
     margin: 0;
     padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their */
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles. */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas. */
+textarea {
+    resize: vertical;
 }
 
 

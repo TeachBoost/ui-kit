@@ -2300,6 +2300,14 @@ ul.three-column {
 }
 /*
  * Global */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
   width: auto;
 }
@@ -2312,6 +2320,23 @@ nav,
 section {
   margin: 0;
   padding: 0;
+}
+/*
+ * Remove the gap between images and the bottom of their */
+img {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles. */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas. */
+textarea {
+  resize: vertical;
 }
 /*
  * Header */
@@ -2664,6 +2689,41 @@ footer {
 .table > tbody > tr.danger > td {
   background-color: #f6e7e4;
 }
+.toggle {
+  border: 1px solid #777777;
+  text-decoration: none;
+  position: relative;
+  outline: 0;
+}
+.toggle span.left {
+  float: left;
+  -moz-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+.toggle span.right {
+  float: right;
+  -moz-border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+.toggle span.option {
+  background-color: #4da74d;
+  color: $white;
+  padding: 4px 12px;
+  height: 22px;
+  line-height: 22px;
+}
+.toggle span.slider {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  left: 46%;
+}
+.toggle.left span.slider {
+  border-left: 1px solid #333333;
+}
 /*
  * Base typography */
 body {
@@ -2914,6 +2974,28 @@ kbd {
 }
 .nowrap {
   white-space: nowrap;
+}
+/*
+ * Wrapper for 'none' messages */
+span.none {
+  color: #a8a8a8;
+  background: #e1e1e1;
+  line-height: 1.8em;
+  display: inline-block;
+  padding: 0 0.4em;
+  font-size: 0.8667em;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design. */
+::-moz-selection {
+  background: #dff5ff;
+  text-shadow: none;
+}
+::selection {
+  background: #dff5ff;
+  text-shadow: none;
 }
 /*
  * Transitions */
