@@ -973,6 +973,12 @@
 .card.yellow > a.value:hover {
   background-color: #aa850b;
 }
+.card.orange > .value {
+  background-color: #d1712d;
+}
+.card.orange > a.value:hover {
+  background-color: #a65a23;
+}
 .card.big {
   position: relative;
   width: 18%;
