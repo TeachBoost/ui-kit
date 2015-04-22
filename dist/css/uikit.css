@@ -2983,6 +2983,15 @@ kbd {
 .nowrap {
   white-space: nowrap;
 }
+.text-align-center {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
 /*
  * Wrapper for 'none' messages */
 span.none {
