@@ -2995,11 +2995,11 @@ kbd {
 /*
  * Wrapper for 'none' messages */
 span.none {
-  color: #a8a8a8;
-  background: #e1e1e1;
-  line-height: 1.8em;
+  color: #999999;
+  background: #e8e8e8;
+  line-height: 2.2em;
   display: inline-block;
-  padding: 0 0.4em;
+  padding: 0 0.6em;
   font-size: 0.8667em;
 }
 /*
