@@ -51,6 +51,7 @@ $( function() {
     var $ulNav = $( 'ul.nav' );
     var $drawerScroller = $( '#drawerScroller' );
 
+    /*
     $ulNav.perfectScrollbar();
     $drawerScroller.perfectScrollbar();
 
@@ -60,6 +61,7 @@ $( function() {
     }, 250 );
 
     $( window ).resize( updateScrollbars );
+    */
 
     // set up notifyjs
     $.notify.addStyle( 'flat', {
