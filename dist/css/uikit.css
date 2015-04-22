@@ -1773,7 +1773,9 @@ ul.three-column {
   margin: 10px 1em 0 0;
 }
 .top-nav .btn {
-  font-size: 15px;
+  font-size: 0.9375em;
+  line-height: 2.15em;
+  padding: 0 15px;
 }
 .top-nav .btn.black {
   background: #444;
