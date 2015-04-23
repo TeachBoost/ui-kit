@@ -1401,7 +1401,7 @@ a.teal-background:hover {
   background-color: #484848;
   font-size: 0.9333em;
   text-shadow: 0 1px 0 #333333;
-  z-index: 1050;
+  z-index: 1040;
 }
 .dropdown-menu .dropdown-header {
   padding: 5px 15px;
@@ -1754,7 +1754,7 @@ ul.three-column {
 .with-left .left-nav {
   border-top: 4px solid #777777;
   top: 52px;
-  z-index: 1030;
+  z-index: 1020;
 }
 .titan.with-left .left-nav {
   border-top-color: #006391;
@@ -1780,6 +1780,9 @@ ul.three-column {
 .top-nav {
   float: right;
   margin: 10px 1em 0 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 .top-nav .btn {
   font-size: 0.9375em;
@@ -1791,6 +1794,39 @@ ul.three-column {
 }
 .top-nav .btn.black:hover {
   background: #3c3c3c;
+}
+.top-nav .dropdown-menu {
+  width: 15em;
+}
+body.x1 .top-nav .dropdown-menu {
+  width: 15.75em;
+}
+body.x2 .top-nav .dropdown-menu,
+body.x3 .top-nav .dropdown-menu {
+  width: 15.5em;
+}
+.top-nav .dropdown-menu li {
+  position: relative;
+}
+.top-nav .dropdown-menu li span,
+.top-nav .dropdown-menu li a {
+  display: block;
+  padding: 6px 6px 6px 38px;
+}
+.top-nav .dropdown-menu li span > i,
+.top-nav .dropdown-menu li a > i {
+  position: absolute;
+  left: 12px;
+  top: 0.625em;
+}
+body.sx3 .top-nav .dropdown-menu li span > i,
+body.sx3 .top-nav .dropdown-menu li a > i {
+  top: 0.6875em;
+}
+.top-nav .dropdown-menu a.dropdown-toggle i {
+  font-size: 18px;
+  left: 3px;
+  position: relative;
 }
 /*
  * Next Steps */
@@ -1906,8 +1942,17 @@ ul.three-column {
 .top-padding-100 {
   padding-top: 100px !important;
 }
+.top-margin-1 {
+  margin-top: 1px !important;
+}
+.top-margin-2 {
+  margin-top: 2px !important;
+}
 .top-margin-3 {
   margin-top: 3px !important;
+}
+.top-margin-4 {
+  margin-top: 4px !important;
 }
 .top-margin-5 {
   margin-top: 5px !important;
@@ -2358,7 +2403,7 @@ header {
   height: 56px;
   position: fixed;
   width: 100%;
-  z-index: 1010;
+  z-index: 1050;
   /*
      * Branding */
   /*
@@ -2442,7 +2487,7 @@ section.help {
   text-align: center;
   position: fixed;
   width: 200px;
-  z-index: 1040;
+  z-index: 1030;
 }
 section.help > .btn {
   font-size: 1em;
@@ -2480,7 +2525,7 @@ section.drawer {
   left: 70%;
   width: 30%;
   background: #eee;
-  z-index: 1030;
+  z-index: 1020;
   display: none;
   /*
          * Components within drawer */
@@ -2574,7 +2619,7 @@ section.actions {
   padding: 0.625em 1em;
   background: #f5f5f5;
   border-bottom: 1px solid #cccccc;
-  z-index: 1005;
+  z-index: 1010;
 }
 section.actions .btn {
   font-size: 1em;
