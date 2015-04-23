@@ -2610,6 +2610,12 @@ footer {
 .with-collapsed-drawer footer {
   right: 44px !important;
 }
+@media (max-width: 768px) {
+  footer {
+    margin-left: 76px !important;
+    left: 0 !important;
+  }
+}
 /*
  * Tables */
 .table {
