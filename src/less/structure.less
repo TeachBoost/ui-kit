@@ -113,11 +113,14 @@ main {
         /*
          * If we have a header and/or left/right nav, push this */
         .with-header & { padding-top: 55px; }
-        .with-left & { 
+        .with-left & {
             margin-left: 12.5em;
             @media (max-width: @screen-sm) {
                 margin-left: 56px;
             }
+        }
+        .with-left.x1 &, .with-left.x2 & {
+            margin-left: 14em;
         }
         .with-drawer & {
             margin-right: 30%;
@@ -190,6 +193,10 @@ section {
             .fa {
                 color: @soft-green;
             }
+        }
+
+        body.x1 &, body.x2 & {
+            width: 14em;
         }
 
         @media (max-width: @screen-sm) {
@@ -349,6 +356,9 @@ section {
             }
         }
 
+        body.x1 &, body.x2 & {
+            left: 14em;
+        }
         body.x4 & {
             top: 3.4em;
         }

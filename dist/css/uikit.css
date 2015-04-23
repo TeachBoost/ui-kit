@@ -1719,14 +1719,14 @@ ul.three-column {
 .left-nav > .nav .item {
   border-bottom: 1px solid #cccccc;
   display: block;
-  font-size: 18px;
-  line-height: 48px;
+  font-size: 1.125em;
+  line-height: 2.666em;
   padding: 0px 15px;
 }
 .left-nav > .nav .item > .fa {
   color: #383838;
-  font-size: 24px;
-  width: 29px;
+  font-size: 1.333em;
+  width: 1.611em;
   padding-right: 3px;
 }
 .left-nav > .nav > .active .item,
@@ -1770,6 +1770,10 @@ ul.three-column {
 }
 .with-left.x5 .left-nav {
   top: 3.05em;
+}
+body.x1 .left-nav,
+body.x2 .left-nav {
+  width: 14em;
 }
 @media (max-width: 768px) {
   .left-nav {
@@ -2476,6 +2480,10 @@ main.container-fluid {
     margin-left: 56px;
   }
 }
+.with-left.x1 main.container-fluid,
+.with-left.x2 main.container-fluid {
+  margin-left: 14em;
+}
 .with-drawer main.container-fluid {
   margin-right: 30%;
 }
@@ -2538,6 +2546,10 @@ section.help.off .fa {
 }
 section.help.on .fa {
   color: #4da74d;
+}
+body.x1 section.help,
+body.x2 section.help {
+  width: 14em;
 }
 @media (max-width: 768px) {
   section.help {
@@ -2672,6 +2684,10 @@ section.actions .btn {
 section.actions .btn:active {
   margin-bottom: 2px;
   height: 34px;
+}
+body.x1 section.actions,
+body.x2 section.actions {
+  left: 14em;
 }
 body.x4 section.actions {
   top: 3.4em;
