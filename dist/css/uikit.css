@@ -1781,7 +1781,7 @@ body.x1 .left-nav {
 }
 @media (max-width: 768px) {
   .left-nav {
-    width: 56px;
+    width: 56px !important;
   }
   .left-nav li {
     overflow: hidden;
@@ -2491,7 +2491,7 @@ main.container-fluid {
 }
 @media (max-width: 768px) {
   .with-left main.container-fluid {
-    margin-left: 56px;
+    margin-left: 56px !important;
   }
 }
 .with-left.x1 main.container-fluid {
@@ -2708,7 +2708,7 @@ body.x5 section.actions {
 }
 @media (max-width: 768px) {
   section.actions {
-    left: 56px;
+    left: 56px !important;
   }
 }
 /*
