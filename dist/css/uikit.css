@@ -1727,7 +1727,8 @@ ul.three-column {
   color: #383838;
   font-size: 1.333em;
   width: 1.611em;
-  padding-right: 3px;
+  padding-right: 5px;
+  text-align: center;
 }
 .left-nav > .nav > .active .item,
 .left-nav > .nav > li:hover .item {
