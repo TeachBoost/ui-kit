@@ -1788,13 +1788,21 @@ body.x1 .left-nav {
     white-space: nowrap;
     height: 2.75em;
   }
-  .left-nav li .item {
-    height: 2.45em;
-    margin-bottom: 0;
-    width: 56px;
-  }
   .left-nav li span {
     display: none;
+  }
+  .left-nav > .nav .item {
+    height: 100%;
+    margin-bottom: 0;
+    width: 56px;
+    padding: 0;
+  }
+  body.x5 .left-nav > .nav .item > .fa {
+    left: 0.25em;
+  }
+  body.x3 .left-nav > .nav .item > .fa,
+  body.x4 .left-nav > .nav .item > .fa {
+    left: 0.3em;
   }
 }
 .top-nav {
