@@ -2461,6 +2461,14 @@ section.help.off .fa {
 section.help.on .fa {
   color: #4da74d;
 }
+@media (max-width: 768px) {
+  section.help {
+    width: 56px;
+  }
+  section.help > .btn {
+    display: none;
+  }
+}
 section.drawer {
   position: fixed;
   top: 0;
