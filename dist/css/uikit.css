@@ -1050,6 +1050,9 @@
   border-bottom-color: #aaaaaa;
   color: #333333;
 }
+.card.icon i.fa {
+  margin-right: 5px;
+}
 .card.icon > .value {
   display: inline-block;
   padding: 10px 15px;
