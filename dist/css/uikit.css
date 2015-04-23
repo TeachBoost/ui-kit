@@ -1721,7 +1721,7 @@ ul.three-column {
   display: block;
   font-size: 1.125em;
   line-height: 2.666em;
-  padding: 0px 15px;
+  padding: 0 10px 0 3em;
 }
 .left-nav > .nav .item > .fa {
   color: #383838;
@@ -1729,6 +1729,10 @@ ul.three-column {
   width: 1.611em;
   padding-right: 5px;
   text-align: center;
+  left: 0.4em;
+  position: absolute;
+  top: 0;
+  line-height: 1.8em;
 }
 .left-nav > .nav > .active .item,
 .left-nav > .nav > li:hover .item {
