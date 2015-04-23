@@ -1,7 +1,7 @@
 {
   "name": "tb-ui-kit",
   "private": true,
-  "version": "0.0.35",
+  "version": "0.0.36",
   "dependencies": {
     "bootstrap": "*",
     "fontawesome": "*",
