@@ -11,6 +11,19 @@ html {
 
 body {
     width: auto;
+
+    &.x1 {
+        font-size: 14px;
+    }
+    &.x2 {
+        font-size: 15px;
+    }
+    &.x4 {
+        font-size: 18px;
+    }
+    &.x5 {
+        font-size: 19px;
+    }
 }
 
 figure,
@@ -50,12 +63,19 @@ textarea {
 
 header {
     background: @dark-gray;
-    border-bottom: 4px solid @gray;
+    border-bottom: 0.25em solid @gray;
     color: @white;
-    height: 56px;
+    height: 3.5em;
     position: fixed;
     width: 100%;
     z-index: @zindex-header;
+
+    body.x4 & {
+        height: 3.4em;
+    }
+    body.x5 & {
+        height: 3.3em;
+    }
 
     /*
      * Branding */
@@ -94,7 +114,7 @@ main {
          * If we have a header and/or left/right nav, push this */
         .with-header & { padding-top: 55px; }
         .with-left & { 
-            margin-left: 200px;
+            margin-left: 12.5em;
             @media (max-width: @screen-sm) {
                 margin-left: 56px;
             }
@@ -120,8 +140,15 @@ section {
      * Content panel */
     &.page {
         .with-actions & {
-            top: 56px;
+            top: 3.5em;
             position: relative;
+
+            body.x4 & {
+                top: 3.4em;
+            }
+            body.x5 & {
+                top: 3.3em;
+            }
         }
     }
 
@@ -134,7 +161,7 @@ section {
         left: 0;
         text-align: center;
         position: fixed;
-        width: 200px;
+        width: 12.5em;
         z-index: @zindex-fixed-nav;
 
         > .btn {
@@ -204,8 +231,15 @@ section {
 
                 .with-header & {
                     position: fixed;
-                    top: 56px;
+                    top: 3.5em;
                     right: 7px;
+
+                    body.x4 & {
+                        top: 3.4em;
+                    }
+                    body.x5 & {
+                        top: 3.3em;
+                    }
                 }
 
                 a {
@@ -245,16 +279,25 @@ section {
             }
         }
 
-        .with-header & { top: 52px; }
+        .with-header & {
+            top: 3.25em;
+
+        }
+        .with-header.x4 & {
+            top: 3.15em;
+        }
+        .with-header.x5 & {
+            top: 3.05em;
+        }
         .with-left & {
             .eagle& {
-                border-top: 4px solid @dark-teal;
+                border-top: 0.25em solid @dark-teal;
             }
             .titan& {
-                border-top: 4px solid @dark-blue;
+                border-top: 0.25em solid @dark-blue;
             }
             .falcon& {
-                border-top: 4px solid @dark-red;
+                border-top: 0.25em solid @dark-red;
             }
         }
         .with-drawer & {
@@ -285,9 +328,9 @@ section {
      * Actions menu */
     &.actions {
         position: fixed;
-        top: 56px;
-        left: 200px;
-        height: 56px;
+        top: 3.5em;
+        left: 12.5em;
+        height: 3.5em;
         right: 0;
         padding: 0.625em 1em;
         background: @five-lt-gray;
@@ -306,6 +349,13 @@ section {
             }
         }
 
+        body.x4 & {
+            top: 3.4em;
+        }
+        body.x5 & {
+            top: 3.3em;
+        }
+
         @media (max-width: @screen-sm) {
             left: 56px;
         }
@@ -318,7 +368,7 @@ section {
 
 footer {
     border-top: 3px solid @line-gray-lt;
-    font-size: 13px;
+    font-size: 0.8125em;
     line-height: 1.8em;
 
     .with-left & {
@@ -329,7 +379,7 @@ footer {
     }
     .with-drawer & {
         right: 30%;
-        left: 200px;
+        left: 15.5em;
         margin: 50px 20px 0 20px;
         position: absolute;
     }
