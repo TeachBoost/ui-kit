@@ -1786,6 +1786,12 @@ body.x1 .left-nav {
   .left-nav li {
     overflow: hidden;
     white-space: nowrap;
+    height: 2.75em;
+  }
+  .left-nav li .item {
+    height: 2.45em;
+    margin-bottom: 0;
+    width: 56px;
   }
   .left-nav li span {
     display: none;
