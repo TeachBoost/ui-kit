@@ -13,10 +13,10 @@ body {
     width: auto;
 
     &.x1 {
-        font-size: 14px;
-    }
-    &.x2 {
         font-size: 15px;
+    }
+    &.x3 {
+        font-size: 17px;
     }
     &.x4 {
         font-size: 18px;
@@ -119,8 +119,8 @@ main {
                 margin-left: 56px;
             }
         }
-        .with-left.x1 &, .with-left.x2 & {
-            margin-left: 14em;
+        .with-left.x1 & {
+            margin-left: 13.5em;
         }
         .with-drawer & {
             margin-right: 30%;
@@ -195,8 +195,8 @@ section {
             }
         }
 
-        body.x1 &, body.x2 & {
-            width: 14em;
+        body.x1 & {
+            width: 13.5em;
         }
 
         @media (max-width: @screen-sm) {
@@ -356,8 +356,8 @@ section {
             }
         }
 
-        body.x1 &, body.x2 & {
-            left: 14em;
+        body.x1 & {
+            left: 13.5em;
         }
         body.x4 & {
             top: 3.4em;

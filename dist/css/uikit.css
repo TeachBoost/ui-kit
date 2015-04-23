@@ -1776,9 +1776,8 @@ ul.three-column {
 .with-left.x5 .left-nav {
   top: 3.05em;
 }
-body.x1 .left-nav,
-body.x2 .left-nav {
-  width: 14em;
+body.x1 .left-nav {
+  width: 13.5em;
 }
 @media (max-width: 768px) {
   .left-nav {
@@ -1814,10 +1813,6 @@ body.x2 .left-nav {
   width: 15em;
 }
 body.x1 .top-nav .dropdown-menu {
-  width: 15.75em;
-}
-body.x2 .top-nav .dropdown-menu,
-body.x3 .top-nav .dropdown-menu {
   width: 15.5em;
 }
 .top-nav .dropdown-menu li {
@@ -2383,10 +2378,10 @@ body {
   width: auto;
 }
 body.x1 {
-  font-size: 14px;
-}
-body.x2 {
   font-size: 15px;
+}
+body.x3 {
+  font-size: 17px;
 }
 body.x4 {
   font-size: 18px;
@@ -2485,9 +2480,8 @@ main.container-fluid {
     margin-left: 56px;
   }
 }
-.with-left.x1 main.container-fluid,
-.with-left.x2 main.container-fluid {
-  margin-left: 14em;
+.with-left.x1 main.container-fluid {
+  margin-left: 13.5em;
 }
 .with-drawer main.container-fluid {
   margin-right: 30%;
@@ -2552,9 +2546,8 @@ section.help.off .fa {
 section.help.on .fa {
   color: #4da74d;
 }
-body.x1 section.help,
-body.x2 section.help {
-  width: 14em;
+body.x1 section.help {
+  width: 13.5em;
 }
 @media (max-width: 768px) {
   section.help {
@@ -2690,9 +2683,8 @@ section.actions .btn:active {
   margin-bottom: 2px;
   height: 34px;
 }
-body.x1 section.actions,
-body.x2 section.actions {
-  left: 14em;
+body.x1 section.actions {
+  left: 13.5em;
 }
 body.x4 section.actions {
   top: 3.4em;
