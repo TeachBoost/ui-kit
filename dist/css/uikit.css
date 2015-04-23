@@ -2707,7 +2707,7 @@ footer {
 .with-left footer {
   border-top: 1px solid #dddddd;
   color: #aaaaaa;
-  margin: 50px 20px 0 16.615;
+  margin: 50px 20px 0 16.615em;
   padding: 15px 0;
 }
 .with-drawer footer {
