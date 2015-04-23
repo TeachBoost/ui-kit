@@ -2583,6 +2583,11 @@ section.actions .btn:active {
   margin-bottom: 2px;
   height: 34px;
 }
+@media (max-width: 768px) {
+  section.actions {
+    left: 56px;
+  }
+}
 /*
  * Footer */
 footer {
