@@ -2707,12 +2707,12 @@ footer {
 .with-left footer {
   border-top: 1px solid #dddddd;
   color: #aaaaaa;
-  margin: 50px 20px 0 220px;
+  margin: 50px 20px 0 16.615;
   padding: 15px 0;
 }
 .with-drawer footer {
   right: 30%;
-  left: 15.5em;
+  left: 16.615em;
   margin: 50px 20px 0 20px;
   position: absolute;
 }
