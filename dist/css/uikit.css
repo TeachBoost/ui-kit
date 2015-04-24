@@ -1,4 +1,28 @@
 @charset "UTF-8";
+/* Common */
+/*
+ * Colors */
+/*
+ * Typography */
+/*
+ * Position */
+/*
+ * Size */
+/*
+ * Typography */
+/*
+ * Corners */
+/* 
+ * Box shadows */
+/* To pass in more than 1 box shadow, call .box-shadow-list() and comma-
+ * delineate a list like this: .box-shadow-list(str, str, str;); */
+/*
+ * Buttons */
+/*
+ * Layout */
+/* Include .clearfix for regular clearfixes; call this mixin on elements 
+   so you don't have to include .clearfix a million times */
+/* UI */
 /*
  * Alert callouts */
 .alert {
@@ -1569,6 +1593,16 @@ a.teal-background:hover {
 .form-horizontal .control-label {
   text-align: left;
   line-height: 1;
+  padding-left: 0;
+  padding-top: 9px;
+}
+.form-horizontal .form-group {
+  margin: 0 0 12px 0;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 12px;
+}
+.form-horizontal .form-group:last-child {
+  border: 0;
 }
 .checkbox,
 .radio {
@@ -1641,14 +1675,36 @@ label.with-checkbox input {
   top: 4px;
   width: 34px;
 }
-/*
- * Colors */
-/*
- * Typography */
-/*
- * Position */
-/*
- * Size */
+.no-selections {
+  padding: 0em 0.5em;
+  font-size: 0.8em;
+  color: #888888;
+  background: #dddddd;
+  display: inline-block;
+  margin-bottom: 10px;
+  line-height: 2em;
+}
+.selections-list.edit .selection {
+  padding: 5px 8px;
+  background-color: #3b9cc9;
+  color: #ffffff;
+  display: inline-block;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.selections-list.edit .selection.with-remove {
+  padding-right: 38px;
+  position: relative;
+}
+.selections-list.edit .selection a.remove {
+  position: absolute;
+  right: 0.5em;
+  top: 0.25em;
+  color: #ffffff;
+}
 /* 
   * Unordered lists */
 ul {
@@ -1666,19 +1722,48 @@ ul.three-column {
   -moz-columns: 3;
 }
 /*
- * Typography */
-/*
- * Corners */
-/* 
- * Box shadows */
-/* To pass in more than 1 box shadow, call .box-shadow-list() and comma-
- * delineate a list like this: .box-shadow-list(str, str, str;); */
-/*
- * Buttons */
-/*
- * Layout */
-/* Include .clearfix for regular clearfixes; call this mixin on elements 
-   so you don't have to include .clearfix a million times */
+ * Modals */
+.modal {
+  transition: display 0.25s ease-in-out;
+  -moz-transition: display 0.25s ease-in-out;
+  -webkit-transition: display 0.25s ease-in-out;
+}
+.modal-backdrop {
+  bottom: 0;
+  height: auto !important;
+}
+.modal-fit {
+  padding: 0 !important;
+}
+.modal-fit .modal-body {
+  overflow-y: auto;
+}
+.modal-fit .modal-content {
+  overflow: hidden;
+}
+.modal-fit table:last-child {
+  margin-bottom: 0;
+}
+.modal-header h4,
+.modal-footer h4 {
+  color: #484848;
+}
+.modal-content {
+  background-color: #edeff0;
+}
+.modal-content h4 {
+  margin-top: 0;
+}
+.modal-header {
+  position: relative;
+}
+.modal-header .close {
+  padding: 6px;
+  font-size: 38px;
+  outline: none;
+  margin-top: -15px;
+  margin-right: -7px;
+}
 /*
  * Fixed navigation */
 .left-nav {
@@ -2488,7 +2573,7 @@ main.container-fluid {
          * If we have a header and/or left/right nav, push this */
 }
 .with-header main.container-fluid {
-  padding-top: 55px;
+  padding-top: 3.5em;
 }
 .with-left main.container-fluid {
   margin-left: 12.5em;
@@ -2512,6 +2597,9 @@ main.container-fluid {
 .with-collapsed-drawer main.container-fluid {
   margin-right: 44px;
 }
+.with-actions main.container-fluid {
+  padding-top: 7em;
+}
 /*
  * Sections */
 section {
@@ -2524,15 +2612,8 @@ section {
   /*
      * Actions menu */
 }
-.with-actions section.page {
-  top: 3.5em;
+section.page {
   position: relative;
-}
-body.x4 .with-actions section.page {
-  top: 3.4em;
-}
-body.x5 .with-actions section.page {
-  top: 3.3em;
 }
 section.help {
   border-right: 1px solid #bbbbbb;
@@ -2683,6 +2764,9 @@ section.drawer .drawer-container .drawer-scroller .drawer-content {
 .with-collapsed-drawer section.drawer h3 .open-btn {
   display: inline-block !important;
 }
+.with-actions section.drawer {
+  border-left: 1px solid #cccccc;
+}
 section.actions {
   position: fixed;
   top: 3.5em;
@@ -2702,7 +2786,13 @@ section.actions .btn {
 }
 section.actions .btn:active {
   margin-bottom: 2px;
-  height: 34px;
+  height: 2.15em;
+}
+.with-drawer section.actions {
+  right: 30%;
+}
+.with-collapsed-drawer section.actions {
+  right: 44px;
 }
 body.x1 section.actions {
   left: 13.5em;
@@ -3019,7 +3109,7 @@ footer {
 }
 .table.table-striped > tbody > tr:nth-child(odd) > td,
 .table.table-striped > tbody > tr:nth-child(odd) > th {
-  background-color: #eeeeee;
+  background-color: #f1f1f1;
 }
 .table.table-hover {
   /*
@@ -3371,6 +3461,7 @@ span.none {
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
 }
+/* Vendor */
 /*
  * iCheck input plug (blue square) */
 .icheck,
