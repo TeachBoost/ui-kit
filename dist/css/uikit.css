@@ -1732,7 +1732,7 @@ ul.three-column {
   left: 0.4em;
   position: absolute;
   top: 0;
-  line-height: 1.8em;
+  line-height: 2.1em;
 }
 .left-nav > .nav > .active .item,
 .left-nav > .nav > li:hover .item {
@@ -2727,16 +2727,18 @@ footer {
 }
 .with-left footer {
   right: 0;
-  left: 16.615em;
+  left: 15.3846em;
   border-top: 1px solid #dddddd;
   color: #aaaaaa;
   margin: 50px 20px 0 20px;
   padding: 15px 0;
   position: absolute;
 }
+.with-left.x1 footer {
+  left: 16.6153em;
+}
 .with-drawer footer {
   right: 30%;
-  left: 16.615em;
   margin: 50px 20px 0 20px;
   position: absolute;
 }
