@@ -112,7 +112,9 @@ main {
 
         /*
          * If we have a header and/or left/right nav, push this */
-        .with-header & { padding-top: 55px; }
+        .with-header & {
+            padding-top: 3.5em;
+        }
         .with-left & {
             margin-left: 12.5em;
             @media (max-width: @screen-sm) {
@@ -130,6 +132,9 @@ main {
         }
         .with-collapsed-drawer & {
             margin-right: 44px;
+        }
+        .with-actions & {
+            padding-top: 7em;
         }
     }
 }
@@ -288,7 +293,6 @@ section {
 
         .with-header & {
             top: 3.25em;
-
         }
         .with-header.x3 & {
             top: 3.3em;
@@ -332,6 +336,9 @@ section {
                 }
             }
         }
+        .with-actions & {
+            border-left: 1px solid @line-gray;
+        }
     }
 
     /*
@@ -357,6 +364,13 @@ section {
                 margin-bottom: 2px;
                 height: 34px;
             }
+        }
+
+        .with-drawer & {
+            right: 30%;
+        }
+        .with-collapsed-drawer & {
+            right: 44px;
         }
 
         body.x1 & {

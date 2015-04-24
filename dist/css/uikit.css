@@ -2573,7 +2573,7 @@ main.container-fluid {
          * If we have a header and/or left/right nav, push this */
 }
 .with-header main.container-fluid {
-  padding-top: 55px;
+  padding-top: 3.5em;
 }
 .with-left main.container-fluid {
   margin-left: 12.5em;
@@ -2596,6 +2596,9 @@ main.container-fluid {
 }
 .with-collapsed-drawer main.container-fluid {
   margin-right: 44px;
+}
+.with-actions main.container-fluid {
+  padding-top: 7em;
 }
 /*
  * Sections */
@@ -2768,6 +2771,9 @@ section.drawer .drawer-container .drawer-scroller .drawer-content {
 .with-collapsed-drawer section.drawer h3 .open-btn {
   display: inline-block !important;
 }
+.with-actions section.drawer {
+  border-left: 1px solid #cccccc;
+}
 section.actions {
   position: fixed;
   top: 3.5em;
@@ -2788,6 +2794,12 @@ section.actions .btn {
 section.actions .btn:active {
   margin-bottom: 2px;
   height: 34px;
+}
+.with-drawer section.actions {
+  right: 30%;
+}
+.with-collapsed-drawer section.actions {
+  right: 44px;
 }
 body.x1 section.actions {
   left: 13.5em;
