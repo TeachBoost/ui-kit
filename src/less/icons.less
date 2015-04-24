@@ -18,15 +18,13 @@
 .tb,
 .fa {
     display: inline-block;
-    font: normal normal normal @icon-font-size-base/1 TeachBoost;
+    font: normal normal normal @icon-font-size-base/0.75 TeachBoost;
     font-size: inherit;
-    line-height: 1em;
+    text-decoration: none;
     text-rendering: auto;
     transform: translate(0, 0);
     speak: none;
     text-transform: none;
-    vertical-align: middle;
-    /* Better font rendering  */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -35,9 +33,18 @@
 .tb-boost:before { content: "\e600"; }
 .tb-tag:before,
 .tb-logo:before { content: "\e601"; }
+.tb-tag-full .path1:before,
+.tb-logo-full .path1:before { content: "\e602"; }
+.tb-tag-full .path2:before,
+.tb-logo-full .path2:before {
+	content: "\e603";
+	margin-left: -1.21em;
+	color: rgb(255, 255, 255);
+}
 
 // FontAwesome icons
 .fa-search:before { content: "\f002"; }
+.fa-star:before { content: "\f005"; }
 .fa-user:before { content: "\f007"; }
 .fa-th:before { content: "\f00a"; }
 .fa-th-list:before { content: "\f00b"; }
@@ -64,6 +71,9 @@
 .fa-print:before { content: "\f02f"; }
 .fa-font:before { content: "\f031"; }
 .fa-align-left:before { content: "\f036"; }
+.fa-align-center:before { content: "\f037"; }
+.fa-align-right:before { content: "\f038"; }
+.fa-align-justify:before { content: "\f039"; }
 .fa-list:before { content: "\f03a"; }
 .fa-video-camera:before { content: "\f03d"; }
 .fa-image:before,
@@ -211,6 +221,6 @@
 // Fixed width
 .tb-fw,
 .fa-fw {
-    width: (18em / 14);
-    text-align: center;
+    width: (24em / 14) !important;
+    text-align: center !important;
 }

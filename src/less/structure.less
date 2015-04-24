@@ -80,15 +80,34 @@ header {
     /*
      * Branding */
     .logo {
-        background: url( '../images/brand/logo-app.png' ) 0 0 no-repeat;
-        height: 43px;
-        margin: 8px 0 0 15px;
-        text-indent: -10000px;
-        width: 170px;
-
+        //background: url( '../images/brand/logo-app.png' ) 0 0 no-repeat;
+        color: #fff;
+        font-family: @font-family-serif;
+        font-size: 28px;
+        font-weight: 300;
+        height: 50px;
+        margin: 0 0 0 12px;
+        text-shadow: 0 1px 0 #111;
+        width: 250px;
         .logo-link {
+            color: #fff;
             width: 175px;
             height: 54px;
+            .tb-logo-full {
+                border-top: 4px solid @beryl;
+                color: @garnet;
+                display: block;
+                float: left;
+                font-size: 42px;
+                line-height: 42px;
+                padding: 0;
+                text-shadow: none;
+                overflow: hidden;
+            }
+            .text-wrapper {
+                display: inline-block;
+                padding: 5px 0 0 10px;
+            }
         }
     }
 
