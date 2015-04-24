@@ -2612,15 +2612,8 @@ section {
   /*
      * Actions menu */
 }
-.with-actions section.page {
-  top: 3.5em;
+section.page {
   position: relative;
-}
-body.x4 .with-actions section.page {
-  top: 3.4em;
-}
-body.x5 .with-actions section.page {
-  top: 3.3em;
 }
 section.help {
   border-right: 1px solid #bbbbbb;
