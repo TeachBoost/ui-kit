@@ -1401,7 +1401,7 @@ a.teal-background:hover {
   background-color: #484848;
   font-size: 0.9333em;
   text-shadow: 0 1px 0 #333333;
-  z-index: 1040;
+  z-index: 1030;
 }
 .dropdown-menu .dropdown-header {
   padding: 5px 15px;
@@ -1759,7 +1759,7 @@ ul.three-column {
 .with-left .left-nav {
   border-top: 0.25em solid #777777;
   top: 3.25em;
-  z-index: 1020;
+  z-index: 1050;
 }
 .titan.with-left .left-nav {
   border-top-color: #006391;
@@ -2439,7 +2439,7 @@ header {
   height: 3.5em;
   position: fixed;
   width: 100%;
-  z-index: 1050;
+  z-index: 1040;
   /*
      * Branding */
   /*
@@ -2538,7 +2538,7 @@ section.help {
   text-align: center;
   position: fixed;
   width: 12.5em;
-  z-index: 1030;
+  z-index: 1020;
 }
 section.help > .btn {
   font-size: 1em;
@@ -2579,7 +2579,7 @@ section.drawer {
   left: 70%;
   width: 30%;
   background: #eee;
-  z-index: 1020;
+  z-index: 1030;
   display: none;
   /*
          * Components within drawer */
@@ -2599,7 +2599,7 @@ section.drawer h3 .buttons {
 }
 .with-header section.drawer h3 .buttons {
   position: fixed;
-  top: 3.5em;
+  top: 2.8em;
   right: 7px;
 }
 body.x4 .with-header section.drawer h3 .buttons {
@@ -2738,6 +2738,202 @@ footer {
     margin-left: 76px !important;
     left: 0 !important;
   }
+}
+/*
+ * Overlays, status messages, and alert and confirm dialogs */
+#app-status {
+  display: none;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  z-index: 1130;
+  font-size: 0.9375em;
+  font-weight: bold;
+  color: #000000;
+}
+#app-status span {
+  background-color: #d6a70e;
+  display: inline-block;
+  padding: 6px 12px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom: 1px solid #aa850b;
+  line-height: 1;
+}
+#app-working {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  display: none;
+  font-size: 1.75em;
+  padding: 1em;
+  position: fixed;
+  z-index: 1141;
+  border-bottom: 1px solid #888888;
+  border-top: 1px solid #000000;
+  background: #111111 url('../images/ui/loader-gear.gif') 14px 20px no-repeat;
+}
+#app-working span {
+  display: block;
+  padding: 6px 0 6px 48px;
+}
+#app-working-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 1140;
+  display: none;
+}
+#app-alert,
+#app-confirm {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #cccccc;
+  color: #333333;
+  display: none;
+  padding: 1em;
+  position: fixed;
+  width: 480px;
+  z-index: 1120;
+}
+#app-alert h1,
+#app-confirm h1 {
+  background-color: transparent;
+  border-bottom: 1px solid #aaaaaa;
+  float: none;
+  font-size: 1.375em;
+  margin: 0;
+  padding: 0 0 0.55em;
+  text-shadow: none;
+}
+#app-alert p,
+#app-confirm p {
+  padding-top: 0.4em;
+  margin-bottom: 0.8em;
+  margin-top: 0;
+  color: #333333;
+  line-height: 150%;
+  font-size: 1.2em;
+}
+#app-alert .app-buttons,
+#app-confirm .app-buttons {
+  text-align: right;
+  margin-top: 35px;
+}
+#app-alert .app-buttons a.btn,
+#app-confirm .app-buttons a.btn {
+  margin-left: 6px;
+}
+#app-alert-overlay,
+#app-confirm-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 1110;
+  display: none;
+}
+#app-working-overlay {
+  background: #cccccc;
+  opacity: 1;
+}
+#app-working-overlay i {
+  display: block;
+  font-size: 64px;
+  margin: -30px auto 0;
+  width: 45px;
+  top: 50%;
+  height: 54px;
+  position: relative;
+  line-height: 0;
+  vertical-align: middle;
+  color: #aaaaaa;
+  text-shadow: 0 1px 0 #eeeeee, 0 -1px 0 #999999;
+}
+#app-error-overlay,
+#app-lock-overlay {
+  background: #e8e8e8;
+  position: fixed;
+  z-index: 1110;
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+#app-error-overlay .cell,
+#app-lock-overlay .cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+#app-working {
+  display: none !important;
+}
+#app-working-overlay .cell {
+  text-align: center;
+}
+#app-error-overlay span,
+#app-lock-overlay span,
+#app-working-overlay span {
+  text-align: center;
+  display: inline-block;
+  color: #888888;
+  padding: 12px 20px;
+  font-size: 1.0667em;
+  max-width: 60%;
+}
+#app-error-overlay span,
+#app-working-overlay span {
+  background-color: #007db6;
+  color: #ffffff;
+  font-weight: normal;
+}
+#app-error-overlay a {
+  color: #ffffff;
+}
+#app-lock-overlay span {
+  padding-top: 0;
+}
+#app-working-overlay span {
+  position: relative;
+  top: 15px;
+}
+#system-console {
+  background: none;
+  border: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  width: 33%;
+}
+#system-console p {
+  border-radius: 3px;
+  margin: 0 0 10px 0;
+  padding: 6px 10px;
+}
+#system-console p.info {
+  color: #777777;
+  background: #bbbbbb;
+}
+#system-console p.warn {
+  color: #333333;
+  background: #d6a70e;
+}
+#system-console p.error {
+  color: #ffffff;
+  background: #b94f3c;
 }
 /*
  * Tables */

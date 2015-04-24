@@ -1,0 +1,218 @@
+/*
+ * Overlays, status messages, and alert and confirm dialogs */
+
+#app-status {
+    display: none;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    z-index: @zindex-status;
+    font-size: 0.9375em;
+    font-weight: bold;
+    color: @black;
+
+    span {
+        background-color: @yellow;
+        display: inline-block;
+        padding: 6px 12px;
+        .border-radius-bottom(2px);
+        border-bottom: 1px solid @dark-yellow;
+        line-height: 1;
+    }
+}
+
+#app-working {
+    .border-radius(5px);
+    color: @white;
+    display: none;
+    font-size: 1.75em;
+    padding: 1em;
+    position: fixed;
+    z-index: @zindex-working;
+    border-bottom: 1px solid @eight-gray;
+    border-top: 1px solid @black;
+    background: @darker-gray url( '../images/ui/loader-gear.gif' ) 14px 20px no-repeat;
+
+    span {
+        display: block;
+        padding: 6px 0 6px 48px;
+    }
+}
+
+#app-working-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @black;
+    z-index: @zindex-working-overlay;
+    display: none;
+}
+
+#app-alert,
+#app-confirm {
+    .border-radius(5px);
+    background-color: @line-gray;
+    color: @dark-gray;
+    display: none;
+    padding: 1em;
+    position: fixed;
+    width: 480px;
+    z-index: @zindex-dialog;
+
+    h1 {
+        background-color: transparent;
+        border-bottom: 1px solid @neutral-gray;
+        float: none;
+        font-size: 1.375em;
+        margin: 0;
+        padding: 0 0 0.55em;
+        text-shadow: none
+    }
+    p {
+        padding-top: 0.4em;
+        margin-bottom: 0.8em;
+        margin-top: 0;
+        color: @dark-gray;
+        line-height: 150%;
+        font-size: 1.2em;
+    }
+    .app-buttons {
+        text-align: right;
+        margin-top: 35px;
+
+        a.btn {
+            margin-left: 6px;
+        }
+    }
+}
+
+#app-alert-overlay,
+#app-confirm-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @black;
+    z-index: @zindex-overlay;
+    display: none;
+}
+
+#app-working-overlay {
+    background: @line-gray;
+    opacity: 1;
+
+    i {
+        display: block;
+        font-size: 64px;
+        margin: -30px auto 0;
+        width: 45px;
+        top: 50%;
+        height: 54px;
+        position: relative;
+        line-height: 0;
+        vertical-align: middle;
+        color: @neutral-gray;
+        text-shadow: 0 1px 0 @light-gray, 0 -1px 0 @nine-gray;
+    }
+}
+
+#app-error-overlay,
+#app-lock-overlay {
+    background: @aspen-dark;
+    position: fixed;
+    z-index: @zindex-overlay;
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#app-error-overlay,
+#app-lock-overlay {
+    .cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+#app-working {
+    display: none !important;
+}
+
+#app-working-overlay {
+    .cell {
+        text-align: center;
+    }
+}
+
+#app-error-overlay,
+#app-lock-overlay,
+#app-working-overlay {
+    span {
+        text-align: center;
+        display: inline-block;
+        color: @eight-gray;
+        padding: 12px 20px;
+        font-size: 1.0667em;
+        max-width: 60%;
+    }
+}
+
+#app-error-overlay span,
+#app-working-overlay span {
+    background-color: @blue;
+    color: @white;
+    font-weight: normal;
+}
+
+#app-error-overlay {
+    a {
+        color: @white;
+    }
+}
+
+#app-lock-overlay {
+    span {
+        padding-top: 0;
+    }
+}
+
+#app-working-overlay {
+    span {
+        position: relative;
+        top: 15px;
+    }
+}
+
+#system-console {
+    background: none;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 33%;
+
+    p {
+        border-radius: 3px;
+        margin: 0 0 10px 0;
+        padding: 6px 10px;
+
+        &.info {
+            color: @seven-gray;
+            background: @medium-gray;
+        }
+        &.warn {
+            color: @dark-gray;
+            background: @yellow;
+        }
+        &.error {
+            color: @white;
+            background: @red;
+        }
+    }
+}

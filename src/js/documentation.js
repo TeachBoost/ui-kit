@@ -7,8 +7,11 @@ $( function() {
     // hide all sections at first
     $( '.page-section' ).hide();
 
+    // hide the working screen
+    $( '#app-working' ).hide();
+    $( '#app-working-overlay' ).hide();
+
     // offset the in-page navigation to account for the fixed header height
-    //
     $( '.item' ).click( function() {
         var $this = $( this ),
             target = $this.attr( "href" );

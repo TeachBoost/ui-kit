@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -37,6 +37,34 @@
       data-spy="scroll"
       data-target=".left-nav"
       data-offset="55">
+
+    <!-- System Dialogs -->
+    <div id="app-working"><span></span></div>
+    <div id="app-working-overlay" style="display:block;">
+        <noscript>
+            <div class="cell">
+                <span class="round-5">
+                    Please enable JavaScript to use this application
+                </span>
+            </div>
+        </noscript>
+        <div id="system-console"></div>
+        <div id="system-event" style="display:none;"></div>
+        <i class="fa fa-bookmark"></i>
+    </div>
+    <div id="app-error-overlay" style="display:none;">
+        <div class="cell">
+            <span class="round-5"></span>
+        </div>
+    </div>
+    <div id="app-lock-overlay" style="display:none;">
+        <div class="cell">
+            <span>
+                The workspace is locked<br /><br />
+                <a class="gray btn" id="unlock-screen" href="javascript:;">Unlock Screen</a>
+            </span>
+        </div>
+    </div>
 
     <!-- Header -->
     <header>
