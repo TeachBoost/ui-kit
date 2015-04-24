@@ -136,7 +136,7 @@ $( function() {
         }
     };
 
-    // drawers
+    // Drawers
     var $body = $( 'body' );
     $( '#openDrawer' ).on( 'click', function () {
         $body.removeClass( 'with-collapsed-drawer' );
@@ -144,4 +144,57 @@ $( function() {
     $( '#closeDrawer' ).on( 'click', function () {
         $body.addClass( 'with-collapsed-drawer' );
     });
+
+    // Update font size on toggle
+    var $toggle = $( '#toggle-zoom' ),
+        bodySizes = [
+            { pt: 15, mag: 1 },
+            { pt: 16, mag: 2 },
+            { pt: 17, mag: 3 },
+            { pt: 18, mag: 4 },
+            { pt: 19, mag: 5 }
+        ];
+    // When the + or - button is pressed
+    $toggle.on( 'click', 'button.adjust', function ( e ) {
+        var $this = $( this ),
+            $size = $this.parent().find( '.size' ),
+            direction = $this.data( 'direction' ),
+            mag = $size.data( 'mag' );
+
+        if ( direction === 'up' ) {
+            mag++;
+        }
+        else if ( direction === 'down' ) {
+            mag--;
+        }
+
+        mag = Math.min( bodySizes[ _.size( bodySizes ) - 1 ].mag, mag );
+        mag = Math.max( bodySizes[ 0 ].mag, mag );
+        setFontSize( mag );
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    // When the middle divider is pressed, do nothing
+    $( '#toggle-zoom' ).on( 'click', 'button.size', function ( e ) {
+        e.stopPropagation();
+    });
+
+    // Updates font size setting based on a magnification level
+    function setFontSize ( mag ) {
+        var size;
+
+        if ( ! mag ) {
+            mag = 2;
+        }
+
+        size = _.findWhere( bodySizes, { mag: mag } );
+
+        $( 'body' ).removeClass( 'x1 x2 x3 x4 x5' )
+            .addClass( 'x' + mag );
+        $( '#toggle-zoom' ).find( '.size' )
+            .data( 'pt', size.pt )
+            .data( 'mag', size.mag )
+            .text( size.pt + ' pt' );
+    }
 });

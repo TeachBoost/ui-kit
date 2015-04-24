@@ -1770,11 +1770,15 @@ ul.three-column {
 .falcon.with-left .left-nav {
   border-top-color: #933e2f;
 }
+.with-header.x1 .left-nav,
+.with-header.x3 .left-nav {
+  top: 3.3em;
+}
 .with-left.x4 .left-nav {
   top: 3.15em;
 }
 .with-left.x5 .left-nav {
-  top: 3.05em;
+  top: 3.1em;
 }
 body.x1 .left-nav {
   width: 13.5em;
@@ -2538,7 +2542,7 @@ section.help {
   text-align: center;
   position: fixed;
   width: 12.5em;
-  z-index: 1020;
+  z-index: 1050;
 }
 section.help > .btn {
   font-size: 1em;
@@ -2642,11 +2646,14 @@ section.drawer .drawer-container .drawer-scroller .drawer-content {
 .with-header section.drawer {
   top: 3.25em;
 }
+.with-header.x3 section.drawer {
+  top: 3.3em;
+}
 .with-header.x4 section.drawer {
   top: 3.15em;
 }
 .with-header.x5 section.drawer {
-  top: 3.05em;
+  top: 3.1em;
 }
 .eagle.with-left section.drawer {
   border-top: 0.25em solid #2a7e81;
@@ -2719,10 +2726,13 @@ footer {
   line-height: 1.8em;
 }
 .with-left footer {
+  right: 0;
+  left: 16.615em;
   border-top: 1px solid #dddddd;
   color: #aaaaaa;
-  margin: 50px 20px 0 16.615em;
+  margin: 50px 20px 0 20px;
   padding: 15px 0;
+  position: absolute;
 }
 .with-drawer footer {
   right: 30%;

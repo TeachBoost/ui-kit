@@ -165,7 +165,7 @@ section {
         text-align: center;
         position: fixed;
         width: 12.5em;
-        z-index: @zindex-fixed-nav;
+        z-index: @zindex-navbar;
 
         > .btn {
             font-size: 1em;
@@ -290,11 +290,14 @@ section {
             top: 3.25em;
 
         }
+        .with-header.x3 & {
+            top: 3.3em;
+        }
         .with-header.x4 & {
             top: 3.15em;
         }
         .with-header.x5 & {
-            top: 3.05em;
+            top: 3.1em;
         }
         .with-left & {
             .eagle& {
@@ -382,10 +385,13 @@ footer {
     line-height: 1.8em;
 
     .with-left & {
+        right: 0;
+        left: 16.615em;
         border-top: 1px solid @line-gray-lt;
         color: @gray;
-        margin: 50px 20px 0 16.615em;
+        margin: 50px 20px 0 20px;
         padding: 15px 0;
+        position: absolute;
     }
     .with-drawer & {
         right: 30%;
