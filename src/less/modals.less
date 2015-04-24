@@ -1,0 +1,50 @@
+/*
+ * Modals */
+
+.modal {
+    transition: display .25s ease-in-out;
+    -moz-transition: display .25s ease-in-out;
+    -webkit-transition: display .25s ease-in-out;
+}
+.modal-backdrop {
+    bottom: 0;
+    height: auto !important;
+}
+.modal-fit {
+    padding: 0 !important;
+
+    .modal-body {
+        overflow-y: auto
+    }
+    .modal-content {
+        overflow: hidden
+    }
+    table:last-child {
+        margin-bottom: 0
+    }
+}
+
+.modal-header,
+.modal-footer {
+    h4 {
+        color: @ash;
+    }
+}
+.modal-content {
+    background-color: @modal;
+    h4 {
+        margin-top: 0;
+    }
+}
+
+.modal-header {
+    position: relative;
+
+    .close {
+        padding: 6px;
+        font-size: 38px;
+        outline: none;
+        margin-top: -15px;
+        margin-right: -7px;
+    }
+}
