@@ -64,6 +64,7 @@ textarea {
 header {
     background: @dark-gray;
     border-bottom: 0.25em solid @gray;
+    border-top: 0.2em solid rgba(0,0,0,0.2);
     color: @white;
     height: 3.5em;
     position: fixed;
@@ -80,13 +81,12 @@ header {
     /*
      * Branding */
     .logo {
-        //background: url( '../images/brand/logo-app.png' ) 0 0 no-repeat;
         color: #fff;
         font-family: @font-family-serif;
         font-size: 28px;
         font-weight: 300;
         height: 50px;
-        margin: 0 0 0 12px;
+        margin: -4px 0 0 12px;
         text-shadow: 0 1px 0 #111;
         width: 250px;
         .logo-link {
@@ -106,7 +106,13 @@ header {
             }
             .text-wrapper {
                 display: inline-block;
-                padding: 5px 0 0 10px;
+                padding: 6px 0 0 10px;
+            }
+        }
+        &:hover {
+            .logo-link .tb-logo-full {
+                border-top-color: @hover-red;
+                color: @garnet-hover;
             }
         }
     }
