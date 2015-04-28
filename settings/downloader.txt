@@ -1,0 +1,21 @@
+maximum_torrents: 2
+maximum_files: 4
+maximum_threads: 4
+maximum_redirections: 2
+timeout_seconds: 60
+timeout_retries: 3
+piece_size: 8MB
+interval_seconds: 0
+resume_support: true
+delete_links: false
+force_delete_links: true
+include_label_in_file_paths: false
+output_progress: true
+output_debug: false
+defer_move: true
+file_finished_command: 
+torrent_finished_command: 
+downloads_folder: downloads
+temporary_folder: tmp/downloads
+label_filter: 
+cleanup_filenames: true
