@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* Common */
 /*
+ * Icons */
+/*
  * Colors */
 /*
  * Typography */
@@ -63,14 +65,14 @@
   border-radius: 0;
 }
 /*
- * Color buttons 
+ * Color buttons
  * function .make-button (
- *      background color: gray, 
- *      text color: white, 
- *      border color: dark-gray, 
- *      box-shadow color: light-gray, 
- *      text-shadow color: dark-gray, 
- *      vertical text-shadow offset: 1, 
+ *      background color: gray,
+ *      text color: white,
+ *      border color: dark-gray,
+ *      box-shadow color: light-gray,
+ *      text-shadow color: dark-gray,
+ *      vertical text-shadow offset: 1,
  *      font-size: 15) */
 .btn {
   /*
@@ -95,14 +97,13 @@
      * Disabled state: always light gray */
   /*
      * Icon buttons */
-  /* 
+  /*
      * Buttons with icons and text need padding */
 }
 .btn.blue {
   /* 
      * Base styles */
   color: #ffffff;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #333333;
@@ -167,7 +168,6 @@
   /* 
      * Base styles */
   color: #ffffff;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #333333;
@@ -232,7 +232,6 @@
   /* 
      * Base styles */
   color: #ffffff;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #333333;
@@ -297,7 +296,6 @@
   /* 
      * Base styles */
   color: #ffffff;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #333333;
@@ -362,7 +360,6 @@
   /* 
      * Base styles */
   color: #ffffff;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #aa850b;
@@ -427,7 +424,6 @@
   /* 
      * Base styles */
   color: #ffffff;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #333333;
@@ -492,7 +488,6 @@
   /* 
      * Base styles */
   color: #ffffff;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #333333;
@@ -557,7 +552,6 @@
   /* 
      * Base styles */
   color: #ffffff;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #000000;
@@ -622,7 +616,6 @@
   /* 
      * Base styles */
   color: #333333;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #f7f7f7;
@@ -687,7 +680,6 @@
   /* 
      * Base styles */
   color: #333333;
-  font-size: 17px;
   /* 
      * Mixins */
   text-shadow: 0 1px 0 #bbbbbb;
@@ -835,7 +827,7 @@
      * style the.button buttons */
   /*
      * middle buttons: remove border radii and add left border */
-  /* 
+  /*
      * prevent double borders when.btns are next to each other */
   /*
      * first button: set corners and handle when there's only one button */
@@ -1531,7 +1523,7 @@ a.teal-background:hover {
   box-shadow: none;
   /*
      * Size overrides */
-  /* 
+  /*
      * Disabled inputs (adding a specific class) */
   /*
      * Focus overrides (no box shadows) */
@@ -1666,13 +1658,13 @@ label.with-checkbox input {
 }
 .form-control-icon {
   color: #333333;
-  display: block;
+  display: block !important;
   height: 34px;
   line-height: 34px;
   position: absolute;
   left: 10px;
   text-align: center;
-  top: 4px;
+  top: 13px;
   width: 34px;
 }
 .no-selections {
@@ -1704,6 +1696,515 @@ label.with-checkbox input {
   right: 0.5em;
   top: 0.25em;
   color: #ffffff;
+}
+/**
+ * Font icons */
+@font-face {
+  font-family: 'TeachBoost';
+  src: url('../fonts/teachboost.eot?v=1.0');
+  src: url('../fonts/teachboost.eot?#iefix&v=1.0') format('embedded-opentype'), url('../fonts/teachboost.woff2?v=1.0') format('woff2'), url('../fonts/teachboost.woff?v=1.0') format('woff'), url('../fonts/teachboost.ttf?v=1.0') format('truetype'), url('../fonts/teachboost.svg?v=1.0#keyrune') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.tb,
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/0.75 TeachBoost;
+  font-size: inherit;
+  text-decoration: none;
+  text-rendering: auto;
+  transform: translate(0, 0);
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.tb-boost:before {
+  content: "\e600";
+}
+.tb-tag:before,
+.tb-logo:before {
+  content: "\e601";
+}
+.tb-tag-full .path1:before,
+.tb-logo-full .path1:before {
+  content: "\e602";
+}
+.tb-tag-full .path2:before,
+.tb-logo-full .path2:before {
+  content: "\e603";
+  margin-left: -1.21em;
+  color: #ffffff;
+}
+.fa-search:before {
+  content: "\f002";
+}
+.fa-star:before {
+  content: "\f005";
+}
+.fa-user:before {
+  content: "\f007";
+}
+.fa-th:before {
+  content: "\f00a";
+}
+.fa-th-list:before {
+  content: "\f00b";
+}
+.fa-check:before {
+  content: "\f00c";
+}
+.fa-close:before,
+.fa-remove:before,
+.fa-times:before {
+  content: "\f00d";
+}
+.fa-power-off:before {
+  content: "\f011";
+}
+.fa-cog:before,
+.fa-gear:before {
+  content: "\f013";
+}
+.fa-trash-o:before {
+  content: "\f014";
+}
+.fa-home:before {
+  content: "\f015";
+}
+.fa-clock-o:before {
+  content: "\f017";
+}
+.fa-road:before {
+  content: "\f018";
+}
+.fa-download:before {
+  content: "\f019";
+}
+.fa-inbox:before {
+  content: "\f01c";
+}
+.fa-refresh:before {
+  content: "\f021";
+}
+.fa-list-alt:before {
+  content: "\f022";
+}
+.fa-lock:before {
+  content: "\f023";
+}
+.fa-flag:before {
+  content: "\f024";
+}
+.fa-tags:before {
+  content: "\f02c";
+}
+.fa-book:before {
+  content: "\f02d";
+}
+.fa-bookmark:before {
+  content: "\f02e";
+}
+.fa-print:before {
+  content: "\f02f";
+}
+.fa-font:before {
+  content: "\f031";
+}
+.fa-align-left:before {
+  content: "\f036";
+}
+.fa-align-center:before {
+  content: "\f037";
+}
+.fa-align-right:before {
+  content: "\f038";
+}
+.fa-align-justify:before {
+  content: "\f039";
+}
+.fa-list:before {
+  content: "\f03a";
+}
+.fa-video-camera:before {
+  content: "\f03d";
+}
+.fa-image:before,
+.fa-photo:before,
+.fa-picture-o:before {
+  content: "\f03e";
+}
+.fa-pencil:before {
+  content: "\f040";
+}
+.fa-map-marker:before {
+  content: "\f041";
+}
+.fa-tint:before {
+  content: "\f043";
+}
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "\f044";
+}
+.fa-check-square-o:before {
+  content: "\f046";
+}
+.fa-chevron-left:before {
+  content: "\f053";
+}
+.fa-chevron-right:before {
+  content: "\f054";
+}
+.fa-minus-circle:before {
+  content: "\f056";
+}
+.fa-question-circle:before {
+  content: "\f059";
+}
+.fa-info-circle:before {
+  content: "\f05a";
+}
+.fa-arrow-left:before {
+  content: "\f060";
+}
+.fa-arrow-right:before {
+  content: "\f061";
+}
+.fa-compress:before {
+  content: "\f066";
+}
+.fa-plus:before {
+  content: "\f067";
+}
+.fa-minus:before {
+  content: "\f068";
+}
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+.fa-eye:before {
+  content: "\f06e";
+}
+.fa-exclamation-triangle:before,
+.fa-warning:before {
+  content: "\f071";
+}
+.fa-calendar:before {
+  content: "\f073";
+}
+.fa-comment:before {
+  content: "\f075";
+}
+.fa-chevron-down:before {
+  content: "\f078";
+}
+.fa-retweet:before {
+  content: "\f079";
+}
+.fa-bar-chart:before,
+.fa-bar-chart-o:before {
+  content: "\f080";
+}
+.fa-key:before {
+  content: "\f084";
+}
+.fa-cogs:before,
+.fa-gears:before {
+  content: "\f085";
+}
+.fa-comments:before {
+  content: "\f086";
+}
+.fa-thumbs-o-up:before {
+  content: "\f087";
+}
+.fa-thumb-tack:before {
+  content: "\f08d";
+}
+.fa-external-link:before {
+  content: "\f08e";
+}
+.fa-trophy:before {
+  content: "\f091";
+}
+.fa-upload:before {
+  content: "\f093";
+}
+.fa-phone:before {
+  content: "\f095";
+}
+.fa-square-o:before {
+  content: "\f096";
+}
+.fa-phone-square:before {
+  content: "\f098";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-bullhorn:before {
+  content: "\f0a1";
+}
+.fa-globe:before {
+  content: "\f0ac";
+}
+.fa-wrench:before {
+  content: "\f0ad";
+}
+.fa-tasks:before {
+  content: "\f0ae";
+}
+.fa-filter:before {
+  content: "\f0b0";
+}
+.fa-group:before,
+.fa-users:before {
+  content: "\f0c0";
+}
+.fa-chain:before,
+.fa-link:before {
+  content: "\f0c1";
+}
+.fa-copy:before,
+.fa-files-o:before {
+  content: "\f0c5";
+}
+.fa-paperclip:before {
+  content: "\f0c6";
+}
+.fa-floppy-o:before,
+.fa-save:before {
+  content: "\f0c7";
+}
+.fa-square:before {
+  content: "\f0c8";
+}
+.fa-bars:before,
+.fa-navicon:before,
+.fa-reorder:before {
+  content: "\f0c9";
+}
+.fa-table:before {
+  content: "\f0ce";
+}
+.fa-magic:before {
+  content: "\f0d0";
+}
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+.fa-caret-right:before {
+  content: "\f0da";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "\f0e2";
+}
+.fa-gavel:before,
+.fa-legal:before {
+  content: "\f0e3";
+}
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "\f0e4";
+}
+.fa-sitemap:before {
+  content: "\f0e8";
+}
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+}
+.fa-cloud-upload:before {
+  content: "\f0ee";
+}
+.fa-coffee:before {
+  content: "\f0f4";
+}
+.fa-file-text-o:before {
+  content: "\f0f6";
+}
+.fa-building-o:before {
+  content: "\f0f7";
+}
+.fa-medkit:before {
+  content: "\f0fa";
+}
+.fa-plus-square:before {
+  content: "\f0fe";
+}
+.fa-angle-right:before {
+  content: "\f105";
+}
+.fa-laptop:before {
+  content: "\f109";
+}
+.fa-circle-o:before {
+  content: "\f10c";
+}
+.fa-quote-left:before {
+  content: "\f10d";
+}
+.fa-quote-right:before {
+  content: "\f10e";
+}
+.fa-circle:before {
+  content: "\f111";
+}
+.fa-frown-o:before {
+  content: "\f119";
+}
+.fa-meh-o:before {
+  content: "\f11a";
+}
+.fa-flag-checkered:before {
+  content: "\f11e";
+}
+.fa-terminal:before {
+  content: "\f120";
+}
+.fa-puzzle-piece:before {
+  content: "\f12e";
+}
+.fa-calendar-o:before {
+  content: "\f133";
+}
+.fa-rocket:before {
+  content: "\f135";
+}
+.fa-chevron-circle-right:before {
+  content: "\f138";
+}
+.fa-unlock-alt:before {
+  content: "\f13e";
+}
+.fa-ellipsis-h:before {
+  content: "\f141";
+}
+.fa-play-circle:before {
+  content: "\f144";
+}
+.fa-level-up:before {
+  content: "\f148";
+}
+.fa-level-down:before {
+  content: "\f149";
+}
+.fa-pencil-square:before {
+  content: "\f14b";
+}
+.fa-share-square:before {
+  content: "\f14d";
+}
+.fa-file:before {
+  content: "\f15b";
+}
+.fa-file-text:before {
+  content: "\f15c";
+}
+.fa-thumbs-up:before {
+  content: "\f164";
+}
+.fa-youtube:before {
+  content: "\f167";
+}
+.fa-long-arrow-down:before {
+  content: "\f175";
+}
+.fa-long-arrow-up:before {
+  content: "\f176";
+}
+.fa-apple:before {
+  content: "\f179";
+}
+.fa-windows:before {
+  content: "\f17a";
+}
+.fa-android:before {
+  content: "\f17b";
+}
+.fa-archive:before {
+  content: "\f187";
+}
+.fa-google:before {
+  content: "\f1a0";
+}
+.fa-language:before {
+  content: "\f1ab";
+}
+.fa-fax:before {
+  content: "\f1ac";
+}
+.fa-child:before {
+  content: "\f1ae";
+}
+.fa-cubes:before {
+  content: "\f1b3";
+}
+.fa-recycle:before {
+  content: "\f1b8";
+}
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-ring:before,
+.fa-life-saver:before,
+.fa-support:before {
+  content: "\f1cd";
+}
+.fa-circle-o-notch:before {
+  content: "\f1ce";
+}
+.fa-plug:before {
+  content: "\f1e6";
+}
+.fa-trash:before {
+  content: "\f1f8";
+}
+.fa-area-chart:before {
+  content: "\f1fe";
+}
+.fa-pie-chart:before {
+  content: "\f200";
+}
+.fa-line-chart:before {
+  content: "\f201";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.tb-2x,
+.fa-2x {
+  font-size: 2em;
+}
+.tb-3x,
+.fa-3x {
+  font-size: 3em;
+}
+.tb-4x,
+.fa-4x {
+  font-size: 4em;
+}
+.tb-5x,
+.fa-5x {
+  font-size: 5em;
+}
+.tb-6x,
+.fa-6x {
+  font-size: 6em;
+}
+.tb-fw,
+.fa-fw {
+  width: 1.71428571em !important;
+  text-align: center !important;
 }
 /* 
   * Unordered lists */
@@ -1896,7 +2397,7 @@ body.x1 .left-nav {
 }
 .top-nav {
   float: right;
-  margin: 10px 1em 0 0;
+  margin: 6px 1em 0 0;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2524,6 +3025,7 @@ textarea {
 header {
   background: #333333;
   border-bottom: 0.25em solid #aaaaaa;
+  border-top: 0.2em solid rgba(0, 0, 0, 0.2);
   color: #ffffff;
   height: 3.5em;
   position: fixed;
@@ -2541,15 +3043,38 @@ body.x5 header {
   height: 3.3em;
 }
 header .logo {
-  background: url('../images/brand/logo-app.png') 0 0 no-repeat;
-  height: 43px;
-  margin: 8px 0 0 15px;
-  text-indent: -10000px;
-  width: 170px;
+  color: #fff;
+  font-family: Signika, "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  height: 50px;
+  margin: -4px 0 0 12px;
+  text-shadow: 0 1px 0 #111;
+  width: 250px;
 }
 header .logo .logo-link {
+  color: #fff;
   width: 175px;
   height: 54px;
+}
+header .logo .logo-link .tb-logo-full {
+  border-top: 4px solid #8c2b22;
+  color: #af362b;
+  display: block;
+  float: left;
+  font-size: 42px;
+  line-height: 42px;
+  padding: 0;
+  text-shadow: none;
+  overflow: hidden;
+}
+header .logo .logo-link .text-wrapper {
+  display: inline-block;
+  padding: 6px 0 0 10px;
+}
+header .logo:hover .logo-link .tb-logo-full {
+  border-top-color: #813729;
+  color: #a63329;
 }
 .titan header {
   border-bottom-color: #007db6;
