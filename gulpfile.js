@@ -48,6 +48,9 @@ gulp.task( 'dist', function () {
     gulp.src( './src/images/**/*' )
         .pipe(
             gulp.dest( './dist/images/' ));
+    gulp.src( './src/fonts/**/*' )
+        .pipe(
+            gulp.dest( './dist/fonts/' ));
     gulp.src( './src/css/build.css' )
         .pipe(
             rename( 'uikit.css' ))
