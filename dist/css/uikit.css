@@ -241,7 +241,7 @@
   /*
      * Background */
   background-color: #2ba02b;
-  border-bottom: 3px solid #227f22;
+  border-bottom: 3px solid #0f520f;
   /* 
      * Hover and active states */
   /*
@@ -258,7 +258,7 @@
   color: #ffffff !important;
   background-color: #268c26;
   border: none;
-  border-bottom: 3px solid #195f19;
+  border-bottom: 3px solid #093009;
   outline: none;
 }
 .btn.green.glowing {
@@ -277,20 +277,20 @@
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
 }
 .btn.green.on-black {
-  border-bottom-color: #175717;
+  border-bottom-color: #072707;
 }
 .black.btn.green.on-black {
   border-bottom-color: #282828;
 }
 .btn.green.on-black:hover {
-  border-color: #124312;
+  border-color: #031103;
 }
 .black.btn.green.on-black:hover {
   border-color: #202020;
 }
 .btn.green.no-hover:hover {
   background-color: #2ba02b;
-  border-bottom: 3px solid #227f22;
+  border-bottom: 3px solid #0f520f;
 }
 .btn.purple {
   /* 
@@ -2531,6 +2531,7 @@ body.sx3 .top-nav .dropdown-menu li a > i {
 }
 .next-step .controls i.edit-next-step {
   margin-right: 5px;
+  margin-top: 2px;
 }
 .next-step.w-controls .wrap {
   display: inline-block;
