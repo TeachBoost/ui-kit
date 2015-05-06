@@ -34,5 +34,5 @@ To create a new distribution and version in the Bower registry:
     gulp dist
     bower version <VERSION>
 
-Where <VERSION> is a semver version like "0.0.1". To see the current version
+Where <VERSION> is a server version like "0.0.1". To see the current version
 look in the `bower.json` file or run `git tag`.

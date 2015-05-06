@@ -1796,6 +1796,9 @@ label.with-checkbox input {
 .fa-flag:before {
   content: "\f024";
 }
+.fa-tag:before {
+  content: "\f02b";
+}
 .fa-tags:before {
   content: "\f02c";
 }
@@ -1871,6 +1874,12 @@ label.with-checkbox input {
 .fa-arrow-right:before {
   content: "\f061";
 }
+.fa-arrow-up:before {
+  content: "\f062";
+}
+.fa-arrow-down:before {
+  content: "\f063";
+}
 .fa-compress:before {
   content: "\f066";
 }
@@ -1885,6 +1894,9 @@ label.with-checkbox input {
 }
 .fa-eye:before {
   content: "\f06e";
+}
+.fa-eye-slash:before {
+  content: "\f070";
 }
 .fa-exclamation-triangle:before,
 .fa-warning:before {
@@ -1918,6 +1930,9 @@ label.with-checkbox input {
 }
 .fa-thumbs-o-up:before {
   content: "\f087";
+}
+.fa-sign-out:before {
+  content: "\f08b";
 }
 .fa-thumb-tack:before {
   content: "\f08d";
@@ -2066,6 +2081,9 @@ label.with-checkbox input {
 .fa-meh-o:before {
   content: "\f11a";
 }
+.fa-keyboard-o:before {
+  content: "\f11c";
+}
 .fa-flag-checkered:before {
   content: "\f11e";
 }
@@ -2092,6 +2110,9 @@ label.with-checkbox input {
 }
 .fa-play-circle:before {
   content: "\f144";
+}
+.fa-minus-square:before {
+  content: "\f146";
 }
 .fa-level-up:before {
   content: "\f148";
@@ -2122,6 +2143,12 @@ label.with-checkbox input {
 }
 .fa-long-arrow-up:before {
   content: "\f176";
+}
+.fa-long-arrow-left:before {
+  content: "\f177";
+}
+.fa-long-arrow-right:before {
+  content: "\f178";
 }
 .fa-apple:before {
   content: "\f179";
