@@ -14,7 +14,11 @@ $( function() {
     // offset the in-page navigation to account for the fixed header height
     $( '.item' ).click( function() {
         var $this = $( this ),
-            target = $this.attr( "href" );
+            target = $this.attr( "href" ),
+            actionsPadding = ( $( 'body' ).hasClass( 'with-actions' ) )
+                ? $( 'section.actions' ).outerHeight()
+                : 0;
+            padding = 54 + actionsPadding;
         target = target.substring( 1, target.length );
         var $section = $( 'section#' + target );
         // activate this LI
@@ -25,7 +29,7 @@ $( function() {
         $section.show();
         // update hash and scroll
         window.location.hash = '#' + target;
-        $( window ).scrollTop( $section.offset().top - 54 );
+        $( window ).scrollTop( $section.offset().top - padding );
         return false; 
     });
 
@@ -36,7 +40,7 @@ $( function() {
         $( 'ul.nav' ).find( 'a.item.' + hash ).click();
     }
     else {
-        $( 'ul.nav' ).find( 'a' ).first().click();
+        $( 'main' ).find( 'section' ).eq( 1 ).show();
     }
 
     // set up checkboxes using icheck

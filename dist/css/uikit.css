@@ -1514,7 +1514,7 @@ a.teal-background:hover {
   border-color: #aaaaaa;
   color: #333333;
   font-size: 1em;
-  height: 34px;
+  height: auto;
   padding: 6px 10px;
   position: relative;
   top: 1px;
