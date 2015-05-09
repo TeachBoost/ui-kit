@@ -1814,6 +1814,12 @@ label.with-checkbox input {
 .fa-font:before {
   content: "\f031";
 }
+.fa-bold {
+  content: "\f032";
+}
+.fa-italic:before {
+  content: "\f033";
+}
 .fa-align-left:before {
   content: "\f036";
 }
@@ -1999,6 +2005,9 @@ label.with-checkbox input {
 .fa-navicon:before,
 .fa-reorder:before {
   content: "\f0c9";
+}
+.fa-underline:before {
+  content: "\f0cd";
 }
 .fa-table:before {
   content: "\f0ce";
