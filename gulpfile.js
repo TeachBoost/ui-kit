@@ -45,10 +45,10 @@ gulp.task( 'watch', [ 'html', 'less' ], function () {
 
 // Copy built assets to dist folder
 gulp.task( 'dist', function () {
-    gulp.src( './src/images/**/*' )
+    gulp.src([ 'src/images/**/*' ])
         .pipe(
             gulp.dest( './dist/images/' ));
-    gulp.src( './src/fonts/**/*' )
+    gulp.src([ 'src/fonts/**/*' ])
         .pipe(
             gulp.dest( './dist/fonts/' ));
     gulp.src( './src/css/build.css' )
