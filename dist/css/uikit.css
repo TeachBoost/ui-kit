@@ -1514,7 +1514,7 @@ a.teal-background:hover {
   border-color: #aaaaaa;
   color: #333333;
   font-size: 1em;
-  height: 34px;
+  height: auto;
   padding: 6px 10px;
   position: relative;
   top: 1px;
@@ -3425,24 +3425,6 @@ footer {
   border-bottom-left-radius: 2px;
   border-bottom: 1px solid #aa850b;
   line-height: 1;
-}
-#app-working {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #ffffff;
-  display: none;
-  font-size: 1.75em;
-  padding: 1em;
-  position: fixed;
-  z-index: 1141;
-  border-bottom: 1px solid #888888;
-  border-top: 1px solid #000000;
-  background: #111111 url('../images/ui/loader-gear.gif') 14px 20px no-repeat;
-}
-#app-working span {
-  display: block;
-  padding: 6px 0 6px 48px;
 }
 #app-working-overlay {
   position: fixed;
