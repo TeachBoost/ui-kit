@@ -1742,6 +1742,9 @@ label.with-checkbox input {
 .fa-star:before {
   content: "\f005";
 }
+.fa-star-o:before {
+  content: "\f006";
+}
 .fa-user:before {
   content: "\f007";
 }
@@ -2024,6 +2027,18 @@ label.with-checkbox input {
 .fa-caret-right:before {
   content: "\f0da";
 }
+.fa-sort:before,
+.fa-unsorted:before {
+  content: "\f0dc";
+}
+.fa-sort-desc,
+.fa-sort-down {
+  content: "\f0dd";
+}
+.fa-sort-asc,
+.fa-sort-up {
+  content: "\f0de";
+}
 .fa-envelope:before {
   content: "\f0e0";
 }
@@ -2056,6 +2071,24 @@ label.with-checkbox input {
 }
 .fa-file-text-o:before {
   content: "\f0f6";
+}
+.fa-sort-alpha-asc {
+  content: "\f15d";
+}
+.fa-sort-alpha-desc {
+  content: "\f15e";
+}
+.fa-sort-amount-desc {
+  content: "\f160";
+}
+.fa-sort-amount-desc {
+  content: "\f161";
+}
+.fa-sort-numeric-desc {
+  content: "\f162";
+}
+.fa-sort-numeric-desc {
+  content: "\f163";
 }
 .fa-building-o:before {
   content: "\f0f7";
@@ -3383,7 +3416,7 @@ section.actions .btn {
   line-height: 2.15em;
 }
 section.actions .btn:active {
-  margin-bottom: 2px;
+  margin-bottom: 0px;
   height: 2.15em;
 }
 .with-drawer section.actions {
