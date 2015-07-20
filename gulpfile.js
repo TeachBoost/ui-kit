@@ -44,7 +44,7 @@ gulp.task( 'watch', [ 'html', 'less' ], function () {
 });
 
 // Copy built assets to dist folder
-gulp.task( 'dist', function () {
+gulp.task( 'dist', [ 'html', 'less' ], function () {
     gulp.src([ 'src/images/**/*' ])
         .pipe(
             gulp.dest( './dist/images/' ));
