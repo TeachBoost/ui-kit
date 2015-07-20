@@ -1,7 +1,7 @@
 {
   "name": "tb-ui-kit",
   "private": true,
-  "version": "0.0.66",
+  "version": "0.0.67",
   "main": "index.html",
   "ignore": [
     "LICENSE",
