@@ -3383,7 +3383,7 @@ section.actions .btn {
   line-height: 2.15em;
 }
 section.actions .btn:active {
-  margin-bottom: 0px;
+  margin-bottom: 2px;
   height: 2.15em;
 }
 .with-drawer section.actions {
