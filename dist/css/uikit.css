@@ -1,29 +1,5 @@
 @charset "UTF-8";
 /* Common */
-/*
- * Icons */
-/*
- * Colors */
-/*
- * Typography */
-/*
- * Position */
-/*
- * Size */
-/*
- * Typography */
-/*
- * Corners */
-/* 
- * Box shadows */
-/* To pass in more than 1 box shadow, call .box-shadow-list() and comma-
- * delineate a list like this: .box-shadow-list(str, str, str;); */
-/*
- * Buttons */
-/*
- * Layout */
-/* Include .clearfix for regular clearfixes; call this mixin on elements 
-   so you don't have to include .clearfix a million times */
 /* UI */
 /*
  * Alert callouts */
@@ -101,27 +77,13 @@
      * Buttons with icons and text need padding */
 }
 .btn.blue {
-  /* 
-     * Base styles */
   color: #ffffff;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #007db6;
   border-bottom: 3px solid #006391;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.blue:hover,
 .btn.blue:focus,
@@ -165,27 +127,13 @@
   border-bottom: 3px solid #006391;
 }
 .btn.red {
-  /* 
-     * Base styles */
   color: #ffffff;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #b94f3c;
   border-bottom: 3px solid #933e2f;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.red:hover,
 .btn.red:focus,
@@ -229,27 +177,13 @@
   border-bottom: 3px solid #933e2f;
 }
 .btn.green {
-  /* 
-     * Base styles */
   color: #ffffff;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #2ba02b;
   border-bottom: 3px solid #227f22;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.green:hover,
 .btn.green:focus,
@@ -293,27 +227,13 @@
   border-bottom: 3px solid #227f22;
 }
 .btn.purple {
-  /* 
-     * Base styles */
   color: #ffffff;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #ab51c4;
   border-bottom: 3px solid #88409c;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.purple:hover,
 .btn.purple:focus,
@@ -357,27 +277,13 @@
   border-bottom: 3px solid #88409c;
 }
 .btn.yellow {
-  /* 
-     * Base styles */
   color: #ffffff;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #aa850b;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #d6a70e;
   border-bottom: 3px solid #aa850b;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.yellow:hover,
 .btn.yellow:focus,
@@ -421,27 +327,13 @@
   border-bottom: 3px solid #aa850b;
 }
 .btn.orange {
-  /* 
-     * Base styles */
   color: #ffffff;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #d1712d;
   border-bottom: 3px solid #a65a23;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.orange:hover,
 .btn.orange:focus,
@@ -485,27 +377,13 @@
   border-bottom: 3px solid #a65a23;
 }
 .btn.teal {
-  /* 
-     * Base styles */
   color: #ffffff;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #359fa3;
   border-bottom: 3px solid #2a7e81;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.teal:hover,
 .btn.teal:focus,
@@ -549,27 +427,13 @@
   border-bottom: 3px solid #2a7e81;
 }
 .btn.black {
-  /* 
-     * Base styles */
   color: #ffffff;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #000000;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #383838;
   border-bottom: 3px solid #111111;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.black:hover,
 .btn.black:focus,
@@ -613,27 +477,13 @@
   border-bottom: 3px solid #111111;
 }
 .btn.gray {
-  /* 
-     * Base styles */
   color: #333333;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #f7f7f7;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #dddddd;
   border-bottom: 3px solid #a8a8a8;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.gray:hover,
 .btn.gray:focus,
@@ -677,27 +527,13 @@
   border-bottom: 3px solid #a8a8a8;
 }
 .btn.medium-gray {
-  /* 
-     * Base styles */
   color: #333333;
-  /* 
-     * Mixins */
   text-shadow: 0 1px 0 #bbbbbb;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  /*
-     * Background */
   background-color: #bbbbbb;
   border-bottom: 3px solid #999999;
-  /* 
-     * Hover and active states */
-  /*
-     * Glow button for marketing site/login */
-  /*
-     * Dark background: overload hover/active so it shows well */
-  /*
-    * Prevent the hover */
 }
 .btn.medium-gray:hover,
 .btn.medium-gray:focus,
@@ -1701,8 +1537,8 @@ label.with-checkbox input {
  * Font icons */
 @font-face {
   font-family: 'TeachBoost';
-  src: url('../fonts/teachboost.eot?v=1.0');
-  src: url('../fonts/teachboost.eot?#iefix&v=1.0') format('embedded-opentype'), url('../fonts/teachboost.woff2?v=1.0') format('woff2'), url('../fonts/teachboost.woff?v=1.0') format('woff'), url('../fonts/teachboost.ttf?v=1.0') format('truetype'), url('../fonts/teachboost.svg?v=1.0#keyrune') format('svg');
+  src: url('../fonts/teachboost.eot?v=1.1');
+  src: url('../fonts/teachboost.eot?#iefix&v=1.1') format('embedded-opentype'), url('../fonts/teachboost.woff2?v=1.1') format('woff2'), url('../fonts/teachboost.woff?v=1.1') format('woff'), url('../fonts/teachboost.ttf?v=1.1') format('truetype'), url('../fonts/teachboost.svg?v=1.1#keyrune') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1735,6 +1571,9 @@ label.with-checkbox input {
   content: "\e603";
   margin-left: -1.21em;
   color: #ffffff;
+}
+.fa-map:before {
+  content: "\e800";
 }
 .fa-search:before {
   content: "\f002";

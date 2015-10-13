@@ -1,13 +1,13 @@
-/*
- * Typography */
+//
+// Typography
 
 .text-shadow (@h: 0; @v: 1px; @blur: 0; @color: @white) {
     text-shadow: @arguments;
 }
 
 
-/*
- * Corners */
+//
+// Corners
 
 .border-radius (@radius: 2px) {
     -moz-border-radius: @radius;
@@ -58,8 +58,9 @@
 }
 
 
-/* 
- * Box shadows */
+//
+// Box shadows
+
 .box-shadow (@x: 0; @y: 1px; @blur: 0; @spread: 0; @color: @light-gray) {
     -webkit-box-shadow: @arguments;
     -moz-box-shadow: @arguments;
@@ -72,8 +73,8 @@
     box-shadow: @arguments;
 }
 
-/* To pass in more than 1 box shadow, call .box-shadow-list() and comma-
- * delineate a list like this: .box-shadow-list(str, str, str;); */
+// To pass in more than 1 box shadow, call .box-shadow-list() and comma-
+// delineate a list like this: .box-shadow-list(str, str, str;);
 .box-shadow-list (@arguments) {
     -webkit-box-shadow: @arguments;
     -moz-box-shadow: @arguments;
@@ -81,31 +82,27 @@
 }
 
 
-/*
- * Buttons */
+//
+// Buttons
 
-.make-button(@background-color: @gray; 
+.make-button(@background-color: @gray;
              @text-color: @white;
-             @border-color: @dark-gray; 
-             @shadow-color: @light-gray; 
-             @textshadow-color: @dark-gray; 
+             @border-color: @dark-gray;
+             @shadow-color: @light-gray;
+             @textshadow-color: @dark-gray;
              @textshadow-vertical: 1px) {
-    /* 
-     * Base styles */
+    // Base styles
     color: @text-color;
 
-    /* 
-     * Mixins */
-    .text-shadow(0, @textshadow-vertical, 0, @textshadow-color);  
+    // Mixins
+    .text-shadow(0, @textshadow-vertical, 0, @textshadow-color);
     .border-radius(4px 4px 5px 5px);
 
-    /*
-     * Background */
+    // Background
     background-color: @background-color;
     border-bottom: 3px solid @border-color;
 
-    /* 
-     * Hover and active states */
+    // Hover and active states
     &:hover,
     &:focus,
     &:active,
@@ -117,8 +114,7 @@
         outline: none;
     }
 
-    /*
-     * Glow button for marketing site/login */
+    // Glow button for marketing site/login
     &.glowing {
         border: none;
         padding: 6px 15px 7px;
@@ -129,8 +125,7 @@
         }
     }
 
-    /*
-     * Dark background: overload hover/active so it shows well */
+    // Dark background: overload hover/active so it shows well
     &.on-black {
         border-bottom-color: darken(@border-color, 10%);
         .black& { border-bottom-color: #282828; }
@@ -140,8 +135,7 @@
         }
     }
 
-    /*
-    * Prevent the hover */
+    // Prevent the hover
     &.no-hover:hover {
         background-color: @background-color;
         border-bottom: 3px solid @border-color;
@@ -149,11 +143,11 @@
 }
 
 
-/*
- * Layout */
+//
+// Layout
 
-/* Include .clearfix for regular clearfixes; call this mixin on elements 
-   so you don't have to include .clearfix a million times */
+// Include .clearfix for regular clearfixes; call this mixin on elements
+// so you don't have to include .clearfix a million times 
 .clearfix () {
     &:before,
     &:after {
