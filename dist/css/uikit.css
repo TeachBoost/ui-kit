@@ -1581,6 +1581,9 @@ label.with-checkbox input {
 .fa-sticky-note-o:before {
   content: "\e900";
 }
+.fa-wheel:before {
+  content: "\e902";
+}
 .fa-search:before {
   content: "\f002";
 }
