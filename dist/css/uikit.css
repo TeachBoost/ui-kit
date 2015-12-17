@@ -4,13 +4,13 @@
 /*
  * Alert callouts */
 .alert {
-  background: #eee;
+  background: #eeeeee;
   border: none;
-  border-left: 5px solid #aaa;
+  border-left: 5px solid #aaaaaa;
   color: #484848;
   line-height: 1.7em;
   padding: 12px 15px 13px 18px;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #ffffff;
   /*
      * Span the entire width of the page */
 }
@@ -53,9 +53,9 @@
 .btn {
   /*
      * Global styles, so just calling .btn works ok */
-  background: #aaa;
+  background: #aaaaaa;
   border: none;
-  border-bottom: 3px solid #777;
+  border-bottom: 3px solid #777777;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -77,8 +77,8 @@
      * Buttons with icons and text need padding */
 }
 .btn.blue {
-  color: #fff;
-  text-shadow: 0 1px 0 #333;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
@@ -89,7 +89,7 @@
 .btn.blue:focus,
 .btn.blue:active,
 .btn.blue.active {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #006b9d;
   border: none;
   border-bottom: 3px solid #004768;
@@ -127,8 +127,8 @@
   border-bottom: 3px solid #006391;
 }
 .btn.red {
-  color: #fff;
-  text-shadow: 0 1px 0 #333;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
@@ -139,7 +139,7 @@
 .btn.red:focus,
 .btn.red:active,
 .btn.red.active {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #a64736;
   border: none;
   border-bottom: 3px solid #743125;
@@ -177,8 +177,8 @@
   border-bottom: 3px solid #933e2f;
 }
 .btn.green {
-  color: #fff;
-  text-shadow: 0 1px 0 #333;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
@@ -189,7 +189,7 @@
 .btn.green:focus,
 .btn.green:active,
 .btn.green.active {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #268c26;
   border: none;
   border-bottom: 3px solid #195f19;
@@ -227,8 +227,8 @@
   border-bottom: 3px solid #227f22;
 }
 .btn.purple {
-  color: #fff;
-  text-shadow: 0 1px 0 #333;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
@@ -239,7 +239,7 @@
 .btn.purple:focus,
 .btn.purple:active,
 .btn.purple.active {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #a140bc;
   border: none;
   border-bottom: 3px solid #6f347f;
@@ -277,7 +277,7 @@
   border-bottom: 3px solid #88409c;
 }
 .btn.yellow {
-  color: #fff;
+  color: #ffffff;
   text-shadow: 0 1px 0 #aa850b;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
@@ -289,7 +289,7 @@
 .btn.yellow:focus,
 .btn.yellow:active,
 .btn.yellow.active {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #be940c;
   border: none;
   border-bottom: 3px solid #846709;
@@ -327,8 +327,8 @@
   border-bottom: 3px solid #aa850b;
 }
 .btn.orange {
-  color: #fff;
-  text-shadow: 0 1px 0 #333;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
@@ -339,7 +339,7 @@
 .btn.orange:focus,
 .btn.orange:active,
 .btn.orange.active {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #bc6628;
   border: none;
   border-bottom: 3px solid #84481c;
@@ -377,8 +377,8 @@
   border-bottom: 3px solid #a65a23;
 }
 .btn.teal {
-  color: #fff;
-  text-shadow: 0 1px 0 #333;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #333333;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
@@ -389,7 +389,7 @@
 .btn.teal:focus,
 .btn.teal:active,
 .btn.teal.active {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #2f8c90;
   border: none;
   border-bottom: 3px solid #206062;
@@ -427,19 +427,19 @@
   border-bottom: 3px solid #2a7e81;
 }
 .btn.black {
-  color: #fff;
-  text-shadow: 0 1px 0 #000;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #000000;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
   background-color: #383838;
-  border-bottom: 3px solid #111;
+  border-bottom: 3px solid #111111;
 }
 .btn.black:hover,
 .btn.black:focus,
 .btn.black:active,
 .btn.black.active {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #2b2b2b;
   border: none;
   border-bottom: 3px solid #000000;
@@ -474,22 +474,22 @@
 }
 .btn.black.no-hover:hover {
   background-color: #383838;
-  border-bottom: 3px solid #111;
+  border-bottom: 3px solid #111111;
 }
 .btn.gray {
-  color: #333;
+  color: #333333;
   text-shadow: 0 1px 0 #f7f7f7;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  background-color: #ddd;
+  background-color: #dddddd;
   border-bottom: 3px solid #a8a8a8;
 }
 .btn.gray:hover,
 .btn.gray:focus,
 .btn.gray:active,
 .btn.gray.active {
-  color: #333 !important;
+  color: #333333 !important;
   background-color: #d0d0d0;
   border: none;
   border-bottom: 3px solid #949494;
@@ -523,23 +523,23 @@
   border-color: #202020;
 }
 .btn.gray.no-hover:hover {
-  background-color: #ddd;
+  background-color: #dddddd;
   border-bottom: 3px solid #a8a8a8;
 }
 .btn.medium-gray {
-  color: #333;
-  text-shadow: 0 1px 0 #bbb;
+  color: #333333;
+  text-shadow: 0 1px 0 #bbbbbb;
   -moz-border-radius: 4px 4px 5px 5px;
   -webkit-border-radius: 4px 4px 5px 5px;
   border-radius: 4px 4px 5px 5px;
-  background-color: #bbb;
-  border-bottom: 3px solid #999;
+  background-color: #bbbbbb;
+  border-bottom: 3px solid #999999;
 }
 .btn.medium-gray:hover,
 .btn.medium-gray:focus,
 .btn.medium-gray:active,
 .btn.medium-gray.active {
-  color: #333 !important;
+  color: #333333 !important;
   background-color: #aeaeae;
   border: none;
   border-bottom: 3px solid #858585;
@@ -573,8 +573,8 @@
   border-color: #202020;
 }
 .btn.medium-gray.no-hover:hover {
-  background-color: #bbb;
-  border-bottom: 3px solid #999;
+  background-color: #bbbbbb;
+  border-bottom: 3px solid #999999;
 }
 .btn:active {
   border-bottom-width: 1px !important;
@@ -644,7 +644,7 @@
   pointer-events: auto;
   /* this conflicts with the cursor */
   filter: none;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #ffffff;
 }
 .btn .fa {
   position: relative;
@@ -732,12 +732,12 @@
   padding-left: 9px !important;
 }
 .btn-group.switch-toggle > .btn {
-  color: #fff;
+  color: #ffffff;
   width: 50px;
-  text-shadow: 0 1px 0 #333;
+  text-shadow: 0 1px 0 #333333;
 }
 .btn-group.switch-toggle > .btn:hover {
-  color: #fff;
+  color: #ffffff;
 }
 .btn-group.switch-toggle > .btn > .fa {
   font-size: 17px;
@@ -747,10 +747,10 @@
   border-bottom-color: #227f22;
 }
 .btn-group.switch-toggle > .btn.off {
-  background: #aaa;
+  background: #aaaaaa;
   border-left: none;
   border-right: none;
-  border-bottom-color: #777;
+  border-bottom-color: #777777;
   text-indent: -9999px;
 }
 .btn-group.switch-toggle > .btn.inactive {
@@ -781,13 +781,13 @@
 }
 .card > .value {
   background: #484848;
-  color: #fff;
+  color: #ffffff;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 .card > a.value:hover {
-  background: #333;
+  background: #333333;
 }
 .card.blue > .value {
   background-color: #007db6;
@@ -883,13 +883,13 @@
          * Link or span holding the value */
 }
 .card.icon > .caption {
-  color: #555;
+  color: #555555;
   font-size: 13px;
   margin: 5px 0 0 2px;
 }
 .card.icon > .caption > a {
-  border-bottom: 1px solid #ccc;
-  color: #555;
+  border-bottom: 1px solid #cccccc;
+  color: #555555;
   padding-bottom: 1px;
 }
 .card.icon > .caption > a:after {
@@ -899,8 +899,8 @@
   margin-left: 3px;
 }
 .card.icon > .caption > a:hover {
-  border-bottom-color: #aaa;
-  color: #333;
+  border-bottom-color: #aaaaaa;
+  color: #333333;
 }
 .card.icon i.fa {
   margin-right: 5px;
@@ -960,13 +960,13 @@ a.teal-background:hover {
   background-color: #8c2b22;
 }
 .white-background {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .gray-background {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .dark-background {
-  background-color: #333;
+  background-color: #333333;
 }
 .castlerock-background {
   background-color: #383838;
@@ -981,7 +981,7 @@ a.teal-background:hover {
   background-color: #a8a8a8;
 }
 .graygray-background {
-  background-color: #aaa;
+  background-color: #aaaaaa;
 }
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.2);
@@ -989,13 +989,13 @@ a.teal-background:hover {
 /*
  * Font colors */
 .gray-text {
-  color: #777;
+  color: #777777;
 }
 .midgray-text {
-  color: #555;
+  color: #555555;
 }
 .darkgray-text {
-  color: #333;
+  color: #333333;
 }
 .teal-text {
   color: #359fa3;
@@ -1252,37 +1252,37 @@ a.teal-background:hover {
   border: none;
   background-color: #484848;
   font-size: 0.9333em;
-  text-shadow: 0 1px 0 #333;
+  text-shadow: 0 1px 0 #333333;
   z-index: 1030;
 }
 .dropdown-menu .dropdown-header {
   padding: 5px 15px;
   font-size: 12px;
   font-weight: normal;
-  color: #aaa;
+  color: #aaaaaa;
   text-transform: uppercase;
 }
 .dropdown-menu li a {
   padding: 6px 15px;
-  color: #fff;
+  color: #ffffff;
 }
 .dropdown-menu li a:hover,
 .dropdown-menu li a:focus,
 .dropdown-menu .active a,
 .dropdown-menu .active a:hover,
 .dropdown-menu .active a:focus {
-  color: #fff;
+  color: #ffffff;
   background-color: #383838;
   outline: none;
 }
 .dropdown-menu .disabled a,
 .dropdown-menu .disabled a:hover,
 .dropdown-menu .disabled a:focus {
-  color: #777;
+  color: #777777;
   cursor: default;
 }
 .dropdown-menu .divider {
-  background-color: #eee;
+  background-color: #eeeeee;
   border-bottom: none;
   height: 2px;
   margin: 5px 0;
@@ -1320,12 +1320,12 @@ a.teal-background:hover {
   border-color: transparent;
   border-style: solid;
   border-width: 5px 0 5px 5px;
-  border-left-color: #fff;
+  border-left-color: #ffffff;
   margin-top: 5px;
   margin-right: -10px;
 }
 .dropdown-submenu:hover a:after {
-  border-left-color: #fff;
+  border-left-color: #ffffff;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -1347,8 +1347,8 @@ a.teal-background:hover {
   margin-bottom: 20px;
 }
 .form-control {
-  border-color: #aaa;
-  color: #333;
+  border-color: #aaaaaa;
+  color: #333333;
   font-size: 1em;
   height: auto;
   padding: 6px 10px;
@@ -1378,8 +1378,8 @@ a.teal-background:hover {
 }
 .form-control[disabled],
 .form-control.disabled {
-  background-color: #eee;
-  color: #aaa;
+  background-color: #eeeeee;
+  color: #aaaaaa;
   cursor: not-allowed;
   opacity: 1;
 }
@@ -1426,7 +1426,7 @@ a.teal-background:hover {
 }
 .form-horizontal .form-group {
   margin: 0 0 12px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
   padding-bottom: 12px;
 }
 .form-horizontal .form-group:last-child {
@@ -1487,13 +1487,13 @@ label.with-checkbox input {
   color: #b94f3c;
 }
 .help-block {
-  color: #777;
+  color: #777777;
   font-size: 13px;
   line-height: 1.5em;
   margin: 8px 0 10px 10px;
 }
 .form-control-icon {
-  color: #333;
+  color: #333333;
   display: block !important;
   height: 34px;
   line-height: 34px;
@@ -1506,8 +1506,8 @@ label.with-checkbox input {
 .no-selections {
   padding: 0em 0.5em;
   font-size: 0.8em;
-  color: #888;
-  background: #ddd;
+  color: #888888;
+  background: #dddddd;
   display: inline-block;
   margin-bottom: 10px;
   line-height: 2em;
@@ -1515,7 +1515,7 @@ label.with-checkbox input {
 .selections-list.edit .selection {
   padding: 5px 8px;
   background-color: #3b9cc9;
-  color: #fff;
+  color: #ffffff;
   display: inline-block;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -1531,14 +1531,14 @@ label.with-checkbox input {
   position: absolute;
   right: 0.5em;
   top: 0.25em;
-  color: #fff;
+  color: #ffffff;
 }
 /**
  * Font icons */
 @font-face {
   font-family: 'TeachBoost';
-  src: url('../fonts/TeachBoost.eot?v=73');
-  src: url('../fonts/TeachBoost.eot?#iefix&v=73') format('embedded-opentype'), url('../fonts/TeachBoost.woff2?v=73') format('woff2'), url('../fonts/TeachBoost.woff?v=73') format('woff'), url('../fonts/TeachBoost.ttf?v=73') format('truetype'), url('../fonts/TeachBoost.svg?v=73#keyrune') format('svg');
+  src: url('../fonts/TeachBoost.eot');
+  src: url('../fonts/TeachBoost.eot?#iefix') format('embedded-opentype'), url('../fonts/TeachBoost.woff2') format('woff2'), url('../fonts/TeachBoost.woff') format('woff'), url('../fonts/TeachBoost.ttf') format('truetype'), url('../fonts/TeachBoost.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2284,18 +2284,18 @@ ul.three-column {
  * Fixed navigation */
 .left-nav {
   bottom: 0;
-  background: #eee;
+  background: #eeeeee;
   float: left;
   height: auto;
   position: fixed;
   top: 0;
   width: 12.5em;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #ffffff;
   /*
      * Shrink the nav bar when the page width is small */
 }
 .left-nav > .nav {
-  border-right: 1px solid #bbb;
+  border-right: 1px solid #bbbbbb;
   bottom: 50px;
   left: 0;
   margin: 0;
@@ -2318,7 +2318,7 @@ ul.three-column {
   padding: 7px 15px 5px;
 }
 .left-nav > .nav .item {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   display: block;
   font-size: 1.125em;
   line-height: 2.666em;
@@ -2337,14 +2337,14 @@ ul.three-column {
 }
 .left-nav > .nav > .active .item,
 .left-nav > .nav > li:hover .item {
-  background: #ddd;
-  color: #333;
+  background: #dddddd;
+  color: #333333;
 }
 .left-nav > .nav .user-search {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
 }
 .left-nav > .nav .user-search .form-control {
-  background-color: #eee;
+  background-color: #eeeeee;
   border: none;
   height: 40px;
   padding: 10px 10px 10px 50px;
@@ -2354,11 +2354,11 @@ ul.three-column {
   border-radius: 0;
 }
 .left-nav > .nav .user-search .form-control:focus {
-  background-color: #fff;
-  border-color: #ccc;
+  background-color: #ffffff;
+  border-color: #cccccc;
 }
 .with-left .left-nav {
-  border-top: 0.25em solid #777;
+  border-top: 0.25em solid #777777;
   top: 3.25em;
   z-index: 1050;
 }
@@ -2474,28 +2474,28 @@ body.sx3 .top-nav .dropdown-menu li a > i {
   position: relative;
 }
 .next-step a {
-  color: #333;
+  color: #333333;
 }
 .next-step i.checkbox {
   font-size: 1.5384em;
   float: left;
   margin-right: 10px;
-  color: #666;
+  color: #666666;
   position: relative;
   top: 1px;
 }
 .next-step.complete {
-  border-left-color: #999;
+  border-left-color: #999999;
 }
 .next-step.complete i {
-  color: #ddd;
+  color: #dddddd;
 }
 .next-step.complete a {
-  color: #aaa;
+  color: #aaaaaa;
 }
 .next-step span.round {
   background: #e8e8e8;
-  color: #777;
+  color: #777777;
   display: inline-block;
   font-size: 0.8667em;
   line-height: 1.5em;
@@ -2517,7 +2517,7 @@ body.sx3 .top-nav .dropdown-menu li a > i {
 }
 .next-step .controls i {
   font-size: 1.3em;
-  color: #999;
+  color: #999999;
   cursor: pointer;
 }
 .next-step .controls i.edit-next-step {
@@ -3040,9 +3040,9 @@ textarea {
  * Header */
 header {
   background: #222;
-  border-bottom: 0.25em solid #aaa;
+  border-bottom: 0.25em solid #aaaaaa;
   border-top: 0.2em solid rgba(0, 0, 0, 0.9);
-  color: #fff;
+  color: #ffffff;
   height: 3.5em;
   position: fixed;
   width: 100%;
@@ -3071,7 +3071,7 @@ header .logo {
   padding: 0.179em 0 0 1.428em;
 }
 header .logo .logo-link {
-  color: #fff;
+  color: #ffffff;
   height: 1.929em;
 }
 .titan header {
@@ -3139,7 +3139,7 @@ section.page {
   position: relative;
 }
 section.help {
-  border-right: 1px solid #bbb;
+  border-right: 1px solid #bbbbbb;
   bottom: 0;
   height: 50px;
   left: 0;
@@ -3159,11 +3159,11 @@ section.help > .btn > .fa {
 }
 section.help.off .btn,
 section.help.off .btn.no-hover:hover {
-  border-bottom-color: #ccc;
-  color: #aaa !important;
+  border-bottom-color: #cccccc;
+  color: #aaaaaa !important;
 }
 section.help.off .fa {
-  color: #aaa;
+  color: #aaaaaa;
 }
 section.help.on .fa {
   color: #4da74d;
@@ -3288,7 +3288,7 @@ section.drawer .drawer-container .drawer-scroller .drawer-content {
   display: inline-block !important;
 }
 .with-actions section.drawer {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #cccccc;
 }
 section.actions {
   position: fixed;
@@ -3298,7 +3298,7 @@ section.actions {
   right: 0;
   padding: 0.625em 1em;
   background: #f5f5f5;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   z-index: 1010;
 }
 section.actions .btn {
@@ -3334,15 +3334,15 @@ body.x5 section.actions {
 /*
  * Footer */
 footer {
-  border-top: 3px solid #ddd;
+  border-top: 3px solid #dddddd;
   font-size: 0.8125em;
   line-height: 1.8em;
 }
 .with-left footer {
   right: 0;
   left: 15.3846em;
-  border-top: 1px solid #ddd;
-  color: #aaa;
+  border-top: 1px solid #dddddd;
+  color: #aaaaaa;
   margin: 50px 20px 0 20px;
   padding: 15px 0;
   position: absolute;
@@ -3375,7 +3375,7 @@ footer {
   z-index: 1130;
   font-size: 0.9375em;
   font-weight: bold;
-  color: #000;
+  color: #000000;
 }
 #app-status span {
   background-color: #d6a70e;
@@ -3396,7 +3396,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #000000;
   z-index: 1140;
   display: none;
 }
@@ -3405,8 +3405,8 @@ footer {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background-color: #ccc;
-  color: #333;
+  background-color: #cccccc;
+  color: #333333;
   display: none;
   padding: 1em;
   position: fixed;
@@ -3416,7 +3416,7 @@ footer {
 #app-alert h1,
 #app-confirm h1 {
   background-color: transparent;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
   float: none;
   font-size: 1.375em;
   margin: 0;
@@ -3428,7 +3428,7 @@ footer {
   padding-top: 0.4em;
   margin-bottom: 0.8em;
   margin-top: 0;
-  color: #333;
+  color: #333333;
   line-height: 150%;
   font-size: 1.2em;
 }
@@ -3448,12 +3448,12 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #000000;
   z-index: 1110;
   display: none;
 }
 #app-working-overlay {
-  background: #ccc;
+  background: #cccccc;
   opacity: 1;
 }
 #app-working-overlay i {
@@ -3466,8 +3466,8 @@ footer {
   position: relative;
   line-height: 0;
   vertical-align: middle;
-  color: #aaa;
-  text-shadow: 0 1px 0 #eee, 0 -1px 0 #999;
+  color: #aaaaaa;
+  text-shadow: 0 1px 0 #eeeeee, 0 -1px 0 #999999;
 }
 #app-error-overlay,
 #app-lock-overlay {
@@ -3495,7 +3495,7 @@ footer {
 #app-working-overlay span {
   text-align: center;
   display: inline-block;
-  color: #888;
+  color: #888888;
   padding: 12px 20px;
   font-size: 1.0667em;
   max-width: 60%;
@@ -3503,11 +3503,11 @@ footer {
 #app-error-overlay span,
 #app-working-overlay span {
   background-color: #007db6;
-  color: #fff;
+  color: #ffffff;
   font-weight: normal;
 }
 #app-error-overlay a {
-  color: #fff;
+  color: #ffffff;
 }
 #app-lock-overlay span {
   padding-top: 0;
@@ -3531,15 +3531,15 @@ footer {
   padding: 6px 10px;
 }
 #system-console p.info {
-  color: #777;
-  background: #bbb;
+  color: #777777;
+  background: #bbbbbb;
 }
 #system-console p.warn {
-  color: #333;
+  color: #333333;
   background: #d6a70e;
 }
 #system-console p.error {
-  color: #fff;
+  color: #ffffff;
   background: #b94f3c;
 }
 /*
@@ -3563,15 +3563,15 @@ footer {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
 }
 .table > thead > tr > th {
   background: #484848;
   border-bottom: 3px solid #383838;
-  color: #fff;
+  color: #ffffff;
   font-weight: normal;
   padding: 8px 8px 6px;
-  text-shadow: 0 1px 0 #000;
+  text-shadow: 0 1px 0 #000000;
   /*
          * Round the top left and top right corners */
 }
@@ -3586,8 +3586,8 @@ footer {
   border-top-right-radius: 3px !important;
 }
 .table > thead > tr.filters td {
-  background: #eee;
-  border-bottom: 3px solid #ccc;
+  background: #eeeeee;
+  border-bottom: 3px solid #cccccc;
   font-size: 13px;
   padding: 6px 8px;
 }
@@ -3610,7 +3610,7 @@ footer {
 .table.table-striped > thead > tr > td,
 .table.table-striped > tbody > tr > td,
 .table.table-striped > tfoot > tr > td {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff;
 }
 .table.table-striped > tbody > tr:nth-child(odd) > td,
 .table.table-striped > tbody > tr:nth-child(odd) > th {
@@ -3625,7 +3625,7 @@ footer {
 }
 .table > tbody > tr > td.active,
 .table > tbody > tr.active > td {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .table > tbody > tr > td.info,
 .table > tbody > tr.info > td {
@@ -3644,7 +3644,7 @@ footer {
   background-color: #f6e7e4;
 }
 .toggle {
-  border: 1px solid #777;
+  border: 1px solid #777777;
   text-decoration: none;
   position: relative;
   outline: 0;
@@ -3676,15 +3676,15 @@ footer {
   left: 46%;
 }
 .toggle.left span.slider {
-  border-left: 1px solid #333;
+  border-left: 1px solid #333333;
 }
 /*
  * Base typography */
 body {
-  color: #333;
+  color: #333333;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  background: #fff;
+  background: #ffffff;
 }
 a {
   color: #007db6;
@@ -3692,7 +3692,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #333;
+  color: #333333;
   text-decoration: none;
 }
 a:focus {
@@ -3719,13 +3719,13 @@ h2 {
   margin: 25px 0 20px;
 }
 h3 {
-  color: #555;
+  color: #555555;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.25em;
   margin: 25px 0 15px;
 }
 h4 {
-  color: #777;
+  color: #777777;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   margin: 25px 0 15px;
@@ -3749,9 +3749,9 @@ p.body {
  * Blockquotes */
 blockquote,
 pre {
-  background: #eee;
+  background: #eeeeee;
   border: none;
-  border-left: 5px solid #ddd;
+  border-left: 5px solid #dddddd;
   font-size: 15px;
   line-height: 1.6em;
   margin: 15px 0;
@@ -3770,7 +3770,7 @@ blockquote.codeblock,
 pre.codeblock {
   background: #484848;
   border-left: 5px solid #383838;
-  color: #fff;
+  color: #ffffff;
   font-size: 13px;
 }
 blockquote.codeblock ::selection,
@@ -3881,19 +3881,19 @@ kbd {
   color: #359fa3;
 }
 .color-gray {
-  color: #aaa;
+  color: #aaaaaa;
 }
 .color-darkgray {
-  color: #333;
+  color: #333333;
 }
 .color-seven {
-  color: #777;
+  color: #777777;
 }
 .color-five {
-  color: #555;
+  color: #555555;
 }
 .color-white {
-  color: #fff;
+  color: #ffffff;
 }
 /*
  * Font sizes */
@@ -3941,7 +3941,7 @@ kbd {
 /*
  * Wrapper for 'none' messages */
 span.none {
-  color: #999;
+  color: #999999;
   background: #e8e8e8;
   line-height: 2.2em;
   display: inline-block;
