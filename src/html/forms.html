@@ -3,52 +3,43 @@
             <a name="forms" class="section"></a>
             <h2>Forms &amp; Inputs</h2>
             <p class="body">
-                At our core we build the very best ways to input and gather educator 
-                information. "Forms" are the beginning and it's our diligent attention to all 
-                of the various inputs&mdash;the way we present them and the tools we build 
-                on top&mdash;that found everything else. As Jeff Bezos said in a letter to 
-                his company:
+                At our core we build the very best ways to input and gather educator
+                information. "Forms" are the beginning and it's our diligent attention to all
+                of the various inputs&mdash;the way we present them and the tools we build
+                on top&mdash;that found everything else.
             </p>
-            <h4 class="left-padding-100 right-padding-100 teal-text no-bottom-margin top-margin-20 lineheight-1-5">
-                [W]e believe that focusing our energy on the controllable inputs . . . is the 
-                most effective way to maximize . . . outputs over time.
-            </h4>
-            <h5 class="float-right right-padding-100 no-top-margin midgray-text">
-                &mdash;Jeff Bezos, Amazon.com, April 2010
-            </h5>
-            <p class="body clear">
-                Hey <em>may</em> have been referring to different inputs but the point still 
-                stands! We use a number of different inputs within TeachBoost and it is critical 
+            <p class="body">
+                We use a number of different inputs within TeachBoost and it is critical
                 to think about and choose the best method for the job.
             </p>
             <p class="body">
-                For the most part, all pre-styled <code>&lt;input&gt;</code>, 
-                <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements will 
-                automatically receive some styling and control themselves for various devices and 
-                implementations. Use our base input class <code>.form-control</code> on elements 
+                For the most part, all pre-styled <code>&lt;input&gt;</code>,
+                <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements will
+                automatically receive some styling and control themselves for various devices and
+                implementations. Use our base input class <code>.form-control</code> on elements
                 and wrap input/label bundles in <code>.form-group</code> for spacing.
             </p>
             <h3>Types and Usage Guidelines</h3>
             <h4>Text Inputs</h4>
             <p class="body">
-                Use basic text <code>&lt;input&gt;</code> elements any time the user needs 
-                to enter short amounts of variable text. If there is a bounded limit on the 
-                types of text to be entered or if it can be grouped, consider using a select 
-                menu or option group instead. Generally text inputs should carry a 
-                <code>&lt;label&gt;</code> and both should be wrapped in a 
+                Use basic text <code>&lt;input&gt;</code> elements any time the user needs
+                to enter short amounts of variable text. If there is a bounded limit on the
+                types of text to be entered or if it can be grouped, consider using a select
+                menu or option group instead. Generally text inputs should carry a
+                <code>&lt;label&gt;</code> and both should be wrapped in a
                 <code>.form-group</code>.
             </p>
             <div class="alert alert-info top-margin-20">
                 <strong>Note:</strong> input labels should always be in title case and
-                end with a colon. Apply the class <code>.control-label</code> to them when 
+                end with a colon. Apply the class <code>.control-label</code> to them when
                 with a form, like here.
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label class="control-label" for="input-field">Input Label:</label>
-                    <input type="text" 
-                           class="form-control" 
-                           placeholder="Placeholder" 
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Placeholder"
                            id="input-field" />
                 </div>
             </div>
@@ -56,18 +47,18 @@
 <code class="html prettyprint">&lt;!-- Basic text input with a label --&gt;
 &lt;div class=&quot;form-group&quot;&gt;
     &lt;label class=&quot;control-label&quot; for=&quot;inputField&quot;&gt;Input Label:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; 
-           class=&quot;form-control&quot; 
-           placeholder=&quot;Placeholder&quot; 
+    &lt;input type=&quot;text&quot;
+           class=&quot;form-control&quot;
+           placeholder=&quot;Placeholder&quot;
            id=&quot;inputField&quot; /&gt;
 &lt;/div&gt;</code></pre>
             <h4 class="top-margin-15">Textareas</h4>
             <p class="body">
-                Use <code>&lt;textarea&gt;</code> fields to allow users to enter large 
-                amounts of text, notes, feedback, and generally anything that might be 
-                longer than 100 characters. Use the same <code>.form-group</code> 
-                wrapper and element class, <code>.form-control</code>. As a fallback, 
-                always include a value for the columns (number of horizontal characters) 
+                Use <code>&lt;textarea&gt;</code> fields to allow users to enter large
+                amounts of text, notes, feedback, and generally anything that might be
+                longer than 100 characters. Use the same <code>.form-group</code>
+                wrapper and element class, <code>.form-control</code>. As a fallback,
+                always include a value for the columns (number of horizontal characters)
                 and rows (vertical lines). Defaults should be 50 and 5.
             </p>
             <div class="row">
@@ -75,28 +66,28 @@
                     <label class="control-label" for="textareaField">Textarea Label:</label>
                     <textarea cols="50"
                               rows="5"
-                              class="form-control" 
-                              placeholder="Placeholder" 
+                              class="form-control"
+                              placeholder="Placeholder"
                               id="inputField"></textarea>
                 </div>
             </div>
 <pre class="codeblock">
 <code class="html prettyprint">&lt;!-- Basic textarea (wrapper HTML removed) --&gt;
-&lt;textarea cols=&quot;50&quot; 
-          rows=&quot;5&quot; 
-          class=&quot;form-control&quot; 
-          placeholder=&quot;Placeholder&quot; 
+&lt;textarea cols=&quot;50&quot;
+          rows=&quot;5&quot;
+          class=&quot;form-control&quot;
+          placeholder=&quot;Placeholder&quot;
           id=&quot;textareaField&quot;&gt;&lt;/textarea&gt;</code></pre>
             <p class="body top-margin-10">
-                Note also that the element requires a separate end tag and that the 
+                Note also that the element requires a separate end tag and that the
                 content goes between those tags.
             </p>
             <h4>Select Menus</h4>
             <p class="body">
-                Use select menus when you have a predefined list of options or answer 
-                choices that is too long to display on the screen in a checkgroup or 
-                radiogroup. Use the same <code>.form-group</code> wrapper and element 
-                class, <code>.form-control</code>, and <code>&lt;select&gt;</code> 
+                Use select menus when you have a predefined list of options or answer
+                choices that is too long to display on the screen in a checkgroup or
+                radiogroup. Use the same <code>.form-group</code> wrapper and element
+                class, <code>.form-control</code>, and <code>&lt;select&gt;</code>
                 elements should also have a placeholder.
             </p>
              <div class="row">
@@ -129,126 +120,112 @@
     &lt;option value=&quot;10&quot;&gt;Option Choice 10&lt;/option&gt;
 &lt;/select&gt;</code></pre>
             <p class="body top-margin-10">
-                If you want to pre-select an option in a select menu use the 
+                If you want to pre-select an option in a select menu use the
                 <code>selected</code> attribute at the end of the <code>&lt;option&gt;</code>
                 element. There is no reason to add a value for this attribute.
             </p>
             <h4>Radio Buttons and Checkboxes</h4>
             <p class="body">
-                Use radio buttons when the user must select one choice from a limited 
-                set of values. Use checkboxes when the user may select one or more 
-                choices from a set of values. The default behavior of both inputs 
+                Use radio buttons when the user must select one choice from a limited
+                set of values. Use checkboxes when the user may select one or more
+                choices from a set of values. The default behavior of both inputs
                 is to stack them vertically:
             </p>
             <div class="row bottom-padding-10">
                 <div class="col-md-4">
                     <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" /> Checkbox option one
-                        </label>
+                        <input id="checkbox1" type="checkbox" value="" />
+                        <label for="checkbox1"><span></span> Checkbox option one</label>
                     </div>
                     <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked /> Checkbox option two
-                        </label>
+                        <input id="checkbox2" type="checkbox" value="" checked />
+                        <label for="checkbox2"><span></span> Checkbox option two</label>
                     </div>
                     <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked /> Checkbox option three
-                        </label>
+                        <input id="checkbox3" type="checkbox" value="" checked />
+                        <label for="checkbox3"><span></span> Checkbox option three</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="radios" id="radio1" value="1" /> Radio button one
-                        </label>
+                        <input id="radio1" type="radio" name="radios" value="1" />
+                        <label for="radio1"><span></span> Radio button one</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="radios" id="radio2" value="2" /> Radio button two
-                        </label>
+                        <input id="radio2" type="radio" name="radios" value="2" />
+                        <label for="radio2"><span></span> Radio button two</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="radios" id="radio3" value="3" /> Radio button three
-                        </label>
+                        <input id="radio3" type="radio" name="radios" value="3" />
+                        <label for="radio3"><span></span> Radio button three</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="radios" id="radio1" value="1" checked /> Radio button one
-                        </label>
+                        <input id="radio4" type="radio" name="radios" value="4" checked />
+                        <label for="radio4"><span></span> Radio button four</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="radios" id="radio2" value="2" /> Radio button two
-                        </label>
+                        <input id="radio5" type="radio" name="radios" value="5" />
+                        <label for="radio5"><span></span> Radio button five</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="radios" id="radio3" value="3" /> Radio button three
-                        </label>
+                        <input id="radio6" type="radio" name="radios" value="6" />
+                        <label for="radio6"><span></span> Radio button six</label>
                     </div>
                 </div>
             </div>
 <pre class="codeblock">
 <code class="html prettyprint">&lt;!-- Checkbox group with two selected --&gt;
 &lt;div class=&quot;checkbox&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;checkbox&quot; value=&quot;1&quot; /&gt; Checkbox option one
-    &lt;/label&gt;
+    &lt;input id=&quot;c1&quot; type=&quot;checkbox&quot; name=&quot;checks&quot; value=&quot;1&quot; /&gt;
+    &lt;label for=&quot;c1&quot;&gt;&lt;span&gt;&lt;/span&gt; Checkbox option one&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;checkbox&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;checkbox&quot; value=&quot;2&quot; checked /&gt; Checkbox option two
-    &lt;/label&gt;
+    &lt;input id=&quot;c2&quot; type=&quot;checkbox&quot; name=&quot;checks&quot; value=&quot;2&quot; checked /&gt;
+    &lt;label for=&quot;c2&quot;&gt;&lt;span&gt;&lt;/span&gt; Checkbox option two&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;checkbox&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;checkbox&quot; value=&quot;3&quot; checked /&gt; Checkbox option three
-    &lt;/label&gt;
+    &lt;input id=&quot;c3&quot; type=&quot;checkbox&quot; name=&quot;checks&quot; value=&quot;3&quot; checked /&gt;
+    &lt;label for=&quot;c3&quot;&gt;&lt;span&gt;&lt;/span&gt; Checkbox option three&lt;/label&gt;
 &lt;/div&gt;
 
 &lt;!-- Radio button group with one selected --&gt;
 &lt;div class=&quot;radio&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;radio&quot; name=&quot;radios&quot; id=&quot;radio1&quot; value=&quot;1&quot; checked /&gt;
-        Radio button one
-    &lt;/label&gt;
+    &lt;input id=&quot;r1&quot; type=&quot;radio&quot; name=&quot;radios&quot; value=&quot;1&quot; checked /&gt;
+    &lt;label for=&quot;r1&quot;&gt;&lt;span&gt;&lt;/span&gt; Radio button one&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;radio&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;radio&quot; name=&quot;radios&quot; id=&quot;radio2&quot; value=&quot;2&quot; /&gt;
-        Radio button two
-    &lt;/label&gt;
+    &lt;input id=&quot;r2&quot; type=&quot;radio&quot; name=&quot;radios&quot; value=&quot;2&quot; /&gt;
+    &lt;label for=&quot;r2&quot;&gt;&lt;span&gt;&lt;/span&gt; Radio button two&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;radio&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;radio&quot; name=&quot;radios&quot; id=&quot;radio3&quot; value=&quot;3&quot; /&gt;
-        Radio button three
-    &lt;/label&gt;
+    &lt;input id=&quot;r3&quot; type=&quot;radio&quot; name=&quot;radios&quot; value=&quot;3&quot; /&gt;
+    &lt;label for=&quot;r3&quot;&gt;&lt;span&gt;&lt;/span&gt; Radio button three&lt;/label&gt;
 &lt;/div&gt;</code></pre>
             <p class="body top-margin-10">
-                Notice that each form input is contained inside of its own contextual 
-                <code>&lt;div&gt;</code> (use <code>.checkbox</code> and <code>.radio</code> 
+                Notice that each form input is contained inside of its own contextual
+                <code>&lt;div&gt;</code> (use <code>.checkbox</code> and <code>.radio</code>
                 respectively) rather than the <code>.form-group</code> container class.
-                The <code>&lt;label&gt;</code> element wraps the form 
-                input as well making the input text clickable. Options within a checkbox 
-                group or radio button group should all have the same <code>name</code> 
-                attribute
+                The <code>&lt;label&gt;</code> element must be directly following the
+                input, and it must contain an empty <code>&lt;span&gt;</code> element (which
+                creates the checkmark or radio dot).
             </p>
             <p class="body">
-                To pre-select an option within one of these groups simply add the attribute 
-                <code>checked</code> to the end of the input. As with the select menu, there 
+                very checkbox and radio button must have a unique ID that matches the
+                label's <code>for</code> attribute. Options within a checkbox group or
+                radio button group should all have the same <code>name</code> attribute.
+            </p>
+            <p class="body">
+                To pre-select an option within one of these groups simply add the attribute
+                <code>checked</code> to the end of the input. As with the select menu, there
                 is no reason to add a value for this attribute and it will work cross-browser.
             </p>
             <h4>File Inputs</h4>
             <p class="body">
-                Use a file input when the user must upload a local file. This field is highly 
-                variable style-wise among browsers and for security reasons it is impossible 
-                to style without using a javascript solution. Currently we rely on the 
+                Use a file input when the user must upload a local file. This field is highly
+                variable style-wise among browsers and for security reasons it is impossible
+                to style without using a javascript solution. Currently we rely on the
                 browser's native styling.
             </p>
             <div class="form-group">
@@ -263,9 +240,9 @@
 &lt;/div&gt;</code></pre>
             <h3 class="top-margin-20">Input Sizing</h3>
             <p class="body">
-                We have two additional size classes you can apply to reduce the 
-                padding, font size, and height of the <code>&lt;input&gt;</code>. Use 
-                <code>.input-sm</code> to make it smaller and <code>.input-lg</code> 
+                We have two additional size classes you can apply to reduce the
+                padding, font size, and height of the <code>&lt;input&gt;</code>. Use
+                <code>.input-sm</code> to make it smaller and <code>.input-lg</code>
                 to make it bigger. So easy!
             </p>
             <div class="row">
@@ -294,14 +271,14 @@
             </div>
             <h3>Disabled Inputs</h3>
             <p class="body">
-                You can disable a form input by adding the <code>disabled</code>  
-                attribute to the input element. Currently <code>&lt;input&gt;</code>, 
+                You can disable a form input by adding the <code>disabled</code>
+                attribute to the input element. Currently <code>&lt;input&gt;</code>,
                 <code>&lt;select&gt;</code>, <code>&lt;button&gt;</code>, and
-                <code>&lt;textarea&gt;</code> elements are supported. To globally 
-                disable form inputs you must wrap the elements  
-                in a <code>&lt;fieldset&gt;</code> with the <code>disabled</code>. 
-                attribute. Note this does not work for IE9 and down, so the preferred 
-                way is to do both (regrettably). 
+                <code>&lt;textarea&gt;</code> elements are supported. To globally
+                disable form inputs you must wrap the elements
+                in a <code>&lt;fieldset&gt;</code> with the <code>disabled</code>.
+                attribute. Note this does not work for IE9 and down, so the preferred
+                way is to do both (regrettably).
             </p>
             <div class="row">
                 <div class="col-md-6">
@@ -317,22 +294,20 @@
                         <textarea class="form-control" cols="25" rows="4" placeholder="Disabled textarea" disabled></textarea>
                     </div>
                     <div class="checkbox no-top-margin">
-                        <label>
-                            <input type="checkbox" value="1" disabled /> Disabled checkbox
-                        </label>
-                        &nbsp;&nbsp;&nbsp;
-                        <label>
-                            <input type="checkbox" value="1" checked disabled /> Disabled checked
-                        </label>
+                        <input id="cbd1" type="checkbox" value="1" disabled />
+                        <label for="cbd1"><span></span> Disabled checkbox</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="cbd2" type="checkbox" value="1" checked disabled />
+                        <label for="cbd2"><span></span> Disabled checked</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" value="2" disabled /> Disabled radio
-                        </label>
-                        &nbsp;&nbsp;&nbsp;
-                        <label>
-                            <input type="radio" value="2" checked disabled /> Disabled checked
-                        </label>
+                        <input id="rbd1" type="radio" value="2" disabled />
+                        <label for="rbd1"><span></span> Disabled radio</label>
+                    </div>
+                    <div class="radio">
+                        <input id="rbd2" type="radio" value="2" disabled checked />
+                        <label for="rbd2"><span></span> Disabled checked</label>
                     </div>
                     <div class="form-group">
                         <button class="blue btn" type="submit" disabled>Disabled Button</button>
@@ -366,12 +341,12 @@
 &lt;fieldset&gt;</code></pre>
             <h3 class="top-margin-20">Validation States</h3>
             <p class="body">
-                We offer a suite of "validation states" to add additional visual style and 
-                contextual information on our form inputs based on different user 
-                interactions: success (green), warning (yellow), and error (red). Apply 
-                these to relevant inputs by appending the respective class to the 
-                <code>.form-group</code> or other wrapper element: <code>.has-success</code>, 
-                <code>.has-warning</code>, <code>.has-error</code>. This will affect not only 
+                We offer a suite of "validation states" to add additional visual style and
+                contextual information on our form inputs based on different user
+                interactions: success (green), warning (yellow), and error (red). Apply
+                these to relevant inputs by appending the respective class to the
+                <code>.form-group</code> or other wrapper element: <code>.has-success</code>,
+                <code>.has-warning</code>, <code>.has-error</code>. This will affect not only
                 the input element but also any label or sub-text.
             </p>
             <div class="row top-padding-10">
@@ -406,11 +381,11 @@
 &lt;/div&gt;</code></pre>
             <h3 class="top-margin-20">Laying Out Forms</h3>
             <p class="body">
-                When constructing a form and laying it out on screen you should use the 
-                same scaffolding grid system that we use throughout the app. Because 
-                <code>&lt;input&gt;</code> elements themselves have a default width of 
-                100% their horizontal size is controlled by their wrapper elements. 
-                Use the correct grid classes on a wrapper <code>&lt;div&gt;</code> to 
+                When constructing a form and laying it out on screen you should use the
+                same scaffolding grid system that we use throughout the app. Because
+                <code>&lt;input&gt;</code> elements themselves have a default width of
+                100% their horizontal size is controlled by their wrapper elements.
+                Use the correct grid classes on a wrapper <code>&lt;div&gt;</code> to
                 control for sizing here; this will most likely just be a
                 <code>.col-xs-*</code> to handle all screen sizes.
             </p>
@@ -453,9 +428,9 @@
 &lt;/form&gt;</code></pre>
             <h3 class="top-margin-20">Help Text</h3>
             <p class="body">
-                When you need to provide additional information on a specific form element, 
-                often after validating user input, you can display a message inside of the 
-                <code>&lt;span.help-block&gt;</code> element. This should sit below the 
+                When you need to provide additional information on a specific form element,
+                often after validating user input, you can display a message inside of the
+                <code>&lt;span.help-block&gt;</code> element. This should sit below the
                 form input and inside the same <code>.form-group</code>.
             </p>
             <div class="row">
