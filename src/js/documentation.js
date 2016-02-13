@@ -30,7 +30,7 @@ $( function() {
         // update hash and scroll
         window.location.hash = '#' + target;
         $( window ).scrollTop( $section.offset().top - padding );
-        return false; 
+        return false;
     });
 
     // try to load a hash section; load first one by default
@@ -42,17 +42,6 @@ $( function() {
     else {
         $( 'main' ).find( 'section' ).eq( 1 ).show();
     }
-
-    // set up checkboxes using icheck
-    $( 'input[type="checkbox"]' ).iCheck({
-        checkboxClass: 'icheck',
-        increaseArea: '20%'
-    });
-
-    $( 'input[type="radio"]' ).iCheck({
-        radioClass: 'iradio',
-        increaseArea: '20%'
-    });
 
     // set up scrollers
     var $ulNav = $( 'ul.nav' );

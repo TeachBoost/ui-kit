@@ -104,7 +104,29 @@
 }
 
 input[type="file"] {
-    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 13px;
+    position: relative;
+    width: 100%;
+
+    + .clear-file {
+        background: #eee;
+        border-radius: 0 3px 3px 0;
+        left: 100%;
+        top: 0;
+        height: 100%;
+        margin: 0 0 0 -26px;
+        border: 1px solid #ccc;
+        line-height: 3rem;
+        padding: 0 6px;
+        position: absolute;
+
+        &:hover {
+            background: #ddd;
+        }
+    }
 }
 
 label.with-checkbox {

@@ -226,17 +226,34 @@
                 Use a file input when the user must upload a local file. This field is highly
                 variable style-wise among browsers and for security reasons it is impossible
                 to style without using a javascript solution. Currently we rely on the
-                browser's native styling.
+                browser's native styling with a small border.
             </p>
-            <div class="form-group">
-                <label class="control-label" for="fileInput">File Input:</label>
-                <input type="file" id="fileInput" />
+            <label class="control-label">File Inputs:</label>
+            <div class="form-group relative-position top-margin-10">
+                <form>
+                    <input type="file" id="fileInput1" name="attachment" />
+                </form>
             </div>
+            <div class="form-group relative-position">
+                <form>
+                    <input type="file" id="fileInput2" name="attachment" />
+                    <a href="javascript:;" class="clear-file"><i class="fa fa-remove"></i></a>
+                </form>
+            </div>
+            <p class="body">
+                We have built-in styling and javascript to provide a "clear file" function (the
+                X icon above). This is optional; if you use it, the button must come directly
+                after the file input and have <code>.clear-file</code> applied to it. Both
+                the file input and the button must appear within a relative positione div as well.
+            </p>
 <pre class="codeblock">
 <code class="html prettyprint">&lt;!-- Default file input --&gt;
+&lt;label class=&quot;control-label&quot; for=&quot;fileInput&quot;&gt;File Input:&lt;/label&gt;
 &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;control-label&quot; for=&quot;fileInput&quot;&gt;File Input:&lt;/label&gt;
-    &lt;input type=&quot;file&quot; id=&quot;fileInput&quot; /&gt;
+    &lt;input type=&quot;file&quot; id=&quot;fileInput&quot; name=&quot;attachment&quot; /&gt;
+    &lt;a href=&quot;javascript:;&quot; class=&quot;clear-file&quot;&gt;
+        &lt;i class=&quot;fa fa-remove&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
 &lt;/div&gt;</code></pre>
             <h3 class="top-margin-20">Input Sizing</h3>
             <p class="body">
