@@ -1783,6 +1783,12 @@ label.with-checkbox input {
 .fa-retweet:before {
   content: "\f079";
 }
+.fa-folder:before {
+  content: "\f07b";
+}
+.fa-folder-open:before {
+  content: "\f07c";
+}
 .fa-bar-chart:before,
 .fa-bar-chart-o:before {
   content: "\f080";
