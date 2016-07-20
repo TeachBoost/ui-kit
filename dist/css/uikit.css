@@ -1933,6 +1933,10 @@ label.with-checkbox input {
 .fa-sitemap:before {
   content: "\f0e8";
 }
+.fa-clipboard:before,
+.fa-paste:before {
+  content: "\f0ea";
+}
 .fa-lightbulb-o:before {
   content: "\f0eb";
 }
@@ -3059,7 +3063,7 @@ body.x5 header {
   height: 3.3em;
 }
 header .logo {
-  background: url('../images/brand/logo-app@2x.png') 0 0 no-repeat;
+  background: url('../images/brand/app-badge-prod@2x.png') 0 0 no-repeat;
   background-size: 1.143em 1.607em;
   height: 1.607em;
   line-height: 1.5em;

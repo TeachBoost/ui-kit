@@ -2,5 +2,6 @@ src/css/build.css
 index.html
 vendor
 node_modules
+dump.rdb
 *.log
 .DS_Store
