@@ -1350,21 +1350,12 @@ a.teal-background:hover {
   border-color: #aaaaaa;
   color: #333333;
   font-size: 1em;
-  height: auto;
   padding: 6px 10px;
   position: relative;
   top: 1px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  /*
-     * Size overrides */
-  /*
-     * Disabled inputs (adding a specific class) */
-  /*
-     * Focus overrides (no box shadows) */
-  /*
-     * Validation states (see below for label text handling) */
 }
 .form-control.input-lg {
   font-size: 18px;
@@ -1441,7 +1432,27 @@ a.teal-background:hover {
   top: 1px;
 }
 input[type="file"] {
-  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 13px;
+  position: relative;
+  width: 100%;
+}
+input[type="file"] + .clear-file {
+  background: #eee;
+  border-radius: 0 3px 3px 0;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  margin: 0 0 0 -26px;
+  border: 1px solid #ccc;
+  line-height: 3rem;
+  padding: 0 6px;
+  position: absolute;
+}
+input[type="file"] + .clear-file:hover {
+  background: #ddd;
 }
 label.with-checkbox {
   display: inline-block;
@@ -1532,6 +1543,94 @@ label.with-checkbox input {
   right: 0.5em;
   top: 0.25em;
   color: #ffffff;
+}
+/*
+ * CSS checkbox and radio buttons */
+input[type=checkbox]:not(old),
+input[type=radio]:not(old) {
+  width: 2rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  opacity: 0;
+}
+input[type=checkbox]:not(old) + label,
+input[type=radio]:not(old) + label {
+  display: inline-block;
+  margin-left: 1.0rem;
+  line-height: 2.35rem;
+  text-indent: -3rem;
+}
+input[type=checkbox]:not(old) + label > span,
+input[type=radio]:not(old) + label > span {
+  display: inline-block;
+  width: 2.0rem;
+  height: 2.0rem;
+  margin: 0 0.4rem 0.5rem 0;
+  border: 0.15rem solid #ccc;
+  background: #fff;
+  vertical-align: bottom;
+  position: relative;
+  top: 3px;
+}
+input[type=checkbox]:not(old) + label:hover > span,
+input[type=radio]:not(old) + label:hover > span {
+  border: 0.25rem solid #007db6;
+}
+input[type=checkbox]:not(old):checked + label > span,
+input[type=radio]:not(old):checked + label > span {
+  background: #007db6;
+  border: 0.2rem solid #007db6;
+}
+input[type=checkbox]:not(old):checked + label > span:before,
+input[type=radio]:not(old):checked + label > span:before {
+  color: #fff;
+  content: '\f00c';
+  display: block;
+  font-family: FontAwesome;
+  width: 1.0rem;
+  position: relative;
+  left: 1.8rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 0.25rem #333;
+  font-weight: normal;
+}
+input[type=checkbox]:not(old):disabled + label,
+input[type=radio]:not(old):disabled + label,
+input[type=checkbox]:not(old):disabled + label:hover,
+input[type=radio]:not(old):disabled + label:hover {
+  color: #aaa;
+}
+input[type=checkbox]:not(old):disabled + label > span,
+input[type=radio]:not(old):disabled + label > span,
+input[type=checkbox]:not(old):disabled + label:hover > span,
+input[type=radio]:not(old):disabled + label:hover > span {
+  background: #eee;
+  border: 0.15rem solid #ccc;
+}
+input[type=checkbox]:not(old):disabled + label > span:before,
+input[type=radio]:not(old):disabled + label > span:before,
+input[type=checkbox]:not(old):disabled + label:hover > span:before,
+input[type=radio]:not(old):disabled + label:hover > span:before {
+  color: #ccc;
+  left: 1.85rem;
+  line-height: 1.8rem;
+  text-shadow: none;
+}
+input[type=radio]:not(old) + label > span {
+  border-radius: 1.25rem;
+}
+input[type=radio]:not(old):checked + label > span:before {
+  content: '\f111';
+  font-size: 1.0rem;
+  line-height: 1.6rem;
+  top: -0.5px;
+  text-shadow: none;
+}
+input[type=radio]:not(old):disabled + label > span:before {
+  line-height: 1.9rem;
 }
 /**
  * Font icons */
