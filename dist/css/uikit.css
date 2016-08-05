@@ -2133,6 +2133,9 @@ label.with-checkbox input {
 .fa-history:before {
   content: "\f1da";
 }
+.fa-sliders:before {
+  content: "\f1de";
+}
 .fa-paper-plane-o:before,
 .fa-send-o:before {
   content: "\f1d9";
