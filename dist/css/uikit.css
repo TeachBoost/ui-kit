@@ -2155,6 +2155,12 @@ label.with-checkbox input {
 .fa-line-chart:before {
   content: "\f201";
 }
+.fa-toggle-off:before {
+  content: "\f204";
+}
+.fa-toggle-on:before {
+  content: "\f205";
+}
 .fa-heartbeat:before {
   content: "\f21e";
 }
