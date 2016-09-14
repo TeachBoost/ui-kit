@@ -1881,6 +1881,9 @@ label.with-checkbox input {
 .fa-reorder:before {
   content: "\f0c9";
 }
+.fa-list-ol:before {
+  content: "\f0cb";
+}
 .fa-underline:before {
   content: "\f0cd";
 }
