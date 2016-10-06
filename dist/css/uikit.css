@@ -1572,6 +1572,9 @@ label.with-checkbox input {
   margin-left: -1.21em;
   color: #ffffff;
 }
+.tb-masque:before {
+  content: "\e903";
+}
 .fa-map:before {
   content: "\e800";
 }
