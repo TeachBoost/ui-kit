@@ -2126,6 +2126,9 @@ label.with-checkbox input {
 .fa-recycle:before {
   content: "\f1b8";
 }
+.fa-database:before {
+  content: "\f1c0";
+}
 .fa-life-bouy:before,
 .fa-life-buoy:before,
 .fa-life-ring:before,
