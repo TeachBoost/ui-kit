@@ -3105,11 +3105,11 @@ header .logo .logo-link {
   color: #fff;
   height: 1.929em;
 }
+.hawk header {
+  border-bottom-color: #359fa3;
+}
 .titan header {
   border-bottom-color: #007db6;
-}
-.eagle header {
-  border-bottom-color: #359fa3;
 }
 .falcon header {
   border-bottom-color: #007db6;
@@ -3290,7 +3290,7 @@ section.drawer .drawer-container .drawer-scroller .drawer-content {
 .with-header.x5 section.drawer {
   top: 3.1em;
 }
-.eagle.with-left section.drawer {
+.hawk.with-left section.drawer {
   border-top: 0.25em solid #2a7e81;
 }
 .titan.with-left section.drawer {
