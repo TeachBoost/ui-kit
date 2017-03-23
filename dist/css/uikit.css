@@ -2393,11 +2393,11 @@ ul.three-column {
   top: 3.25em;
   z-index: 1050;
 }
+.hawk.with-left .left-nav {
+  border-top-color: #2a7e81;
+}
 .titan.with-left .left-nav {
   border-top-color: #006391;
-}
-.eagle.with-left .left-nav {
-  border-top-color: #2a7e81;
 }
 .falcon.with-left .left-nav {
   border-top-color: #933e2f;
