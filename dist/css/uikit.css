@@ -2111,6 +2111,9 @@ label.with-checkbox input {
 .fa-archive:before {
   content: "\f187";
 }
+.fa-plus-square-o:before {
+  content: "\f196";
+}
 .fa-google:before {
   content: "\f1a0";
 }
