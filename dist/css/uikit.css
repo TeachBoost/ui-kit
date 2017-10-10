@@ -1578,6 +1578,9 @@ label.with-checkbox input {
 .fa-map:before {
   content: "\e800";
 }
+.fa-palette:before {
+  content: "\e904";
+}
 .fa-sticky-note:before {
   content: "\e901";
 }
