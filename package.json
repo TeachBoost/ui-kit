@@ -1,6 +1,7 @@
 {
-  "name": "ui-kit",
+  "name": "tb-ui-kit",
   "description": "TeachBoost UI Kit",
+  "version": "1.0.6",
   "contributors": [
     "Mike Gioia <mike@teachboost.com>",
     "Andrew Gioia <andrew@teachboost.com>"
