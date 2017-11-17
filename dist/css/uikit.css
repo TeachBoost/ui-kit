@@ -1546,91 +1546,101 @@ label.with-checkbox input {
 }
 /*
  * CSS checkbox and radio buttons */
-input[type=checkbox]:not(old),
-input[type=radio]:not(old) {
-  width: 2rem;
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  opacity: 0;
+.form-check {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-input[type=checkbox]:not(old) + label,
-input[type=radio]:not(old) + label {
+.form-check-inline {
   display: inline-block;
-  margin-left: 1.0rem;
-  line-height: 2.35rem;
-  text-indent: -3rem;
+  margin-right: 0.125rem;
 }
-input[type=checkbox]:not(old) + label > span,
-input[type=radio]:not(old) + label > span {
+.form-check-inline .form-check-label {
+  vertical-align: middle;
+}
+.form-check-label {
+  position: relative;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.form-check-label:hover > .form-check-icon {
+  border: 0.175rem solid #007db6;
+}
+.form-check-icon {
   display: inline-block;
-  width: 2.0rem;
-  height: 2.0rem;
-  margin: 0 0.4rem 0.5rem 0;
-  border: 0.15rem solid #ccc;
+  font-style: normal;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0.125rem solid #ccc;
   background: #fff;
   vertical-align: bottom;
   position: relative;
-  top: 3px;
 }
-input[type=checkbox]:not(old) + label:hover > span,
-input[type=radio]:not(old) + label:hover > span {
-  border: 0.25rem solid #007db6;
+.form-check-icon + span {
+  padding-left: 0.125rem;
 }
-input[type=checkbox]:not(old):checked + label > span,
-input[type=radio]:not(old):checked + label > span {
+.form-check-input {
+  opacity: 0;
+  position: absolute;
+  top: 0.25rem;
+  margin: 0 !important;
+  z-index: -1;
+}
+.form-check-input:checked + .form-check-icon {
   background: #007db6;
   border: 0.2rem solid #007db6;
 }
-input[type=checkbox]:not(old):checked + label > span:before,
-input[type=radio]:not(old):checked + label > span:before {
+.form-check-input:checked + .form-check-icon:before {
   color: #fff;
-  content: '\f00c';
+  content: "\f00c";
   display: block;
   font-family: TeachBoost;
-  width: 1.0rem;
+  width: 100%;
   position: relative;
-  left: 1.8rem;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 110%;
   text-align: center;
   text-shadow: 0 0 0.25rem #333;
   font-weight: normal;
 }
-input[type=checkbox]:not(old):disabled + label,
-input[type=radio]:not(old):disabled + label,
-input[type=checkbox]:not(old):disabled + label:hover,
-input[type=radio]:not(old):disabled + label:hover {
-  color: #aaa;
-}
-input[type=checkbox]:not(old):disabled + label > span,
-input[type=radio]:not(old):disabled + label > span,
-input[type=checkbox]:not(old):disabled + label:hover > span,
-input[type=radio]:not(old):disabled + label:hover > span {
+.form-check-input:disabled + .form-check-icon,
+.form-check-input:hover:disabled + .form-check-icon,
+.form-check-input:disabled + .form-check-icon:hover,
+.form-check-input:hover:disabled + .form-check-icon:hover {
   background: #eee;
   border: 0.15rem solid #ccc;
+  cursor: not-allowed;
 }
-input[type=checkbox]:not(old):disabled + label > span:before,
-input[type=radio]:not(old):disabled + label > span:before,
-input[type=checkbox]:not(old):disabled + label:hover > span:before,
-input[type=radio]:not(old):disabled + label:hover > span:before {
+.form-check-input:disabled + .form-check-icon:before,
+.form-check-input:hover:disabled + .form-check-icon:before,
+.form-check-input:disabled + .form-check-icon:hover:before,
+.form-check-input:hover:disabled + .form-check-icon:hover:before {
   color: #ccc;
-  left: 1.85rem;
-  line-height: 1.8rem;
   text-shadow: none;
 }
-input[type=radio]:not(old) + label > span {
-  border-radius: 1.25rem;
+.form-check-input:disabled + .form-check-icon + span,
+.form-check-input:hover:disabled + .form-check-icon + span,
+.form-check-input:disabled + .form-check-icon:hover + span,
+.form-check-input:hover:disabled + .form-check-icon:hover + span,
+.form-check-input:disabled + .form-check-icon + span:hover,
+.form-check-input:hover:disabled + .form-check-icon + span:hover,
+.form-check-input:disabled + .form-check-icon:hover + span:hover,
+.form-check-input:hover:disabled + .form-check-icon:hover + span:hover {
+  color: #aaa;
+  cursor: not-allowed;
 }
-input[type=radio]:not(old):checked + label > span:before {
-  content: '\f111';
-  font-size: 1.0rem;
-  line-height: 1.6rem;
-  top: -0.5px;
+.form-check-input[type="radio"] + .form-check-icon {
+  border-radius: 50%;
+}
+.form-check-input[type="radio"]:checked + .form-check-icon:before {
+  content: "\f111";
+  font-size: 0.925rem;
+  line-height: 150%;
+  left: 0.05rem;
   text-shadow: none;
 }
-input[type=radio]:not(old):disabled + label > span:before {
-  line-height: 1.9rem;
+.form-check-input[type="radio"]:checked:disabled + .form-check-icon:before {
+  top: 0.05rem;
 }
 /**
  * Font icons */
@@ -3825,6 +3835,9 @@ footer {
 }
 /*
  * Base typography */
+html {
+  font-size: 16px;
+}
 body {
   color: #333;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3917,6 +3930,7 @@ pre.codeblock {
   border-left: 5px solid #383838;
   color: #fff;
   font-size: 13px;
+  width: 100%;
 }
 blockquote.codeblock ::selection,
 pre.codeblock ::selection {
@@ -3980,7 +3994,7 @@ kbd {
   background-color: #111;
   font-weight: bold;
 }
-/* 
+/*
  * Font families */
 .serif-font {
   font-family: Signika, "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
