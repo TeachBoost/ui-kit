@@ -1576,8 +1576,18 @@ label.with-checkbox input {
   vertical-align: bottom;
   position: relative;
 }
+.form-check-icon:before {
+  font-family: TeachBoost;
+  position: relative;
+  font-size: 1.25rem;
+  line-height: 1.3750rem;
+  text-align: center;
+  text-shadow: 0 0 0.25rem #333;
+  font-weight: normal;
+}
 .form-check-icon + span {
   padding-left: 0.125rem;
+  line-height: 165%;
 }
 .form-check-input {
   opacity: 0;
@@ -1593,15 +1603,8 @@ label.with-checkbox input {
 .form-check-input:checked + .form-check-icon:before {
   color: #fff;
   content: "\f00c";
-  display: block;
-  font-family: TeachBoost;
   width: 100%;
-  position: relative;
-  font-size: 1.25rem;
-  line-height: 110%;
-  text-align: center;
-  text-shadow: 0 0 0.25rem #333;
-  font-weight: normal;
+  display: block;
 }
 .form-check-input:disabled + .form-check-icon,
 .form-check-input:hover:disabled + .form-check-icon,
@@ -1629,18 +1632,56 @@ label.with-checkbox input {
   color: #aaa;
   cursor: not-allowed;
 }
+.form-check-input.input-lg {
+  height: auto;
+}
+.form-check-input.input-lg + .form-check-icon {
+  width: 3em;
+  height: 3rem;
+}
+.form-check-input.input-lg + .form-check-icon:before {
+  font-size: 2.25rem;
+  line-height: 2.7188rem;
+}
+.form-check-input.input-lg + .form-check-icon + span {
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+}
+.form-check-input.input-sm {
+  height: auto;
+}
+.form-check-input.input-sm + .form-check-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.form-check-input.input-sm + .form-check-icon:before {
+  font-size: 0.9375rem;
+  line-height: 1.2656rem;
+}
+.form-check-input.input-sm + .form-check-icon + span {
+  font-size: 0.8125rem;
+}
 .form-check-input[type="radio"] + .form-check-icon {
   border-radius: 50%;
 }
 .form-check-input[type="radio"]:checked + .form-check-icon:before {
   content: "\f111";
   font-size: 0.925rem;
-  line-height: 150%;
+  line-height: 1.3875rem;
   left: 0.05rem;
   text-shadow: none;
 }
 .form-check-input[type="radio"]:checked:disabled + .form-check-icon:before {
   top: 0.05rem;
+}
+.form-check-input[type="radio"]:checked.input-lg + .form-check-icon:before {
+  font-size: 1.75rem;
+  line-height: 2.7rem;
+  left: .1rem;
+}
+.form-check-input[type="radio"]:checked.input-sm + .form-check-icon:before {
+  font-size: 0.6938rem;
+  line-height: 1.2142rem;
 }
 /**
  * Font icons */
