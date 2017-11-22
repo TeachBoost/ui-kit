@@ -1568,19 +1568,17 @@ label.with-checkbox input {
 .form-check-icon {
   display: inline-block;
   font-style: normal;
-  width: 1.75rem;
-  height: 1.75rem;
-  border: 0.125rem solid #ccc;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.0625rem solid #aaa;
   background: #fff;
   vertical-align: bottom;
   position: relative;
 }
 .form-check-icon:before {
   font-family: TeachBoost;
-  position: relative;
-  font-size: 1.25rem;
-  line-height: 1.3750rem;
-  text-align: center;
+  font-size: 1.1875rem;
+  line-height: 1.125rem;
   text-shadow: 0 0 0.25rem #333;
   font-weight: normal;
 }
@@ -1602,7 +1600,7 @@ label.with-checkbox input {
 .form-check-input:checked + .form-check-icon:before {
   color: #fff;
   content: "\f00c";
-  width: 100%;
+  margin-left: -1%;
   display: block;
 }
 .form-check-input:disabled + .form-check-icon,
@@ -1635,12 +1633,12 @@ label.with-checkbox input {
   height: auto;
 }
 .form-check-input.input-lg + .form-check-icon {
-  width: 3em;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
 }
 .form-check-input.input-lg + .form-check-icon:before {
-  font-size: 2.25rem;
-  line-height: 2.7188rem;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
 }
 .form-check-input.input-lg + .form-check-icon + span {
   font-size: 1.125rem;
@@ -1650,12 +1648,12 @@ label.with-checkbox input {
   height: auto;
 }
 .form-check-input.input-sm + .form-check-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .form-check-input.input-sm + .form-check-icon:before {
-  font-size: 0.9375rem;
-  line-height: 1.2656rem;
+  font-size: 0.875rem;
+  line-height: .9375rem;
 }
 .form-check-input.input-sm + .form-check-icon + span {
   font-size: 0.8125rem;
@@ -1665,22 +1663,24 @@ label.with-checkbox input {
 }
 .form-check-input[type="radio"]:checked + .form-check-icon:before {
   content: "\f111";
-  font-size: 0.925rem;
-  line-height: 1.3875rem;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   left: 0.05rem;
   text-shadow: none;
+  position: relative;
+  text-align: center;
 }
 .form-check-input[type="radio"]:checked:disabled + .form-check-icon:before {
   top: 0.05rem;
 }
 .form-check-input[type="radio"]:checked.input-lg + .form-check-icon:before {
-  font-size: 1.75rem;
-  line-height: 2.7rem;
-  left: .1rem;
+  font-size: 1.4375rem;
+  line-height: 1.825rem;
+  left: 0.1rem;
 }
 .form-check-input[type="radio"]:checked.input-sm + .form-check-icon:before {
-  font-size: 0.6938rem;
-  line-height: 1.2142rem;
+  font-size: 0.6875rem;
+  line-height: 1rem;
 }
 /**
  * Font icons */
