@@ -1577,10 +1577,11 @@ label.with-checkbox input {
 }
 .form-check-icon:before {
   font-family: TeachBoost;
-  font-size: 1.1875rem;
+  font-size: 0.875rem;
   line-height: 1.125rem;
   text-shadow: 0 0 0.25rem #333;
   font-weight: normal;
+  text-align: center;
 }
 .form-check-icon + span {
   padding-left: 0.125rem;
@@ -1637,8 +1638,8 @@ label.with-checkbox input {
   height: 2.25rem;
 }
 .form-check-input.input-lg + .form-check-icon:before {
-  font-size: 1.875rem;
-  line-height: 1.875rem;
+  font-size: 1.4375rem;
+  line-height: 1.825rem;
 }
 .form-check-input.input-lg + .form-check-icon + span {
   font-size: 1.125rem;
@@ -1652,8 +1653,8 @@ label.with-checkbox input {
   height: 1.25rem;
 }
 .form-check-input.input-sm + .form-check-icon:before {
-  font-size: 0.875rem;
-  line-height: .9375rem;
+  font-size: 0.6875rem;
+  line-height: 1rem;
 }
 .form-check-input.input-sm + .form-check-icon + span {
   font-size: 0.8125rem;
@@ -1663,8 +1664,6 @@ label.with-checkbox input {
 }
 .form-check-input[type="radio"]:checked + .form-check-icon:before {
   content: "\f111";
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   left: 0.05rem;
   text-shadow: none;
   position: relative;
@@ -1674,13 +1673,7 @@ label.with-checkbox input {
   top: 0.05rem;
 }
 .form-check-input[type="radio"]:checked.input-lg + .form-check-icon:before {
-  font-size: 1.4375rem;
-  line-height: 1.825rem;
   left: 0.1rem;
-}
-.form-check-input[type="radio"]:checked.input-sm + .form-check-icon:before {
-  font-size: 0.6875rem;
-  line-height: 1rem;
 }
 /**
  * Font icons */
