@@ -1556,11 +1556,15 @@ label.with-checkbox input {
 }
 .form-check-inline .form-check-label {
   vertical-align: middle;
+  text-indent: 0;
+  margin-left: 0;
 }
 .form-check-label {
   position: relative;
   font-weight: normal;
   margin-bottom: 0;
+  text-indent: -2em;
+  margin-left: 2em;
 }
 .form-check-label:hover > .form-check-icon {
   border: 0.175rem solid #007db6;
@@ -1574,6 +1578,7 @@ label.with-checkbox input {
   background: #fff;
   vertical-align: bottom;
   position: relative;
+  text-indent: 0;
 }
 .form-check-icon:before {
   font-family: TeachBoost;

@@ -235,12 +235,18 @@ label.with-checkbox {
     margin-right: 0.125rem;
     .form-check-label {
         vertical-align: middle;
+        text-indent: 0;
+        margin-left: 0;
     }
 }
 .form-check-label {
     position: relative;
     font-weight: normal;
     margin-bottom: 0;
+    // Labels longer than one line will all be equally indented, with
+    // control to the left in its own column.
+    text-indent: -2em;
+    margin-left: 2em;
     // Override default `<label>` bottom margin
     &:hover {
         >.form-check-icon {
@@ -261,6 +267,7 @@ label.with-checkbox {
     background: #fff;
     vertical-align: bottom;
     position: relative;
+    text-indent: 0;
     &:before {
         font-family: TeachBoost;
         font-size: 0.875rem;
