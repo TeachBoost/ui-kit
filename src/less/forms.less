@@ -243,6 +243,7 @@ label.with-checkbox {
     position: relative;
     font-weight: normal;
     margin-bottom: 0;
+    line-height: 125%;
     // Labels longer than one line will all be equally indented, with
     // control to the left in its own column.
     text-indent: -2em;
@@ -278,7 +279,7 @@ label.with-checkbox {
     }
     +span {
         padding-left: 0.125rem;
-        line-height: 165%;
+        line-height: 150%;
     }
 }
 
@@ -395,6 +396,18 @@ label.with-checkbox {
                     left: 0.1rem;
                 }
             }
+        }
+    }
+}
+
+// Allow display of checkmark in custom input treatments (those) that
+// do not use the label styles above.
+// Omit the background when not checked
+.form-check-custom {
+    .form-check-input:not(:checked) {
+        + .form-check-icon {
+            background: transparent !important;
+            border: 0 !important;
         }
     }
 }

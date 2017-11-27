@@ -1563,6 +1563,7 @@ label.with-checkbox input {
   position: relative;
   font-weight: normal;
   margin-bottom: 0;
+  line-height: 125%;
   text-indent: -2em;
   margin-left: 2em;
 }
@@ -1590,7 +1591,7 @@ label.with-checkbox input {
 }
 .form-check-icon + span {
   padding-left: 0.125rem;
-  line-height: 165%;
+  line-height: 150%;
 }
 .form-check-input {
   opacity: 0;
@@ -1679,6 +1680,10 @@ label.with-checkbox input {
 }
 .form-check-input[type="radio"]:checked.input-lg + .form-check-icon:before {
   left: 0.1rem;
+}
+.form-check-custom .form-check-input:not(:checked) + .form-check-icon {
+  background: transparent !important;
+  border: 0 !important;
 }
 /**
  * Font icons */
