@@ -271,8 +271,8 @@ label.with-checkbox {
     text-indent: 0;
     &:before {
         font-family: TeachBoost;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
+        font-size: 1rem;
+        line-height: 1rem;
         text-shadow: 0 0 0.25rem #333;
         font-weight: normal;
         text-align: center;
@@ -295,7 +295,7 @@ label.with-checkbox {
         // Color the background for selected checkboxes
         +.form-check-icon {
             background: #007db6;
-            border: 0.2rem solid #007db6;
+            border: 0.25rem solid #007db6;
             // Display a checkmark/dot for selected inputs
             &:before {
                 color: #fff;
@@ -312,7 +312,7 @@ label.with-checkbox {
         +.form-check-icon,
         +.form-check-icon:hover {
             background: #eee;
-            border: 0.15rem solid #ccc;
+            border: 0.125rem solid #ccc;
             cursor: not-allowed;
             &:before {
                 color: #ccc;
@@ -330,15 +330,16 @@ label.with-checkbox {
     &.input-lg {
         height: auto; // Remove the .input-lg rules we don't need.
         +.form-check-icon {
-            // width: 3rem;
-            // height: 3rem;
-            width: 2.25rem;
-            height: 2.25rem;
+            height: 1.75rem;
+            top: -0.0625rem;
+            vertical-align: middle;
+            width: 1.75rem;
+
             &:before {
-                //font-size: 1.875rem;
-                //line-height: 1.875rem;
-                font-size: 1.4375rem;
-                line-height: 1.825rem;
+                font-size: 1.25rem;
+                line-height: 1.25rem;
+                top: 0.125rem;
+                position: relative;
             }
             +span {
                 font-size: 1.125rem;
@@ -349,18 +350,20 @@ label.with-checkbox {
     &.input-sm {
         height: auto; // Remove the .input-lg rules we don't need.
         +.form-check-icon {
-            // width: 1.5rem;
-            // height: 1.5rem;
             width: 1.25rem;
             height: 1.25rem;
             &:before {
-                // font-size: 0.875rem;
-                // line-height: .9375rem;
-                font-size: 0.6875rem;
-                line-height: 1rem;
+                font-size: 0.75rem;
+                line-height: 0.75rem;
             }
             +span {
                 font-size: 0.8125rem;
+            }
+        }
+
+        &:disabled {
+            +.form-check-icon:before {
+                line-height: 1rem;
             }
         }
     }
@@ -375,25 +378,37 @@ label.with-checkbox {
     &:checked {
         +.form-check-icon {
             &:before {
-                content: "\f111";
-                left: 0.05rem;
-                text-shadow: none;
+                content: ' ';
+                background: #fff;
+                border-radius: 50%;
+                height: 0.875rem;
+                margin: auto;
                 position: relative;
-                text-align: center;
+                top: 0.0625rem;
+                width: 0.875rem;
             }
         }
         &:disabled {
             +.form-check-icon {
                 &:before {
                     // Account for the difference in border width
-                    top: 0.05rem;
+                    top: 0.1875rem;
                 }
             }
         }
         &.input-lg {
             +.form-check-icon {
                 &:before {
-                    left: 0.1rem;
+                    height: 1rem;
+                    top: 0.125rem;
+                    width: 1rem;
+                }
+            }
+        }
+        &.input-lg:disabled {
+            +.form-check-icon {
+                &:before {
+                    top: 0.25rem;
                 }
             }
         }
