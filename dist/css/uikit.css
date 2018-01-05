@@ -1583,8 +1583,8 @@ label.with-checkbox input {
 }
 .form-check-icon:before {
   font-family: TeachBoost;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 1rem;
+  line-height: 1rem;
   text-shadow: 0 0 0.25rem #333;
   font-weight: normal;
   text-align: center;
@@ -1602,7 +1602,7 @@ label.with-checkbox input {
 }
 .form-check-input:checked + .form-check-icon {
   background: #007db6;
-  border: 0.2rem solid #007db6;
+  border: 0.25rem solid #007db6;
 }
 .form-check-input:checked + .form-check-icon:before {
   color: #fff;
@@ -1615,7 +1615,7 @@ label.with-checkbox input {
 .form-check-input:disabled + .form-check-icon:hover,
 .form-check-input:hover:disabled + .form-check-icon:hover {
   background: #eee;
-  border: 0.15rem solid #ccc;
+  border: 0.125rem solid #ccc;
   cursor: not-allowed;
 }
 .form-check-input:disabled + .form-check-icon:before,
@@ -1640,12 +1640,16 @@ label.with-checkbox input {
   height: auto;
 }
 .form-check-input.input-lg + .form-check-icon {
-  width: 2.25rem;
-  height: 2.25rem;
+  height: 1.75rem;
+  top: -0.0625rem;
+  vertical-align: middle;
+  width: 1.75rem;
 }
 .form-check-input.input-lg + .form-check-icon:before {
-  font-size: 1.4375rem;
-  line-height: 1.825rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  top: 0.125rem;
+  position: relative;
 }
 .form-check-input.input-lg + .form-check-icon + span {
   font-size: 1.125rem;
@@ -1659,27 +1663,38 @@ label.with-checkbox input {
   height: 1.25rem;
 }
 .form-check-input.input-sm + .form-check-icon:before {
-  font-size: 0.6875rem;
-  line-height: 1rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
 }
 .form-check-input.input-sm + .form-check-icon + span {
   font-size: 0.8125rem;
+}
+.form-check-input.input-sm:disabled + .form-check-icon:before {
+  line-height: 1rem;
 }
 .form-check-input[type="radio"] + .form-check-icon {
   border-radius: 50%;
 }
 .form-check-input[type="radio"]:checked + .form-check-icon:before {
-  content: "\f111";
-  left: 0.05rem;
-  text-shadow: none;
+  content: ' ';
+  background: #fff;
+  border-radius: 50%;
+  height: 0.875rem;
+  margin: auto;
   position: relative;
-  text-align: center;
+  top: 0.0625rem;
+  width: 0.875rem;
 }
 .form-check-input[type="radio"]:checked:disabled + .form-check-icon:before {
-  top: 0.05rem;
+  top: 0.1875rem;
 }
 .form-check-input[type="radio"]:checked.input-lg + .form-check-icon:before {
-  left: 0.1rem;
+  height: 1rem;
+  top: 0.125rem;
+  width: 1rem;
+}
+.form-check-input[type="radio"]:checked.input-lg:disabled + .form-check-icon:before {
+  top: 0.25rem;
 }
 .form-check-custom .form-check-input:not(:checked) + .form-check-icon {
   background: transparent !important;
