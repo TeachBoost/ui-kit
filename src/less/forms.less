@@ -14,15 +14,12 @@
     border-color: @gray;
     color: @dark-gray;
     font-size: 1em;
-    height: auto;
     padding: 6px 10px;
     position: relative;         // this is for inputs that are inline
     top: 1px;                   // with a button, so they line up well
     .box-shadow-list(none);
 
-    /*
-     * Size overrides */
-
+    // size overrides
     &.input-lg {
         font-size: 18px;
         height: 48px;
@@ -34,8 +31,7 @@
         padding: 3px 6px;
     }
 
-    /*
-     * Disabled inputs (adding a specific class) */
+    // disabled inputs (adding a specific class)
 
     &[disabled],
     &.disabled {
@@ -45,16 +41,14 @@
         opacity: 1;
     }
 
-    /*
-     * Focus overrides (no box shadows) */
+    // focus overrides (no box shadows)
     &:focus {
         background-color: @white-gray;
         border-color: @blue;
         .box-shadow-list(none) !important;
     }
 
-    /*
-     * Validation states (see below for label text handling) */
+    // validation states (see below for label text handling)
     .has-success &,
     .has-warning &,
     .has-error & {
@@ -62,15 +56,21 @@
     }
     .has-success & {
         border-color: @dark-green;
-        &:focus { border-color: darken(@dark-green, 10%); }
+        &:focus {
+            border-color: darken(@dark-green, 10%);
+        }
     }
     .has-warning & {
         border-color: @dark-yellow;
-        &:focus { border-color: darken(@dark-yellow, 10%); }
+        &:focus {
+            border-color: darken(@dark-yellow, 10%);
+        }
     }
     .has-error & {
         border-color: @dark-red;
-        &:focus { border-color: darken(@dark-red, 10%); }
+        &:focus {
+            border-color: darken(@dark-red, 10%);
+        }
     }
 }
 
@@ -84,7 +84,7 @@
         padding-top: 9px;
     }
 
-     .form-group {
+    .form-group {
         margin: 0 0 12px 0;
         border-bottom: 1px solid @line-gray-lt;
         padding-bottom: 12px;
@@ -104,7 +104,29 @@
 }
 
 input[type="file"] {
-    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 13px;
+    position: relative;
+    width: 100%;
+
+    + .clear-file {
+        background: #eee;
+        border-radius: 0 3px 3px 0;
+        left: 100%;
+        top: 0;
+        height: 100%;
+        margin: 0 0 0 -26px;
+        border: 1px solid #ccc;
+        line-height: 3rem;
+        padding: 0 6px;
+        position: absolute;
+
+        &:hover {
+            background: #ddd;
+        }
+    }
 }
 
 label.with-checkbox {
@@ -135,10 +157,16 @@ label.with-checkbox {
 .radio,
 .checkbox,
 .radio-inline,
-.checkbox-inline  {
-    .has-success & { color: @dark-green; }
-    .has-warning & { color: @dark-yellow; }
-    .has-error & { color: @red; }
+.checkbox-inline {
+    .has-success & {
+        color: @dark-green;
+    }
+    .has-warning & {
+        color: @dark-yellow;
+    }
+    .has-error & {
+        color: @red;
+    }
 }
 
 .help-block {
@@ -190,6 +218,211 @@ label.with-checkbox {
             right: 0.5em;
             top: 0.25em;
             color: @white;
+        }
+    }
+}
+
+
+/*
+ * CSS checkbox and radio buttons */
+ // rem units based on base HTML font size of 16px
+.form-check {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form-check-inline {
+    display: inline-block;
+    margin-right: 0.125rem;
+    .form-check-label {
+        vertical-align: middle;
+        text-indent: 0;
+        margin-left: 0;
+    }
+}
+.form-check-label {
+    position: relative;
+    font-weight: normal;
+    margin-bottom: 0;
+    line-height: 125%;
+    // Labels longer than one line will all be equally indented, with
+    // control to the left in its own column.
+    text-indent: -2em;
+    margin-left: 2em;
+    // Override default `<label>` bottom margin
+    &:hover {
+        >.form-check-icon {
+            border: 0.175rem solid #007db6;
+        }
+    }
+}
+
+.form-check-icon {
+    background: #fff;
+    display: inline-block;
+    font-style: normal;
+    // width: 1.75rem;
+    // height: 1.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.0625rem solid #aaa; // To match other controls
+    background: #fff;
+    vertical-align: bottom;
+    position: relative;
+    text-indent: 0;
+    &:before {
+        font-family: TeachBoost;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-shadow: 0 0 0.25rem #333;
+        font-weight: normal;
+        text-align: center;
+    }
+    +span {
+        padding-left: 0.125rem;
+        line-height: 150%;
+    }
+}
+
+.form-check-input {
+    // Hide the checkboxes and radio buttons
+    visibility: hidden;
+    position: absolute;
+    top: 0.25rem;
+    margin: 0 !important;
+    z-index: -1;
+    // Style the checked state
+    &:checked {
+        // Color the background for selected checkboxes
+        +.form-check-icon {
+            background: #007db6;
+            border: 0.25rem solid #007db6;
+            // Display a checkmark/dot for selected inputs
+            &:before {
+                color: #fff;
+                content: "\f00c";
+                margin-left: -1%;
+                display: block;
+            }
+        }
+    }
+    // Style the :disabled state
+    &:disabled,
+    &:hover:disabled {
+        // Make the checkbox/radio gray
+        +.form-check-icon,
+        +.form-check-icon:hover {
+            background: #eee;
+            border: 0.125rem solid #ccc;
+            cursor: not-allowed;
+            &:before {
+                color: #ccc;
+                text-shadow: none;
+            }
+            // Color the label text
+            +span,
+            +span:hover {
+                color: #aaa;
+                cursor: not-allowed;
+            }
+        }
+    }
+    // Different sizes
+    &.input-lg {
+        height: auto; // Remove the .input-lg rules we don't need.
+        +.form-check-icon {
+            height: 1.75rem;
+            top: -0.0625rem;
+            vertical-align: middle;
+            width: 1.75rem;
+
+            &:before {
+                font-size: 1.25rem;
+                line-height: 1.25rem;
+                top: 0.125rem;
+                position: relative;
+            }
+            +span {
+                font-size: 1.125rem;
+                line-height: 2.25rem;
+            }
+        }
+    }
+    &.input-sm {
+        height: auto; // Remove the .input-lg rules we don't need.
+        +.form-check-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            &:before {
+                font-size: 0.75rem;
+                line-height: 0.75rem;
+            }
+            +span {
+                font-size: 0.8125rem;
+            }
+        }
+
+        &:disabled {
+            +.form-check-icon:before {
+                line-height: 1rem;
+            }
+        }
+    }
+}
+
+// Radio-specific corrections
+.form-check-input[type="radio"] {
+    +.form-check-icon {
+        border-radius: 50%;
+    }
+    // Adjustments for the dot
+    &:checked {
+        +.form-check-icon {
+            &:before {
+                content: ' ';
+                background: #fff;
+                border-radius: 50%;
+                height: 0.875rem;
+                margin: auto;
+                position: relative;
+                top: 0.0625rem;
+                width: 0.875rem;
+            }
+        }
+        &:disabled {
+            +.form-check-icon {
+                &:before {
+                    // Account for the difference in border width
+                    top: 0.1875rem;
+                }
+            }
+        }
+        &.input-lg {
+            +.form-check-icon {
+                &:before {
+                    height: 1rem;
+                    top: 0.125rem;
+                    width: 1rem;
+                }
+            }
+        }
+        &.input-lg:disabled {
+            +.form-check-icon {
+                &:before {
+                    top: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+// Allow display of checkmark in custom input treatments (those) that
+// do not use the label styles above.
+// Omit the background when not checked
+.form-check-custom {
+    .form-check-input:not(:checked) {
+        + .form-check-icon {
+            background: transparent !important;
+            border: 0 !important;
         }
     }
 }

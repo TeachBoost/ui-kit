@@ -1350,21 +1350,12 @@ a.teal-background:hover {
   border-color: #aaa;
   color: #333;
   font-size: 1em;
-  height: auto;
   padding: 6px 10px;
   position: relative;
   top: 1px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  /*
-     * Size overrides */
-  /*
-     * Disabled inputs (adding a specific class) */
-  /*
-     * Focus overrides (no box shadows) */
-  /*
-     * Validation states (see below for label text handling) */
 }
 .form-control.input-lg {
   font-size: 18px;
@@ -1441,7 +1432,27 @@ a.teal-background:hover {
   top: 1px;
 }
 input[type="file"] {
-  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 13px;
+  position: relative;
+  width: 100%;
+}
+input[type="file"] + .clear-file {
+  background: #eee;
+  border-radius: 0 3px 3px 0;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  margin: 0 0 0 -26px;
+  border: 1px solid #ccc;
+  line-height: 3rem;
+  padding: 0 6px;
+  position: absolute;
+}
+input[type="file"] + .clear-file:hover {
+  background: #ddd;
 }
 label.with-checkbox {
   display: inline-block;
@@ -1532,6 +1543,162 @@ label.with-checkbox input {
   right: 0.5em;
   top: 0.25em;
   color: #fff;
+}
+/*
+ * CSS checkbox and radio buttons */
+.form-check {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form-check-inline {
+  display: inline-block;
+  margin-right: 0.125rem;
+}
+.form-check-inline .form-check-label {
+  vertical-align: middle;
+  text-indent: 0;
+  margin-left: 0;
+}
+.form-check-label {
+  position: relative;
+  font-weight: normal;
+  margin-bottom: 0;
+  line-height: 125%;
+  text-indent: -2em;
+  margin-left: 2em;
+}
+.form-check-label:hover > .form-check-icon {
+  border: 0.175rem solid #007db6;
+}
+.form-check-icon {
+  display: inline-block;
+  font-style: normal;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.0625rem solid #aaa;
+  background: #fff;
+  vertical-align: bottom;
+  position: relative;
+  text-indent: 0;
+}
+.form-check-icon:before {
+  font-family: TeachBoost;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-shadow: 0 0 0.25rem #333;
+  font-weight: normal;
+  text-align: center;
+}
+.form-check-icon + span {
+  padding-left: 0.125rem;
+  line-height: 150%;
+}
+.form-check-input {
+  visibility: hidden;
+  position: absolute;
+  top: 0.25rem;
+  margin: 0 !important;
+  z-index: -1;
+}
+.form-check-input:checked + .form-check-icon {
+  background: #007db6;
+  border: 0.25rem solid #007db6;
+}
+.form-check-input:checked + .form-check-icon:before {
+  color: #fff;
+  content: "\f00c";
+  margin-left: -1%;
+  display: block;
+}
+.form-check-input:disabled + .form-check-icon,
+.form-check-input:hover:disabled + .form-check-icon,
+.form-check-input:disabled + .form-check-icon:hover,
+.form-check-input:hover:disabled + .form-check-icon:hover {
+  background: #eee;
+  border: 0.125rem solid #ccc;
+  cursor: not-allowed;
+}
+.form-check-input:disabled + .form-check-icon:before,
+.form-check-input:hover:disabled + .form-check-icon:before,
+.form-check-input:disabled + .form-check-icon:hover:before,
+.form-check-input:hover:disabled + .form-check-icon:hover:before {
+  color: #ccc;
+  text-shadow: none;
+}
+.form-check-input:disabled + .form-check-icon + span,
+.form-check-input:hover:disabled + .form-check-icon + span,
+.form-check-input:disabled + .form-check-icon:hover + span,
+.form-check-input:hover:disabled + .form-check-icon:hover + span,
+.form-check-input:disabled + .form-check-icon + span:hover,
+.form-check-input:hover:disabled + .form-check-icon + span:hover,
+.form-check-input:disabled + .form-check-icon:hover + span:hover,
+.form-check-input:hover:disabled + .form-check-icon:hover + span:hover {
+  color: #aaa;
+  cursor: not-allowed;
+}
+.form-check-input.input-lg {
+  height: auto;
+}
+.form-check-input.input-lg + .form-check-icon {
+  height: 1.75rem;
+  top: -0.0625rem;
+  vertical-align: middle;
+  width: 1.75rem;
+}
+.form-check-input.input-lg + .form-check-icon:before {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  top: 0.125rem;
+  position: relative;
+}
+.form-check-input.input-lg + .form-check-icon + span {
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+}
+.form-check-input.input-sm {
+  height: auto;
+}
+.form-check-input.input-sm + .form-check-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.form-check-input.input-sm + .form-check-icon:before {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+.form-check-input.input-sm + .form-check-icon + span {
+  font-size: 0.8125rem;
+}
+.form-check-input.input-sm:disabled + .form-check-icon:before {
+  line-height: 1rem;
+}
+.form-check-input[type="radio"] + .form-check-icon {
+  border-radius: 50%;
+}
+.form-check-input[type="radio"]:checked + .form-check-icon:before {
+  content: ' ';
+  background: #fff;
+  border-radius: 50%;
+  height: 0.875rem;
+  margin: auto;
+  position: relative;
+  top: 0.0625rem;
+  width: 0.875rem;
+}
+.form-check-input[type="radio"]:checked:disabled + .form-check-icon:before {
+  top: 0.1875rem;
+}
+.form-check-input[type="radio"]:checked.input-lg + .form-check-icon:before {
+  height: 1rem;
+  top: 0.125rem;
+  width: 1rem;
+}
+.form-check-input[type="radio"]:checked.input-lg:disabled + .form-check-icon:before {
+  top: 0.25rem;
+}
+.form-check-custom .form-check-input:not(:checked) + .form-check-icon {
+  background: transparent !important;
+  border: 0 !important;
 }
 /**
  * Font icons */
@@ -3726,6 +3893,9 @@ footer {
 }
 /*
  * Base typography */
+html {
+  font-size: 16px;
+}
 body {
   color: #333;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3818,6 +3988,7 @@ pre.codeblock {
   border-left: 5px solid #383838;
   color: #fff;
   font-size: 13px;
+  width: 100%;
 }
 blockquote.codeblock ::selection,
 pre.codeblock ::selection {
@@ -3881,7 +4052,7 @@ kbd {
   background-color: #111;
   font-weight: bold;
 }
-/* 
+/*
  * Font families */
 .serif-font {
   font-family: Signika, "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
@@ -4013,64 +4184,6 @@ span.none {
   transition: all 400ms ease;
 }
 /* Vendor */
-/*
- * iCheck input plug (blue square) */
-.icheck,
-.iradio {
-  background: url('../images/icheck/blue.png') no-repeat;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  *display: inline;
-  height: 22px;
-  margin: 0 5px 0 0;
-  padding: 0;
-  top: -1px;
-  vertical-align: middle;
-  width: 22px;
-}
-.icheck {
-  background-position: 0 0;
-}
-.icheck.hover {
-  background-position: -24px 0;
-}
-.icheck.checked {
-  background-position: -48px 0;
-}
-.icheck.disabled {
-  background-position: -72px 0;
-  cursor: not-allowed;
-}
-.icheck.disabled.checked {
-  background-position: -96px 0;
-}
-.iradio {
-  background-position: -120px 0;
-}
-.iradio.hover {
-  background-position: -144px 0;
-}
-.iradio.checked {
-  background-position: -168px 0;
-}
-.iradio.disabled {
-  background-position: -192px 0;
-  cursor: not-allowed;
-}
-.iradio.disabled.checked {
-  background-position: -216px 0;
-}
-/* 
- * HiDPI support */
-@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  .icheck,
-  .iradio {
-    background-image: url('../images/icheck/blue@2x.png');
-    -webkit-background-size: 240px 24px;
-    background-size: 240px 24px;
-  }
-}
 .notifyjs-corner {
   top: 54px !important;
 }
