@@ -1937,6 +1937,9 @@ label.with-checkbox input {
 .fa-exclamation-circle:before {
   content: "\f06a";
 }
+.fa-leaf:before {
+  content: "\f06c";
+}
 .fa-eye:before {
   content: "\f06e";
 }
