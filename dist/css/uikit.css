@@ -1742,6 +1742,12 @@ label.with-checkbox input {
 .tb-masque:before {
   content: "\e903";
 }
+.fa-google-drive:before {
+  content: "\e905";
+}
+.fa-google:before {
+  content: "\e906";
+}
 .fa-map:before {
   content: "\e800";
 }
@@ -2078,9 +2084,6 @@ label.with-checkbox input {
 .fa-magic:before {
   content: "\f0d0";
 }
-.fa-google-plus:before {
-  content: "\f0d5";
-}
 .fa-caret-down:before {
   content: "\f0d7";
 }
@@ -2292,9 +2295,6 @@ label.with-checkbox input {
 }
 .fa-plus-square-o:before {
   content: "\f196";
-}
-.fa-google:before {
-  content: "\f1a0";
 }
 .fa-language:before {
   content: "\f1ab";
