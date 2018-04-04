@@ -3640,7 +3640,9 @@ footer {
   text-shadow: none;
 }
 #app-alert p,
-#app-confirm p {
+#app-confirm p,
+#app-alert .message,
+#app-confirm .message {
   padding-top: 0.4em;
   margin-bottom: 0.8em;
   margin-top: 0;
