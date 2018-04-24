@@ -1617,6 +1617,7 @@ label.with-checkbox input {
   background: #eee;
   border: 0.125rem solid #ccc;
   cursor: not-allowed;
+  padding: 0.125rem;
 }
 .form-check-input:disabled + .form-check-icon:before,
 .form-check-input:hover:disabled + .form-check-icon:before,
