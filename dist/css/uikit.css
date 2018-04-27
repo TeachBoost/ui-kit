@@ -2028,6 +2028,9 @@ label.with-checkbox input {
 .fa-bullhorn:before {
   content: "\f0a1";
 }
+.fa-bell-o:before {
+  content: "\f0a2";
+}
 .fa-globe:before {
   content: "\f0ac";
 }
