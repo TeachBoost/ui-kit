@@ -3885,7 +3885,7 @@ footer {
 }
 .toggle span.option {
   background-color: #4da74d;
-  color: $white;
+  color: #fff;
   padding: 4px 12px;
   height: 22px;
   line-height: 22px;
