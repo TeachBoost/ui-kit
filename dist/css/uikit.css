@@ -1929,6 +1929,9 @@ label.with-checkbox input {
 .fa-arrow-down:before {
   content: "\f063";
 }
+.fa-share:before {
+  content: "\f064";
+}
 .fa-compress:before {
   content: "\f066";
 }
@@ -2197,6 +2200,9 @@ label.with-checkbox input {
 }
 .fa-terminal:before {
   content: "\f120";
+}
+.fa-exclamation:before {
+  content: "\f12a";
 }
 .fa-puzzle-piece:before {
   content: "\f12e";
