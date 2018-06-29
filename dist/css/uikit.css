@@ -1668,7 +1668,7 @@ label.with-checkbox input {
   line-height: 0.75rem;
 }
 .form-check-input.input-sm + .form-check-icon + span {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 .form-check-input.input-sm:disabled + .form-check-icon:before {
   line-height: 1rem;
