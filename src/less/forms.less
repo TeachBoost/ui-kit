@@ -393,7 +393,17 @@ label.with-checkbox {
             +.form-check-icon {
                 &:before {
                     // Account for the difference in border width
-                    top: 0.1875rem;
+                    top: 0.0625rem;
+                    background: #ccc;
+                }
+            }
+        }
+        &.input-sm {
+            +.form-check-icon {
+                &:before {
+                    height: 0.75rem;
+                    top: 0;
+                    width: 0.75rem;
                 }
             }
         }
@@ -409,7 +419,7 @@ label.with-checkbox {
         &.input-lg:disabled {
             +.form-check-icon {
                 &:before {
-                    top: 0.25rem;
+                    top: 0.125rem;
                 }
             }
         }
