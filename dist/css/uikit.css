@@ -1687,7 +1687,13 @@ label.with-checkbox input {
   width: 0.875rem;
 }
 .form-check-input[type="radio"]:checked:disabled + .form-check-icon:before {
-  top: 0.1875rem;
+  top: 0.0625rem;
+  background: #ccc;
+}
+.form-check-input[type="radio"]:checked.input-sm + .form-check-icon:before {
+  height: 0.75rem;
+  top: 0;
+  width: 0.75rem;
 }
 .form-check-input[type="radio"]:checked.input-lg + .form-check-icon:before {
   height: 1rem;
@@ -1695,7 +1701,7 @@ label.with-checkbox input {
   width: 1rem;
 }
 .form-check-input[type="radio"]:checked.input-lg:disabled + .form-check-icon:before {
-  top: 0.25rem;
+  top: 0.125rem;
 }
 .form-check-custom .form-check-input:not(:checked) + .form-check-icon {
   background: transparent !important;
