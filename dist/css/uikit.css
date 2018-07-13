@@ -2350,6 +2350,9 @@ label.with-checkbox input {
 .fa-send-o:before {
   content: "\f1d9";
 }
+.fa-bomb:before {
+  content: "\f1e2";
+}
 .fa-plug:before {
   content: "\f1e6";
 }
