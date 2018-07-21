@@ -111,21 +111,24 @@
     /*
      * Shrink the nav bar when the page width is small */
     @media (max-width: @screen-sm) {
-        width: 56px !important;
-        li {
-            overflow: hidden;
-            white-space: nowrap;
-            height: 2.75em;
-            span {
-                display: none;
+        &:not(.active) {
+            width: 56px !important;
+            li {
+                overflow: hidden;
+                white-space: nowrap;
+                height: 2.75em;
+                span {
+                    display: none;
+                }
+            }
+            > .nav .item {
+                height: 100%;
+                margin-bottom: 0;
+                width: 56px;
+                padding: 0;
             }
         }
         > .nav .item {
-            height: 100%;
-            margin-bottom: 0;
-            width: 56px;
-            padding: 0;
-
             body.x5 & {
                 > .fa {
                     left: 0.25em;

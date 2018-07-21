@@ -2620,18 +2620,18 @@ body.x1 .left-nav {
   width: 13.5em;
 }
 @media (max-width: 768px) {
-  .left-nav {
+  .left-nav:not(.active) {
     width: 56px !important;
   }
-  .left-nav li {
+  .left-nav:not(.active) li {
     overflow: hidden;
     white-space: nowrap;
     height: 2.75em;
   }
-  .left-nav li span {
+  .left-nav:not(.active) li span {
     display: none;
   }
-  .left-nav > .nav .item {
+  .left-nav:not(.active) > .nav .item {
     height: 100%;
     margin-bottom: 0;
     width: 56px;
