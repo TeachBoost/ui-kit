@@ -2330,6 +2330,9 @@ label.with-checkbox input {
 .fa-database:before {
   content: "\f1c0";
 }
+.fa-file-pdf-o:before {
+  content: "\f1c1";
+}
 .fa-life-bouy:before,
 .fa-life-buoy:before,
 .fa-life-ring:before,
