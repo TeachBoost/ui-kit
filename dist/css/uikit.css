@@ -1770,6 +1770,9 @@ label.with-checkbox input {
 .fa-wheel:before {
   content: "\e902";
 }
+.fa-clipboard-check:before {
+  content: "\e907";
+}
 .fa-search:before {
   content: "\f002";
 }
