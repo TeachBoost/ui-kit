@@ -1978,7 +1978,9 @@ label.with-checkbox input {
 .fa-exclamation-circle:before {
   content: "\f06a";
 }
-.fa-exclamation-triangle:before,
+.fa-exclamation-triangle:before {
+  content: "\f071";
+}
 .fa-exclamation:before {
   content: "\f12a";
 }
@@ -3958,12 +3960,12 @@ h6 {
 }
 h1 {
   font-size: 2.25em;
-  line-height: 1em;
+  line-height: 1.0em;
   margin: 25px 0 20px;
 }
 h2 {
   font-size: 1.5em;
-  line-height: 1em;
+  line-height: 1.0em;
   margin: 25px 0 20px;
 }
 h3 {
