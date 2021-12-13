@@ -1969,6 +1969,9 @@ label.with-checkbox input {
 .fa-ellipsis-h:before {
   content: "\f141";
 }
+.fa-ellipsis-v:before {
+  content: "\f142";
+}
 .fa-envelope-o:before {
   content: "\f003";
 }
@@ -3960,12 +3963,12 @@ h6 {
 }
 h1 {
   font-size: 2.25em;
-  line-height: 1.0em;
+  line-height: 1em;
   margin: 25px 0 20px;
 }
 h2 {
   font-size: 1.5em;
-  line-height: 1.0em;
+  line-height: 1em;
   margin: 25px 0 20px;
 }
 h3 {
