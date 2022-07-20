@@ -1749,6 +1749,9 @@ label.with-checkbox input {
 .tb-masque:before {
   content: "\e903";
 }
+.tb-upcoming:before {
+  content: "\e909";
+}
 .fa-map:before {
   content: "\e800";
 }
