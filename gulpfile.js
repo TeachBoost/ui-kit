@@ -63,6 +63,11 @@ gulp.task('dist', gulp.series('html', 'less'), function () {
             rename('uikit.css'))
         .pipe(
             gulp.dest('./dist/css/'));
+    gulp.src('./src/css/build.min.css')
+        .pipe(
+            rename('uikit.min.css'))
+        .pipe(
+            gulp.dest('./dist/css/'))
 });
 
 // Watch for changes by default

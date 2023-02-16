@@ -1,4 +1,5 @@
 src/css/build.css
+src/css/build.min.css
 index.html
 vendor
 node_modules
