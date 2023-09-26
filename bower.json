@@ -1,7 +1,7 @@
 {
   "name": "tb-ui-kit",
   "private": true,
-  "version": "1.0.19",
+  "version": "1.0.20",
   "main": [
     "dist/css/uikit.css"
   ],
