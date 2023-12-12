@@ -1729,6 +1729,15 @@ label.with-checkbox input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.tb-arrow-down-up::before {
+  content: "\e90d";
+}
+.tb-arrow-down-desc::before {
+  content: "\e90e";
+}
+.tb-arrow-up-asc::before {
+  content: "\e90f";
+}
 .tb-boost::before {
   content: "\e600";
 }
@@ -1751,6 +1760,9 @@ label.with-checkbox input {
 }
 .tb-upcoming::before {
   content: "\e909";
+}
+.tb-revert::before {
+  content: "\e90c";
 }
 .fa-map::before {
   content: "\e800";
