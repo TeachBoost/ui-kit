@@ -1,7 +1,7 @@
 {
   "name": "tb-ui-kit",
   "description": "TeachBoost UI Kit",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "contributors": [
     "Mike Gioia <mike@teachboost.com>",
     "Andrew Gioia <andrew@teachboost.com>"
@@ -17,6 +17,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/TeachBoost/ui-kit.git"
+  },
+  "scripts": {
+    "publish:css": "lessc ./src/less/build.less ./dist/css/uikit.css && lessc --clean-css ./src/less/build.less ./dist/css/uikit.min.css"
   },
   "license": "UNLICENSED"
 }
