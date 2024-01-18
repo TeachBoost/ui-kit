@@ -19,7 +19,7 @@
     "url": "https://github.com/TeachBoost/ui-kit.git"
   },
   "scripts": {
-    "publish:css": "lessc ./src/less/build.less ./dist/css/uikit.css && lessc --clean-css ./src/less/build.less ./dist/css/uikit.min.css"
+    "publish:css": "lessc ./src/less/build.less ./dist/css/build.css && lessc --clean-css ./src/less/build.less ./dist/css/build.min.css"
   },
   "license": "UNLICENSED"
 }
