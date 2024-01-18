@@ -1711,8 +1711,8 @@ label.with-checkbox input {
  * Font icons */
 @font-face {
   font-family: 'TeachBoost';
-  src: url('../fonts/TeachBoost.eot');
-  src: url('../fonts/TeachBoost.eot?#iefix') format('embedded-opentype'), url('../fonts/TeachBoost.woff2') format('woff2'), url('../fonts/TeachBoost.woff') format('woff'), url('../fonts/TeachBoost.ttf') format('truetype'), url('../fonts/TeachBoost.svg') format('svg');
+  src: url('../fonts/TeachBoost.v1.eot');
+  src: url('../fonts/TeachBoost.v1.eot?#iefix') format('embedded-opentype'), url('../fonts/TeachBoost.v1.woff2') format('woff2'), url('../fonts/TeachBoost.v1.woff') format('woff'), url('../fonts/TeachBoost.v1.ttf') format('truetype'), url('../fonts/TeachBoost.v1.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1728,6 +1728,15 @@ label.with-checkbox input {
   text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.tb-arrow-down-up::before {
+  content: "\e90d";
+}
+.tb-arrow-down-desc::before {
+  content: "\e90e";
+}
+.tb-arrow-up-asc::before {
+  content: "\e90f";
 }
 .tb-boost::before {
   content: "\e600";
